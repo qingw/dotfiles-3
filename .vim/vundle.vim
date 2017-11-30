@@ -23,6 +23,7 @@ Plugin 'vim-scripts/bufexplorer.zip.git'
 Plugin 'sjl/gundo.vim.git'
 Plugin 'vim-scripts/matchit.zip.git'
 Plugin 'vim-scripts/vim2ansi.git'
+Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'git://git.wincent.com/command-t.git'
 
