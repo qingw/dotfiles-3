@@ -1,0 +1,3 @@
+[submodule "/Users/steamedfish/.emacs.d"]
+	path = /Users/steamedfish/.emacs.d
+	url = https://github.com/syl20bnr/spacemacs
