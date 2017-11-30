@@ -1,3 +1,6 @@
 [submodule "/Users/steamedfish/.emacs.d"]
 	path = /Users/steamedfish/.emacs.d
 	url = https://github.com/syl20bnr/spacemacs
+[submodule "/Users/steamedfish/.vim/bundle/Vundle.vim"]
+	path = /Users/steamedfish/.vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
