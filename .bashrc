@@ -4,7 +4,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LESS="-R"
 export CVS_RSH=ssh
-export EDITOR="emacsclient"
+export EDITOR="vim"
 export MYSQL_PS1="(\u@\h) [\d]> "
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:~/bin
 
