@@ -4,7 +4,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LESS="-R"
 export CVS_RSH=ssh
-export EDITOR=vim
+export EDITOR="emacsclient"
 export MYSQL_PS1="(\u@\h) [\d]> "
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:~/bin
 
@@ -59,6 +59,7 @@ fi
 
 # Aliases
 alias grep='grep --color=auto'
-alias cp='cp -i'
-#alias python='ipython'
-
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias pip='pip2'
