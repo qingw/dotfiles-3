@@ -1,0 +1,30 @@
+# remove everything
+*
+# not remove the following 
+
+!.gitmodules
+!.gitconfig
+!.gitignore
+
+!.bashrc
+!.bash_profile
+
+!.emacs.d
+!.spacemacs
+!.spacemacs.d
+!.spacemacs.d/steamedfish.el
+!.spacemacs.d/steamedfish-init.el
+
+!.vim
+.vim/undo
+.vim/backup
+.netrwhist
+!.vim/autocmd.vim
+!.vim/keymaps.vim
+!.vim/macvim.vim
+!.vim/plugin.vim
+!.vim/scripts.vim
+!.vim/settings.vim
+!.vim/vundle.vim
+!.vim/bundle
+!.vim/bundle/Vundle.vim
