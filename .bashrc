@@ -63,3 +63,4 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 alias pip='pip2'
+alias emacs="emacsclient -n"
