@@ -19,6 +19,7 @@
 !.spacemacs.d/BlueFish.png
 
 !.vim
+!.vimrc
 .vim/undo
 .vim/backup
 .netrwhist
