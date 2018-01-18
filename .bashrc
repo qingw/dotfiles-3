@@ -40,6 +40,8 @@ for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
     fi
     break
 done
+unset _POSSIBLE_PATH
+unset _CONTEXT_PATH
 
 # bash-completion
 if [ -n "$BASH_VERSION" -a -z "$BASH_COMPLETION" ]; then
