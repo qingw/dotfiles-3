@@ -40,3 +40,5 @@
 
 !.ssh
 !.ssh/config
+
+!.lftprc
