@@ -32,3 +32,8 @@
 !.vim/vundle.vim
 !.vim/bundle
 !.vim/bundle/Vundle.vim
+
+!Library
+!Library/Rime
+!Library/Rime/squirrel.custom.yaml
+!Library/Rime/default.custom.yaml
