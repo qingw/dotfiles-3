@@ -37,3 +37,6 @@
 !Library/Rime
 !Library/Rime/squirrel.custom.yaml
 !Library/Rime/default.custom.yaml
+
+!.ssh
+!.ssh/config
