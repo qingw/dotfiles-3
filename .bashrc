@@ -32,10 +32,14 @@ if [ -f /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline
 fi
 
 # ConTeXt minimals
-if [ -d /Volumes/DATA/ConTeXt ]; then
-    . /Volumes/DATA/ConTeXt/tex/setuptex
-    OSFONTDIR="/Library/Fonts/;/System/Library/Fonts/;$HOME/Library/Fonts/"
-fi
+_POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/SteamedFish/ConTeXt ~/ConTeXt"
+for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
+    if [ -d "${_CONTEXT_PATH}" ]; then
+        source ${_CONTEXT_PATH}/tex/setuptex
+        OSFONTDIR="/Library/Fonts/;/System/Library/Fonts/;$HOME/Library/Fonts/"
+    fi
+    break
+done
 
 # bash-completion
 if [ -n "$BASH_VERSION" -a -z "$BASH_COMPLETION" ]; then
