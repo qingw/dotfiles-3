@@ -1,0 +1,25 @@
+# install xcode commandline tools
+gcc
+# install xcode and accept license
+sudo xcodebuild -license accept
+
+# install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew tap caskroom/fonts
+brew tap d12frosted/emacs-plus
+
+brew install htop archey aria2 bash-completion csshx curl dos2unix figlet gsmartcontrol ipcalc lftp mysql nethack nmap p7zip pandoc python python3 sqlite squashfs sshrc tmux trash unrar wget you-get youtube-dl
+
+brew cask install iterm2 squirrel alfred cocoapacketanalyzer dropbox firefox gns3 google-chrome iina istat-menus keepassx kindle language-switcher leanote minecraft neteasemusic omnifocus omnigraffle omnioutliner omniplan openemu opera qsync-client sequel-pro slack spectacle steam tunnelblick virtualbox virtualbox-extension-pack x-lite xquartz yu-writer font-source-code-pro-for-powerline font-source-han-sans font-source-han-serif-el-m font-source-han-serif-sb-h font-source-sans-pro font-source-serif-pro font-sourcecodepro-nerd-font font-sourcecodepro-nerd-font-mono
+
+brew install macvim --with-override-system-vim
+brew install emacs-plus --with-natural-title-bar --without-spacemacs-icon
+
+# setup ssh keys before git
+
+git init
+git remote add origin git@github.com:SteamedFish/macconfig.git
+git pull origin master
+git branch --set-upstream-to=origin/master master
+git submodule update --init

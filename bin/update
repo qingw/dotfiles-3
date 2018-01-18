@@ -1,0 +1,34 @@
+#!/bin/bash -e
+
+cd ~
+
+echo "Updating HomeBrew"
+brew update && brew upgrade && brew cleanup
+
+echo "Updating Pip"
+pip2 list | cut -d ' ' -f 1 | xargs -n1 pip2 install -U
+pip3 list | cut -d ' ' -f 1 | xargs -n1 pip3 install -U
+
+echo "updating cask"
+brew cask upgrade && brew cask cleanup
+
+echo "updating vim plugins"
+vim +PluginInstall +qall
+
+echo "updating git repo"
+git pull
+git submodule update --recursive --remote
+
+echo "updating ConTeXt"
+_POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/SteamedFish/ConTeXt ~/ConTeXt"
+for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
+    if [ -d "${_CONTEXT_PATH}" ]; then
+        cd ${_CONTEXT_PATH}
+        rsync -av rsync://contextgarden.net/minimals/setup/first-setup.sh .
+        bash first-setup.sh --modules=all
+    fi
+    break
+done
+mtxrun --scripts fonts --reload
+unset _POSSIBLE_PATH
+unset _CONTEXT_PATH

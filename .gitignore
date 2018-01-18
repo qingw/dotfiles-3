@@ -42,3 +42,10 @@
 !.ssh/config
 
 !.lftprc
+
+!bin
+!bin/auth
+!bin/update
+!bin/gssh
+!bin/macflush
+!bin/macinit
