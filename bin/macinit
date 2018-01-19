@@ -9,10 +9,12 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap d12frosted/emacs-plus
 brew install htop archey aria2 bash-completion csshx curl dos2unix figlet gsmartcontrol ipcalc lftp mysql nethack nmap p7zip pandoc python python3 sqlite squashfs sshrc tmux trash unrar wget you-get youtube-dl brew-cask-completion
-brew cask install iterm2 squirrel alfred cocoapacketanalyzer dropbox firefox gns3 google-chrome iina istat-menus keepassx kindle language-switcher leanote minecraft neteasemusic omnifocus omnigraffle omnioutliner omniplan openemu opera qsync-client sequel-pro slack spectacle steam tunnelblick virtualbox virtualbox-extension-pack x-lite xquartz yu-writer font-source-code-pro-for-powerline font-source-han-sans font-source-han-serif-el-m font-source-han-serif-sb-h font-source-sans-pro font-source-serif-pro font-sourcecodepro-nerd-font font-sourcecodepro-nerd-font-mono font-source-code-pro
+brew cask install iterm2 squirrel alfred cocoapacketanalyzer dropbox firefox gns3 google-chrome iina istat-menus keepassx kindle language-switcher leanote minecraft neteasemusic omnifocus omnigraffle omnioutliner omniplan openemu opera qsync-client sequel-pro slack spectacle steam tunnelblick virtualbox virtualbox-extension-pack x-lite xquartz yu-writer font-source-code-pro-for-powerline font-source-han-sans font-source-han-serif-el-m font-source-han-serif-sb-h font-source-sans-pro font-source-serif-pro font-sourcecodepro-nerd-font font-sourcecodepro-nerd-font-mono font-source-code-pro lastpass
 brew install macvim --with-override-system-vim
 brew install emacs-plus --with-natural-title-bar --without-spacemacs-icon
 brew linkapps
+
+open '/usr/local/Caskroom/lastpass/latest/LastPass Installer/LastPass Installer.app'
 
 # iTerm shell integration
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
