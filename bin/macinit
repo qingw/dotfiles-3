@@ -1,3 +1,89 @@
+# lists
+homebrew_taps=(
+caskroom/cask
+caskroom/fonts
+d12frosted/emacs-plus
+)
+
+homebrew_apps=(
+htop
+archey
+aria2
+bash-completion
+csshx
+curl
+dos2unix
+figlet
+gsmartcontrol
+ipcalc
+lftp
+mysql
+nethack
+nmap
+p7zip
+pandoc
+python
+python3
+sqlite
+squashfs
+sshrc
+tmux
+trash
+unrar
+wget
+you-get
+youtube-dl
+brew-cask-completion
+macvim --with-override-system-vim
+emacs-plus --with-natural-title-bar --without-spacemacs-icon
+)
+
+homebrew_cask_apps=(
+iterm2
+squirrel
+alfred
+cocoapacketanalyzer
+dropbox
+firefox
+gns3
+google-chrome
+iina
+istat-menus
+keepassx
+kindle
+language-switcher
+lastpass
+leanote
+minecraft
+neteasemusic
+omnifocus
+omnigraffle
+omnioutliner
+omniplan
+openemu
+opera
+qsync-client
+sequel-pro
+slack
+spectacle
+steam
+tunnelblick
+virtualbox
+virtualbox-extension-pack
+x-lite
+xquartz
+yu-writer
+font-source-code-pro-for-powerline
+font-source-han-sans
+font-source-han-serif-el-m
+font-source-han-serif-sb-h
+font-source-sans-pro
+font-source-serif-pro
+font-sourcecodepro-nerd-font
+font-sourcecodepro-nerd-font-mono
+font-source-code-pro
+)
+
 # install xcode commandline tools
 gcc
 # install xcode and accept license
@@ -5,14 +91,19 @@ sudo xcodebuild -license accept
 
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap caskroom/cask
-brew tap caskroom/fonts
-brew tap d12frosted/emacs-plus
-brew install htop archey aria2 bash-completion csshx curl dos2unix figlet gsmartcontrol ipcalc lftp mysql nethack nmap p7zip pandoc python python3 sqlite squashfs sshrc tmux trash unrar wget you-get youtube-dl brew-cask-completion
-brew cask install iterm2 squirrel alfred cocoapacketanalyzer dropbox firefox gns3 google-chrome iina istat-menus keepassx kindle language-switcher leanote minecraft neteasemusic omnifocus omnigraffle omnioutliner omniplan openemu opera qsync-client sequel-pro slack spectacle steam tunnelblick virtualbox virtualbox-extension-pack x-lite xquartz yu-writer font-source-code-pro-for-powerline font-source-han-sans font-source-han-serif-el-m font-source-han-serif-sb-h font-source-sans-pro font-source-serif-pro font-sourcecodepro-nerd-font font-sourcecodepro-nerd-font-mono font-source-code-pro lastpass
-brew install macvim --with-override-system-vim
-brew install emacs-plus --with-natural-title-bar --without-spacemacs-icon
+
+for taps in ${homebrew_taps[@]}; do
+    brew tap $taps
+done
+
+for apps in ${homebrew_apps[@]}; do
+    brew install $apps
+done
 brew linkapps
+
+for apps in ${homebrew_cask_apps[@]}; do
+    brew install $apps
+done
 
 open '/usr/local/Caskroom/lastpass/latest/LastPass Installer/LastPass Installer.app'
 
