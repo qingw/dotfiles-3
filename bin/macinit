@@ -119,3 +119,6 @@ git remote add origin git@github.com:SteamedFish/macconfig.git
 git pull origin master
 git branch --set-upstream-to=origin/master master
 git submodule update --init
+
+# add crontab for NetEase AUTH
+echo "* * * * * (/Users/steamedfish/bin/auth 2>&1 >/dev/null)" | crontab
