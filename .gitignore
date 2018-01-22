@@ -6,6 +6,8 @@
 !.gitconfig
 !.gitignore
 
+!.config
+
 !.bashrc
 !.bash_profile
 
@@ -49,3 +51,6 @@
 !bin/gssh
 !bin/macflush
 !bin/macinit
+
+!.config/powerline
+!.config/powerline/config.json
