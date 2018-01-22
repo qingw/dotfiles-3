@@ -111,7 +111,7 @@ if has("gui_running")
   set cursorline
   hi cursorline guibg=#333333
   hi CursorColumn guibg=#333333
-  set guifont=Menlo\ for\ Powerline:h12
+  set guifont=Sauce\ Code\ Powerline:h12
 endif
 
 " name of the font to be used for :hardcopy
