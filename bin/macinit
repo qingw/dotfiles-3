@@ -2,7 +2,7 @@
 homebrew_taps=(
 caskroom/cask
 caskroom/fonts
-d12frosted/emacs-plus
+railwaycat/emacsmacport
 )
 
 homebrew_apps=(
@@ -40,11 +40,11 @@ you-get
 youtube-dl
 brew-cask-completion
 macvim --with-override-system-vim
-emacs-plus --with-natural-title-bar --without-spacemacs-icon
 )
 
 homebrew_cask_apps=(
 iterm2
+emacs-mac
 squirrel
 alfred
 cocoapacketanalyzer
