@@ -46,7 +46,7 @@ au FileType python setlocal iskeyword +=.,( | set dictionary+=xxx/pydiction/comp
 if has("mac")
   " HomeBrew's pip install to this location
   if filereadable("/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
-    source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+    set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
   endif
 elseif has("unix")
   " pip installes to home dir
