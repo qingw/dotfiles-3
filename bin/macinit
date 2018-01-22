@@ -86,6 +86,20 @@ font-sourcecodepro-nerd-font-mono
 font-source-code-pro
 )
 
+pip2_apps=(
+pymysql
+netaddr
+simplejson
+pyflakes
+pylint
+flake8
+requests
+powerline-status
+)
+
+pip3_apps=(
+)
+
 # install xcode commandline tools
 gcc
 # install xcode and accept license
@@ -105,6 +119,14 @@ brew linkapps
 
 for apps in ${homebrew_cask_apps[@]}; do
     brew cask install $apps
+done
+
+for apps in ${pip2_apps[@]}; do
+    pip2 install $apps
+done
+
+for apps in ${pip3_apps[@]}; do
+    pip3 install $apps
 done
 
 open '/usr/local/Caskroom/lastpass/latest/LastPass Installer/LastPass Installer.app'
