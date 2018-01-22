@@ -63,7 +63,7 @@ if &t_Co > 1 || has("gui_running")
   " highlight speling mistakes
   " set spell
   " list of accepted languages
-  set spelllang=en
+  set spelllang=en,cjk
   syntax on
   " Highlight space errors in C/C++ source files (Vim tip #935)
   if $VIM_HATE_SPACE_ERRORS != '0'
