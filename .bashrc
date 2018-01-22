@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # exports
-export CLICOLOR=true
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LESS="-R"
@@ -9,6 +8,14 @@ export CVS_RSH=ssh
 export EDITOR="vim"
 export MYSQL_PS1="(\u@\h) [\d]> "
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:~/bin
+
+# enable color support
+export CLICOLOR=true
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+elif [ -x /usr/local/bin/gdircolors ]; then
+    test -r ~/.dircolors && eval "$(gdircolors -b ~/.dircolors)" || eval "$(gdircolors -b)"
+fi
 
 # History
 export HISTCONTROL=ignoredups

@@ -6,6 +6,7 @@ d12frosted/emacs-plus
 )
 
 homebrew_apps=(
+coreutils
 htop
 archey
 neofetch
