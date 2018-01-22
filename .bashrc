@@ -30,6 +30,7 @@ export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT="%F %T"
 export HISTTIMEFORMAT="[%Y-%m-%d %H:%M:%S]  "
 export HISTSIZE=""
+shopt -s histappend
 
 # HomeBrew API tokens and other secret stuff
 source $HOME/.bashrc_secret
