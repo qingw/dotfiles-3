@@ -68,16 +68,16 @@ if &t_Co > 1 || has("gui_running")
   " Highlight space errors in C/C++ source files (Vim tip #935)
   if $VIM_HATE_SPACE_ERRORS != '0'
     let c_space_errors=1
-  endif  
+  endif
   " Show syntax highlighting attributes of character under cursor (Vim script #383)
-  map <Leader>a :call SyntaxAttr()<CR>  
+  map <Leader>a :call SyntaxAttr()<CR>
   set colorcolumn=81
 endif
 
 " 0, 1 or 2; when to use a status line for the last window
 set laststatus=2
 " alternate format to be used for a status line
-set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P  
+set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
 " make all windows the same size then adding/removing windows
 set equalalways
 " in which direction 'equalalways' works: "ver", "hor" or "both"
@@ -98,7 +98,7 @@ if has('mouse')
   " hide the mouse pointer while typing
   set mousehide
   " "extend", "popup" or "popup_setpos"; what the right mouse button is used for
-  set mousemodel=extend 
+  set mousemodel=extend
 endif
 
 if has("gui_running")
@@ -117,7 +117,7 @@ endif
 " name of the font to be used for :hardcopy
 " set printfont=Monaco
 " format of the header used for :hardcopy
-set printheader=%<%f%h%m%=Page\ %N 
+set printheader=%<%f%h%m%=Page\ %N
 " encoding used to print the PostScript file for :hardcopy
 "set printencoding=
 " the CJK character set to be used for CJK output from :hardcopy
