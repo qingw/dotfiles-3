@@ -54,3 +54,6 @@
 
 !.config/powerline
 !.config/powerline/config.json
+
+!.config/neofetch
+!.config/neofetch/config.conf

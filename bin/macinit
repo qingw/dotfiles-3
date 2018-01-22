@@ -8,6 +8,7 @@ d12frosted/emacs-plus
 homebrew_apps=(
 htop
 archey
+neofetch
 aria2
 bash-completion
 csshx

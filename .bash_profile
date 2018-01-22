@@ -6,7 +6,9 @@ if [ -n "$(command -v figlet)" ];then
     figlet -f doh -w 300 SteamedFish
 fi
 
-if [ -n "$(command -v archey)" ];then
+if [ -n "$(command -v neofetch)" ];then
+    neofetch
+elif [ -n "$(command -v archey)" ];then
     archey -c -o
 fi
 
