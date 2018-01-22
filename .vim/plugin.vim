@@ -54,6 +54,12 @@ elseif has("unix")
     source ~/.local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
   endif
 endif
+
+" fzf
+if filereadable("/usr/local/bin/fzf")
+  set rtp+=/usr/local/opt/fzf
+endif
+
 if ! has('gui_running')
     set ttimeoutlen=10
     augroup FastEscape
