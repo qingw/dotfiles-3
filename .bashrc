@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# do nothing if not running interactively
+
+case $- in
+    *i*) ;;
+    *) return;
+esac
+
 # exports
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
