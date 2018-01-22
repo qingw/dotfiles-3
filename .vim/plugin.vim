@@ -46,7 +46,7 @@ au FileType python setlocal iskeyword +=.,( | set dictionary+=xxx/pydiction/comp
 if has("mac")
   " HomeBrew's pip install to this location
   if filereadable("/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
-    "source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+    source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
   elseif filereadable("/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/Current/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
     source /usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/Current/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
   endif
