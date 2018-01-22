@@ -42,24 +42,6 @@ let g:Tex_ViewRule_pdf='evince'
 let g:pydiction_location = '/usr/share/pydiction/complete-dict'
 au FileType python setlocal iskeyword +=.,( | set dictionary+=xxx/pydiction/complete-dict
 
-" powerline
-if has("mac")
-  " HomeBrew's pip install to this location
-  if filereadable("/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
-    set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-  endif
-elseif has("unix")
-  " pip installes to home dir
-  if filereadable("~/.local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
-    source ~/.local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
-  endif
-endif
-
-" fzf
-if filereadable("/usr/local/bin/fzf")
-  set rtp+=/usr/local/opt/fzf
-endif
-
 if ! has('gui_running')
     set ttimeoutlen=10
     augroup FastEscape

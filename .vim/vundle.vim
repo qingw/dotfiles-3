@@ -42,3 +42,21 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" powerline
+if has("mac")
+  " HomeBrew's pip install to this location
+  if filereadable("/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
+    set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+  endif
+elseif has("unix")
+  " pip installes to home dir
+  if filereadable("~/.local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
+    source ~/.local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+  endif
+endif
+
+" fzf
+if filereadable("/usr/local/bin/fzf")
+  set rtp+=/usr/local/opt/fzf
+endif
