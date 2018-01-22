@@ -104,7 +104,7 @@ done
 brew linkapps
 
 for apps in ${homebrew_cask_apps[@]}; do
-    brew install $apps
+    brew cask install $apps
 done
 
 open '/usr/local/Caskroom/lastpass/latest/LastPass Installer/LastPass Installer.app'
