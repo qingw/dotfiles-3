@@ -6,8 +6,8 @@ echo "Updating HomeBrew"
 brew update && brew upgrade && brew cleanup
 
 echo "Updating Pip"
-pip2 list | cut -d ' ' -f 1 | xargs -n1 pip2 install -U
-pip3 list | cut -d ' ' -f 1 | xargs -n1 pip3 install -U
+pip2 list --format=legacy | cut -d ' ' -f 1 | xargs -n1 pip2 install -U
+pip3 list --format=legacy | cut -d ' ' -f 1 | xargs -n1 pip3 install -U
 
 echo "updating cask"
 brew cask upgrade && brew cask cleanup
