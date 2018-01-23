@@ -55,7 +55,8 @@ fi
 _POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/SteamedFish/ConTeXt ~/ConTeXt"
 for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
     if [ -d "${_CONTEXT_PATH}" ]; then
-        source ${_CONTEXT_PATH}/tex/setuptex
+        #source ${_CONTEXT_PATH}/tex/setuptex
+        export PATH=$PATH:${_CONTEXT_PATH}/tex/texmf-osx-64/bin
         OSFONTDIR="/Library/Fonts/;/System/Library/Fonts/;$HOME/Library/Fonts/"
     fi
     break
