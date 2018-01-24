@@ -27,7 +27,6 @@ for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
         rsync -av rsync://contextgarden.net/minimals/setup/first-setup.sh .
         bash first-setup.sh --modules=all
     fi
-    break
 done
 mtxrun --scripts fonts --reload
 unset _POSSIBLE_PATH
