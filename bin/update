@@ -13,7 +13,7 @@ echo "updating cask"
 brew cask upgrade && brew cask cleanup
 
 echo "updating vim plugins"
-vim +PluginInstall +qall
+vim +SPUpdate +qall
 
 echo "updating git repo"
 git pull
