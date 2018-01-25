@@ -19,6 +19,9 @@ echo "updating git repo"
 git pull
 git submodule update --recursive --remote
 
+echo "updating mac appstore"
+mas upgrade
+
 echo "updating ConTeXt"
 _POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/SteamedFish/ConTeXt ~/ConTeXt"
 for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do

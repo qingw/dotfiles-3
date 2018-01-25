@@ -41,6 +41,7 @@ youtube-dl
 brew-cask-completion
 macvim --with-override-system-vim
 vitorgalvao/tiny-scripts/cask-repair
+mas
 )
 
 homebrew_cask_apps=(
