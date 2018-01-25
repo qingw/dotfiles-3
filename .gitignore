@@ -1,6 +1,6 @@
 # remove everything
 *
-# not remove the following 
+# not remove the following
 
 !.gitmodules
 !.gitconfig
@@ -23,6 +23,8 @@
 !.vim
 !.SpaceVim.d
 !.SpaceVim.d/init.vim
+
+!.editorconfig
 
 !Library
 !Library/Rime
