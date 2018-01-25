@@ -21,19 +21,8 @@
 !.spacemacs.d/BlueFish.png
 
 !.vim
-!.vimrc
-.vim/undo
-.vim/backup
-.netrwhist
-!.vim/autocmd.vim
-!.vim/keymaps.vim
-!.vim/macvim.vim
-!.vim/plugin.vim
-!.vim/scripts.vim
-!.vim/settings.vim
-!.vim/vundle.vim
-!.vim/bundle
-!.vim/bundle/Vundle.vim
+!.SpaceVim.d
+!.SpaceVim.d/init.vim
 
 !Library
 !Library/Rime
