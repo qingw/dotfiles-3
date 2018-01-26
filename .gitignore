@@ -50,5 +50,5 @@
 !.config/neofetch/config.conf
 
 !.cider
-!.cider/bootstrap.json
+!.cider/bootstrap.yaml
 !.cider/defaults.yaml
