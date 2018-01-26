@@ -48,3 +48,6 @@
 
 !.config/neofetch
 !.config/neofetch/config.conf
+
+!.cider
+!.cider/bootstrap.json
