@@ -30,8 +30,6 @@ sudo xcodebuild -license accept
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install python
-
 for apps in ${pip2_apps[@]}; do
     pip2 install $apps
 done
@@ -52,8 +50,7 @@ curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utili
 git clone git@github.com:SteamedFish/dotfiles.git
 cd ~/dotfiles && git submodule update --init --recursive --remote
 
-ln -s dotfiles/.cider ~/.cider
-cider restore
+python ciderrestore.py
 
 if [[ "$(kextstat | grep "FakeSMC")" != "" ]]; then
     # disable computer sleep
