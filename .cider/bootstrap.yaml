@@ -99,3 +99,20 @@ taps:
 - 'caskroom/cask'
 - 'caskroom/fonts'
 - 'railwaycat/emacsmacport'
+symlinks:
+  ".gitconfig": "~"
+  ".gitignore": "~"
+  ".bashrc": "~"
+  ".bash_profile": "~"
+  ".emacs.d": "~"
+  ".spacemacs": "~"
+  ".spacemacs.d": "~"
+  ".vim": "~"
+  ".SpaceVim.d": "~"
+  ".editorconfig": "~"
+  ".lftprc": "~"
+  ".cider": "~"
+  "bin/*": "~/bin/"
+  ".ssh/*": "~/.ssh/"
+  ".config/*": "~/.config/"
+  "Library/Rime/*": "~/Library/Rime/"
