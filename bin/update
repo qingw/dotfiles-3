@@ -18,6 +18,7 @@ echo "updating cask"
 brew cask upgrade && brew cask cleanup
 
 echo "updating git repo"
+cd ~/dotfiles
 git pull
 git submodule update --recursive --remote
 git commit -a -m "daily update"
