@@ -105,7 +105,6 @@ symlinks:
   ".bashrc": "~"
   ".bash_profile": "~"
   ".emacs.d": "~"
-  ".spacemacs": "~"
   ".spacemacs.d": "~"
   ".vim": "~"
   ".SpaceVim.d": "~"
