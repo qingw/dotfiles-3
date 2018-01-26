@@ -15,6 +15,19 @@ powerline-status
 pip3_apps=(
 )
 
+mas_apps=(
+Numbers
+Pixelmator
+WeChat
+PopClip
+Xcode
+Pages
+iPack
+Keynote
+iThoughtsX
+Tweetbot
+)
+
 dirs=(
 ~/bin
 ~/.config
@@ -51,6 +64,10 @@ git clone git@github.com:SteamedFish/dotfiles.git
 cd ~/dotfiles && git submodule update --init --recursive --remote
 
 python ciderrestore.py
+
+for apps in ${mas_apps[@]}; do
+    mas install $apps
+done
 
 if [[ "$(kextstat | grep "FakeSMC")" != "" ]]; then
     # disable computer sleep
