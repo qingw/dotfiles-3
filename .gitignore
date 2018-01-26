@@ -51,3 +51,4 @@
 
 !.cider
 !.cider/bootstrap.json
+!.cider/defaults.json
