@@ -51,4 +51,4 @@
 
 !.cider
 !.cider/bootstrap.json
-!.cider/defaults.json
+!.cider/defaults.yaml

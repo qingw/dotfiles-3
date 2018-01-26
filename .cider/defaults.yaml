@@ -1,0 +1,9 @@
+NSGlobalDomain:
+    # Expand save panel by default
+    NSNavPanelExpandedStateForSaveMode: true
+    NSNavPanelExpandedStateForSaveMode2: true
+    # Expand print panel by default
+    PMPrintingExpandedStateForPrint: true
+    PMPrintingExpandedStateForPrint2: true
+    # Save to disk instead of iCloud by default
+    PMPrintingExpandedStateForPrint: true
