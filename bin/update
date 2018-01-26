@@ -2,7 +2,7 @@
 
 cd ~
 
-if [[ "$(kextstat | grep "FakeSMC")" != "" ]]; then
+if [[ "$(kextstat | grep "FakeSMC")" == "" ]]; then
     echo "updating system"
     sudo softwareupdate -i -a
 fi
