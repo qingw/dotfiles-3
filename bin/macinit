@@ -1,108 +1,5 @@
-# lists
-homebrew_taps=(
-caskroom/cask
-caskroom/fonts
-railwaycat/emacsmacport
-)
-
-homebrew_apps=(
-coreutils
-htop
-archey
-neofetch
-aria2
-bash-completion
-csshx
-curl
-fzf
-dos2unix
-figlet
-gsmartcontrol
-ipcalc
-lftp
-mysql
-nethack
-nmap
-p7zip
-pandoc
-python
-python3
-sqlite
-squashfs
-sshrc
-tmux
-mtr
-tree
-trash
-unrar
-wget
-you-get
-youtube-dl
-brew-cask-completion
-macvim --with-override-system-vim
-vitorgalvao/tiny-scripts/cask-repair
-mas
-)
-
-homebrew_cask_apps=(
-iterm2
-emacs-mac
-squirrel
-alfred
-cocoapacketanalyzer
-dropbox
-firefox
-gns3
-google-chrome
-iina
-istat-menus
-keepassx
-kindle
-language-switcher
-lastpass
-leanote
-minecraft
-neteasemusic
-omnifocus
-omnigraffle
-omnioutliner
-omniplan
-openemu
-opera
-qsync-client
-sequel-pro
-wireshark
-slack
-spectacle
-steam
-tunnelblick
-virtualbox
-virtualbox-extension-pack
-x-lite
-xquartz
-yu-writer
-android-platform-tools
-google-earth-pro
-suspicious-package
-qlcolorcode
-qlstephen
-qlmarkdown
-quicklook-json
-qlprettypatch
-quicklook-csv
-webpquicklook
-font-source-code-pro-for-powerline
-font-source-han-sans
-font-source-han-serif-el-m
-font-source-han-serif-sb-h
-font-source-sans-pro
-font-source-serif-pro
-font-sourcecodepro-nerd-font
-font-sourcecodepro-nerd-font-mono
-font-source-code-pro
-)
-
 pip2_apps=(
+cider
 pymysql
 netaddr
 simplejson
@@ -124,18 +21,7 @@ sudo xcodebuild -license accept
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-for taps in ${homebrew_taps[@]}; do
-    brew tap $taps
-done
-
-for apps in ${homebrew_apps[@]}; do
-    brew install $apps
-done
-brew linkapps
-
-for apps in ${homebrew_cask_apps[@]}; do
-    brew cask install $apps
-done
+brew install python
 
 for apps in ${pip2_apps[@]}; do
     pip2 install $apps
@@ -144,8 +30,6 @@ done
 for apps in ${pip3_apps[@]}; do
     pip3 install $apps
 done
-
-open '/usr/local/Caskroom/lastpass/latest/LastPass Installer/LastPass Installer.app'
 
 # iTerm shell integration
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
@@ -157,6 +41,9 @@ git remote add origin git@github.com:SteamedFish/macconfig.git
 git pull origin master
 git branch --set-upstream-to=origin/master master
 git submodule update --init
+
+cider restore
+open '/usr/local/Caskroom/lastpass/latest/LastPass Installer/LastPass Installer.app'
 
 # add crontab for NetEase AUTH
 echo "* * * * * (/Users/steamedfish/bin/auth 2>&1 >/dev/null)" | crontab
