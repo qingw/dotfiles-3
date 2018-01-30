@@ -35,6 +35,12 @@ dirs=(
 ~/.ssh
 )
 
+# check if ssh key exist
+if ! [ -f "~/.ssh/id_rsa" ]; then
+    echo "please copy your ssh key first"
+    exit 1
+fi
+
 # get sudo access
 echo "please input sudo password"
 sudo /usr/bin/true
