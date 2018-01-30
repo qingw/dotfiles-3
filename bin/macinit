@@ -71,6 +71,11 @@ sudo xcodebuild -license accept
 git clone git@github.com:SteamedFish/dotfiles.git
 cd ~/dotfiles && git submodule update --init --recursive --remote
 
+install Xcode
+/usr/local/bin/brew install mas
+xcode_id=$(/usr/local/bin/mas search Xcode | /usr/bin/grep -E '^[0-9]* *Xcode$' | /usr/bin/awk '{print $1}')
+/usr/local/bin/mas install ${xcode_id}
+
 # setup cider
 /usr/local/bin/brew install python
 /usr/local/bin/pip2 install cider
