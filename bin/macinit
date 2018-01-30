@@ -116,4 +116,6 @@ fi
 open '/usr/local/Caskroom/lastpass/latest/LastPass Installer/LastPass Installer.app'
 
 # add crontab for NetEase AUTH
-echo "* * * * * (/Users/steamedfish/bin/auth 2>&1 >/dev/null)" | crontab
+if /sbin/ping -q -c 3 ita.netease.com > /dev/null ; then
+    echo "* * * * * (/Users/steamedfish/bin/auth 2>&1 >/dev/null)" | crontab
+fi
