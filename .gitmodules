@@ -4,6 +4,3 @@
 [submodule ".vim"]
 	path = .vim
 	url = https://github.com/SpaceVim/SpaceVim.git
-[submodule "cider"]
-	path = cider
-	url = https://github.com/msanders/cider.git
