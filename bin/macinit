@@ -81,6 +81,9 @@ cd ~/dotfiles && git submodule update --init --recursive --remote
 
 # install Xcode
 /usr/local/bin/brew install mas
+if ! /usr/local/bin/mas account; then
+    /usr/local/bin/mas signin steamedfish@me.com
+fi
 xcode_id=$(/usr/local/bin/mas search Xcode | /usr/bin/grep -E '^[0-9]* *Xcode$' | /usr/bin/awk '{print $1}')
 /usr/local/bin/mas install ${xcode_id}
 
