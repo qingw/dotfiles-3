@@ -62,7 +62,7 @@ if ! /usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables; then
     exit 1
 fi
 
-# install xcode and accept license
+# accept Xcode license
 sudo xcodebuild -license accept
 
 # install homebrew
