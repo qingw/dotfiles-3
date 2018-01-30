@@ -72,7 +72,9 @@ fi
 sudo xcodebuild -license accept
 
 # install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if ! [ -f "/usr/local/bin/brew" ]; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 git clone git@github.com:SteamedFish/dotfiles.git
 cd ~/dotfiles && git submodule update --init --recursive --remote
