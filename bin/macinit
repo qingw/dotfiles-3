@@ -10,6 +10,8 @@ pylint
 flake8
 requests
 powerline-status
+celery[redis]
+sqlalchemy
 )
 
 pip3_apps=(
