@@ -60,7 +60,7 @@ if ! /usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables; then
     sudo /usr/bin/touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
     sudo /usr/sbin/softwareupdate -i "$(/usr/sbin/softwareupdate -l | /usr/bin/grep -B 1 -E "Command Line (Developer|Tools)" | /usr/bin/awk -F"*" '/^ +\\*/ {print $2}' | /usr/bin/sed 's/^ *//' | /usr/bin/tail -n1)"
     sudo /bin/rm -f /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
-    sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
+    # sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
 fi
 
 # if ! [ -d "/Library/Developer/CommandLineTools" ]; then
