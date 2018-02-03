@@ -1,5 +1,20 @@
 let g:spacevim_enable_debug = 1
 let g:spacevim_realtime_leader_guide = 1
+let g:spacevim_enable_vimfiler_welcome = 1
+let g:spacevim_enable_vimfiler_gitstatus = 1
+let g:spacevim_enable_vimfiler_filetypeicon = 1
+let g:spacevim_enable_tabline_filetype_icon = 1
+let g:spacevim_enable_statusline_display_mode = 1
+let g:spacevim_enable_os_fileformat_icon = 1
+let g:spacevim_buffer_index_type = 1
+let g:spacevim_max_column = 80
+let g:spacevim_colorscheme = 'solarized'
+let g:spacevim_colorscheme_bg = 'dark'
+let g:spacevim_relativenumber = 0
+let g:spacevim_enable_googlesuggest = 1
+let g:spacevim_github_username = "SteamedFish"
+let g:spacevim_guifont = 'SauceCodePro\ Nerd\ Font:h12'
+
 call SpaceVim#layers#load('lang#javascript')
 call SpaceVim#layers#load('lang#perl')
 call SpaceVim#layers#load('lang#php')
@@ -29,18 +44,10 @@ call SpaceVim#layers#load('shell')
 call SpaceVim#layers#load('tags')
 call SpaceVim#layers#load('tumx')
 call SpaceVim#layers#load('ui')
-let g:spacevim_enable_vimfiler_welcome = 1
-let g:deoplete#auto_complete_delay = 150
-let g:spacevim_enable_tabline_filetype_icon = 1
-let g:spacevim_enable_statusline_display_mode = 1
-let g:spacevim_enable_os_fileformat_icon = 1
-let g:spacevim_buffer_index_type = 1
-let g:neomake_vim_enabled_makers = []
-let g:spacevim_max_column = 80
-let g:spacevim_colorscheme = 'solarized'
-let g:spacevim_colorscheme_bg = 'dark'
-let g:spacevim_relativenumber = 0
 
+let g:deoplete#auto_complete_delay = 150
+
+let g:neomake_vim_enabled_makers = []
 if executable('vimlint')
     call add(g:neomake_vim_enabled_makers, 'vimlint')
 endif
@@ -53,13 +60,6 @@ if has('python3')
 endif
 let g:clang2_placeholder_next = ''
 let g:clang2_placeholder_prev = ''
-
-" let g:spacevim_custom_plugins = [
-    " ['vim-pandoc/vim-pandoc'],
-    " ['vim-pandoc/vim-pandoc-syntax'],
-" ]
-
-let g:spacevim_guifont = 'SauceCodePro\ Nerd\ Font:h12'
 
 set list
 set listchars=tab:➟➟,trail:❚,extends:>
