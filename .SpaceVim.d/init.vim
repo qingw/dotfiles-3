@@ -39,6 +39,7 @@ let g:neomake_vim_enabled_makers = []
 let g:spacevim_max_column = 80
 let g:spacevim_colorscheme = 'solarized'
 let g:spacevim_colorscheme_bg = 'dark'
+let g:spacevim_relativenumber = 0
 
 if executable('vimlint')
     call add(g:neomake_vim_enabled_makers, 'vimlint')
@@ -64,7 +65,6 @@ set list
 set listchars=tab:➟➟,trail:❚,extends:>
 set spelllang=en,cjk
 set fileencodings=ucs-bom,utf-8,gbk,cp936,default,latin1
-set norelativenumber
 
 if has("gui_macvim")
     set transparency=15
