@@ -58,8 +58,8 @@ for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
         #source ${_CONTEXT_PATH}/tex/setuptex
         export PATH=$PATH:${_CONTEXT_PATH}/tex/texmf-osx-64/bin
         OSFONTDIR="/Library/Fonts/;/System/Library/Fonts/;$HOME/Library/Fonts/"
+        break
     fi
-    break
 done
 unset _POSSIBLE_PATH
 unset _CONTEXT_PATH
