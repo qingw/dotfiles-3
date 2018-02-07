@@ -52,7 +52,7 @@ if [ -f /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline
 fi
 
 # ConTeXt minimals
-_POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/MacData/ConTeXt /Volumes/SteamedFish/ConTeXt ~/ConTeXt"
+_POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/MacData/ConTeXt /Volumes/SteamedFish/ConTeXt $HOME/ConTeXt"
 for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
     if [ -d "${_CONTEXT_PATH}" ]; then
         #source ${_CONTEXT_PATH}/tex/setuptex
