@@ -31,7 +31,7 @@ echo "updating mac appstore"
 mas upgrade
 
 echo "updating ConTeXt"
-_POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/MacData/ConTeXt /Volumes/SteamedFish/ConTeXt ~/ConTeXt"
+_POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/MacData/ConTeXt /Volumes/SteamedFish/ConTeXt $HOME/ConTeXt"
 for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
     if [ -d "${_CONTEXT_PATH}" ]; then
         cd ${_CONTEXT_PATH}
