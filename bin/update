@@ -21,8 +21,8 @@ echo "updating git repo"
 cd ~/dotfiles
 git pull
 git submodule update --recursive --remote
-git commit -a -m "daily update" || /bin/true
-git push || /bin/true
+git commit -a -m "daily update" || /usr/bin/true
+git push || /usr/bin/true
 
 echo "updating vim plugins"
 vim +SPUpdate +qall
