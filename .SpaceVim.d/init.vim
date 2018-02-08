@@ -62,7 +62,7 @@ let g:clang2_placeholder_next = ''
 let g:clang2_placeholder_prev = ''
 
 set list
-set listchars=tab:➟➟,trail:❚,extends:>
+set listchars=tab:⇀⇀,trail:█,extends:>
 set spelllang=en,cjk
 set fileencodings=ucs-bom,utf-8,gbk,cp936,default,latin1
 
