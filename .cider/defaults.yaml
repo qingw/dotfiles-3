@@ -21,3 +21,8 @@ NSGlobalDomain:
 com.apple.systempreferences:
     # no resume windows when boot
     NSQuitAlwaysKeepsWindows: false
+com.apple.finder:
+    ShowPathbar: true
+    ShowPreviewPane: true
+    ShowSidebar: true
+    ShowStatusBar: true
