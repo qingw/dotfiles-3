@@ -7,3 +7,17 @@ NSGlobalDomain:
     PMPrintingExpandedStateForPrint2: true
     # Save to disk instead of iCloud by default
     PMPrintingExpandedStateForPrint: true
+    # Display ASCII control characters
+    NSTextShowsControlCharacters: true
+    # Disable "smart" substitution
+    NSAutomaticDashSubstitutionEnabled: false
+    NSAutomaticCapitalizationEnabled: false
+    NSAutomaticPeriodSubstitutionEnabled: false
+    NSAutomaticQuoteSubstitutionEnabled: false
+    NSAutomaticSpellingCorrectionEnabled: false
+    NSAutomaticTextCompletionEnabled: false
+    # no natual mouse scrolling
+    com.apple.swipescrolldirection: false
+com.apple.systempreferences:
+    # no resume windows when boot
+    NSQuitAlwaysKeepsWindows: false
