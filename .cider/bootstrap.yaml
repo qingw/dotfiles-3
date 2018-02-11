@@ -89,6 +89,7 @@ formulas:
 - 'tmux'
 - 'trash'
 - 'tree'
+- 'telnet'
 - 'unrar'
 - 'vitorgalvao/tiny-scripts/cask-repair'
 - 'wget'
