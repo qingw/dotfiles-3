@@ -80,6 +80,7 @@ formulas:
 - 'nmap'
 - 'p7zip'
 - 'pandoc'
+- 'percona-toolkit'
 - 'python'
 - 'python3'
 - 'socat'
