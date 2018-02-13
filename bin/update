@@ -8,7 +8,9 @@ if [[ "$(kextstat | grep "FakeSMC")" == "" ]]; then
 fi
 
 echo "Updating HomeBrew"
-brew update && brew upgrade && brew cleanup
+brew update
+brew upgrade
+brew cleanup
 
 echo "Updating Pip"
 pip2 list --format=legacy | cut -d ' ' -f 1 | xargs -n1 pip2 install -U
