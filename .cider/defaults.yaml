@@ -26,3 +26,17 @@ com.apple.finder:
     ShowPreviewPane: true
     ShowSidebar: true
     ShowStatusBar: true
+com.apple.Safari:
+    AutoOpenSafeDownloads: false
+    AutoFillCreditCardData: false
+    AutoFillFromAddressBook: false
+    AutoFillMiscellaneousForms: false
+    AutoFillPasswords: false
+    IncludeInternalDebugMenu: true
+    IncludeDevelopMenu: true
+    ShowFullURLInSmartSearchField: true
+    ShowOverlayStatusBar: true
+    AlwaysRestoreSessionAtLaunch: true
+    AlwaysShowTabBar: true
+    SendDoNotTrackHTTPHeader: true
+    WebKitDefaultTextEncodingName: "utf-8"
