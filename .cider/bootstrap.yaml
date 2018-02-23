@@ -117,3 +117,5 @@ symlinks:
   ".ssh/*": "~/.ssh/"
   ".config/*": "~/.config/"
   "Library/Rime/*": "~/Library/Rime/"
+  ".oh-my-zsh": "~/.oh-my-zsh"
+  ".zshrc": "~/.zshrc"
