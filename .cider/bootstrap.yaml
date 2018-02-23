@@ -81,6 +81,7 @@ formulas:
 - nmap
 - p7zip
 - pandoc
+- parallel
 - percona-toolkit
 - python
 - python3
@@ -88,10 +89,10 @@ formulas:
 - sqlite
 - squashfs
 - sshrc
+- telnet
 - tmux
 - trash
 - tree
-- telnet
 - unrar
 - vitorgalvao/tiny-scripts/cask-repair
 - wget
