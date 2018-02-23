@@ -103,6 +103,7 @@ symlinks:
     .bashrc: '~'
     .cider: '~'
     .config/*: ~/.config/
+    .curlrc: '~'
     .editorconfig: '~'
     .emacs.d: '~'
     .gitconfig: '~'
