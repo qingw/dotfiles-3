@@ -83,6 +83,7 @@ formulas:
 - pandoc
 - parallel
 - percona-toolkit
+- progress
 - python
 - python3
 - socat
