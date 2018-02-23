@@ -1,121 +1,121 @@
 after-scripts:
-- 'brew linkapps'
+- brew linkapps
 casks:
-- 'iterm2'
-- 'emacs-mac'
-- 'squirrel'
-- 'alfred'
-- 'cocoapacketanalyzer'
-- 'dropbox'
-- 'firefox'
-- 'flash-player'
-- 'gns3'
-- 'google-chrome'
-- 'iina'
-- 'istat-menus'
-- 'keepassx'
-- 'kindle'
-- 'language-switcher'
-- 'lastpass'
-- 'leanote'
-- 'minecraft'
-- 'neteasemusic'
-- 'omnifocus'
-- 'omnigraffle'
-- 'omnioutliner'
-- 'omniplan'
-- 'openemu'
-- 'opera'
-- 'qsync-client'
-- 'sequel-pro'
-- 'wireshark'
-- 'slack'
-- 'spectacle'
-- 'steam'
-- 'tunnelblick'
-- 'virtualbox'
-- 'virtualbox-extension-pack'
-- 'x-lite'
-- 'xquartz'
-- 'yu-writer'
-- 'android-platform-tools'
-- 'google-earth-pro'
-- 'suspicious-package'
-- 'qlcolorcode'
-- 'qlstephen'
-- 'qlmarkdown'
-- 'quicklook-json'
-- 'qlprettypatch'
-- 'quicklook-csv'
-- 'webpquicklook'
-- 'font-source-code-pro-for-powerline'
-- 'font-source-han-sans'
-- 'font-source-han-serif-el-m'
-- 'font-source-han-serif-sb-h'
-- 'font-source-sans-pro'
-- 'font-source-serif-pro'
-- 'font-sourcecodepro-nerd-font'
-- 'font-sourcecodepro-nerd-font-mono'
-- 'font-source-code-pro'
+- alfred
+- android-platform-tools
+- cocoapacketanalyzer
+- dropbox
+- emacs-mac
+- firefox
+- flash-player
+- font-source-code-pro
+- font-source-code-pro-for-powerline
+- font-source-han-sans
+- font-source-han-serif-el-m
+- font-source-han-serif-sb-h
+- font-source-sans-pro
+- font-source-serif-pro
+- font-sourcecodepro-nerd-font
+- font-sourcecodepro-nerd-font-mono
+- gns3
+- google-chrome
+- google-earth-pro
+- iina
+- istat-menus
+- iterm2
+- keepassx
+- kindle
+- language-switcher
+- lastpass
+- leanote
+- minecraft
+- neteasemusic
+- omnifocus
+- omnigraffle
+- omnioutliner
+- omniplan
+- openemu
+- opera
+- qlcolorcode
+- qlmarkdown
+- qlprettypatch
+- qlstephen
+- qsync-client
+- quicklook-csv
+- quicklook-json
+- sequel-pro
+- slack
+- spectacle
+- squirrel
+- steam
+- suspicious-package
+- tunnelblick
+- virtualbox
+- virtualbox-extension-pack
+- webpquicklook
+- wireshark
+- x-lite
+- xquartz
+- yu-writer
 formulas:
-- 'archey'
-- 'aria2'
-- 'bash-completion'
-- 'brew-cask-completion'
-- 'coreutils'
-- 'csshx'
-- 'curl'
-- 'dos2unix'
-- 'figlet'
-- 'fzf'
-- 'git'
-- 'htop'
-- 'ipcalc'
-- 'lftp'
-- 'macvim --with-override-system-vim'
-- 'mas'
-- 'mtr'
-- 'mysql'
-- 'neofetch'
-- 'nethack'
-- 'nmap'
-- 'p7zip'
-- 'pandoc'
-- 'percona-toolkit'
-- 'python'
-- 'python3'
-- 'socat'
-- 'sqlite'
-- 'squashfs'
-- 'sshrc'
-- 'tmux'
-- 'trash'
-- 'tree'
-- 'telnet'
-- 'unrar'
-- 'vitorgalvao/tiny-scripts/cask-repair'
-- 'wget'
-- 'you-get'
-- 'youtube-dl'
-taps:
-- 'caskroom/cask'
-- 'caskroom/fonts'
-- 'railwaycat/emacsmacport'
+- archey
+- aria2
+- bash-completion
+- brew-cask-completion
+- coreutils
+- csshx
+- curl
+- dos2unix
+- figlet
+- fzf
+- git
+- htop
+- ipcalc
+- lftp
+- macvim --with-override-system-vim
+- mas
+- mtr
+- mysql
+- neofetch
+- nethack
+- nmap
+- p7zip
+- pandoc
+- percona-toolkit
+- python
+- python3
+- socat
+- sqlite
+- squashfs
+- sshrc
+- tmux
+- trash
+- tree
+- telnet
+- unrar
+- vitorgalvao/tiny-scripts/cask-repair
+- wget
+- you-get
+- youtube-dl
 symlinks:
-  ".gitconfig": "~"
-  ".gitignore": "~"
-  ".bashrc": "~"
-  ".bash_profile": "~"
-  ".emacs.d": "~"
-  ".spacemacs.d": "~"
-  ".vim": "~"
-  ".SpaceVim.d": "~"
-  ".editorconfig": "~"
-  ".lftprc": "~"
-  ".cider": "~"
-  "bin/*": "~/bin/"
-  ".ssh/*": "~/.ssh/"
-  ".config/*": "~/.config/"
-  "Library/Rime/*": "~/Library/Rime/"
-  ".oh-my-zsh": "~/.oh-my-zsh"
-  ".zshrc": "~/.zshrc"
+    .SpaceVim.d: '~'
+    .bash_profile: '~'
+    .bashrc: '~'
+    .cider: '~'
+    .config/*: ~/.config/
+    .editorconfig: '~'
+    .emacs.d: '~'
+    .gitconfig: '~'
+    .gitignore: '~'
+    .lftprc: '~'
+    .oh-my-zsh: ~/.oh-my-zsh
+    .spacemacs.d: '~'
+    .ssh/*: ~/.ssh/
+    .vim: '~'
+    .zshrc: ~/.zshrc
+    Library/Rime/*: ~/Library/Rime/
+    bin/*: ~/bin/
+taps:
+- caskroom/cask
+- caskroom/fonts
+- railwaycat/emacsmacport
