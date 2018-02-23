@@ -1,3 +1,7 @@
 [user]
-	name = SteamedFish
-	email = i@steamedfish.org
+    name = SteamedFish
+    email = i@steamedfish.org
+[github]
+    user = SteamedFish
+[grep]
+    lineNumber = true
