@@ -45,3 +45,11 @@ done
 mtxrun --scripts fonts --reload
 unset _POSSIBLE_PATH
 unset _CONTEXT_PATH
+
+echo "updating optools"
+
+if [ -d "~/optools" ]; then
+    cd "~/optools"
+    git pull
+    git submodule update --remote --recursive
+fi
