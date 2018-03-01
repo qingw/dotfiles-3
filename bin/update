@@ -21,11 +21,13 @@ brew cask upgrade
 brew cask cleanup
 
 echo "updating git repo"
-cd ~/dotfiles
-git pull
-git submodule update --recursive --remote
-git commit -a -m "daily update" || /usr/bin/true
-git push || /usr/bin/true
+if [ -d "~/dotfiles/" ]; then
+    cd ~/dotfiles
+    git pull
+    git submodule update --recursive --remote
+    git commit -a -m "daily update" || /usr/bin/true
+    git push || /usr/bin/true
+fi
 
 echo "updating vim plugins"
 vim +SPUpdate +qall
