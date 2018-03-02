@@ -91,13 +91,14 @@ xcode_id=$(/usr/local/bin/mas search Xcode | /usr/bin/grep -E '^[0-9]* *Xcode$' 
 
 # setup cider
 /usr/local/bin/brew install python
-/usr/local/bin/pip2 install cider
+/usr/local/bin/brew install python@2
+/usr/local/opt/python@2/bin/pip2 install cider
 ln -s dotfiles/.cider ~/.cider
 echo "restoreing cider"
 /usr/local/bin/cider restore
 
 for apps in ${pip2_apps[@]}; do
-    pip2 install $apps
+    /usr/local/opt/python@2/bin/pip2 install @apps
 done
 
 for apps in ${pip3_apps[@]}; do

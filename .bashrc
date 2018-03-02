@@ -14,7 +14,7 @@ export LESS="-R"
 export CVS_RSH=ssh
 export EDITOR="vim"
 export MYSQL_PS1="(\u@\h) [\d]> "
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:~/bin
+export PATH=/usr/local/opt/python@2/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:~/bin
 
 # enable color support
 export CLICOLOR=true

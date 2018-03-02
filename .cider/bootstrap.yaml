@@ -91,7 +91,7 @@ formulas:
 - percona-toolkit
 - progress
 - python
-- python3
+- python@2
 - socat
 - sqlite
 - squashfs
