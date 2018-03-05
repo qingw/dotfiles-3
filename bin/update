@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-cd ~
+cd $HOME
 
 if [[ "$(kextstat | grep "FakeSMC")" == "" ]]; then
     echo "updating system"
@@ -21,8 +21,8 @@ brew cask upgrade
 brew cask cleanup
 
 echo "updating git repo"
-if [ -d "~/dotfiles/" ]; then
-    cd ~/dotfiles
+if [ -d "$HOME/dotfiles" ]; then
+    cd $HOME/dotfiles
     git pull
     git submodule update --recursive --remote
     git commit -a -m "daily update" || /usr/bin/true
@@ -50,8 +50,8 @@ unset _CONTEXT_PATH
 
 echo "updating optools"
 
-if [ -d "~/optools" ]; then
-    cd "~/optools"
+if [ -d "$HOME/optools" ]; then
+    cd "$HOME/optools"
     git pull
     git submodule update --remote --recursive
 fi
