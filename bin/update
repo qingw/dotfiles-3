@@ -49,9 +49,12 @@ unset _POSSIBLE_PATH
 unset _CONTEXT_PATH
 
 echo "updating optools"
-
-if [ -d "$HOME/optools" ]; then
-    cd "$HOME/optools"
-    git pull
-    git submodule update --remote --recursive
+if [ -d "$HOME/dumbo" ]; then
+    for _PROJECT in $(ls "$HOME/dumbo"); do
+        if [ -d "$HOME/dumbo/${_PROJECT}/.git" ]; then
+            cd "$HOME/dumbo/${_PROJECT}"
+            git pull
+            git submodule update --remote --recursive
+        fi
+    done
 fi
