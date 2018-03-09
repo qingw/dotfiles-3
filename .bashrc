@@ -15,8 +15,6 @@ export CVS_RSH=ssh
 export EDITOR="vim"
 export MYSQL_PS1="(\u@\h) [\d]> "
 export PATH=/usr/local/opt/python@2/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:~/bin
-# required for SpaceVIM with MacVIM GUI
-export PYTHONHOME=/usr/local/Frameworks/Python.framework/Versions/Current/
 
 # enable color support
 export CLICOLOR=true
