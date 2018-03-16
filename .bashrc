@@ -89,3 +89,4 @@ alias rm='rm -iv'
 alias pip='pip2'
 alias python='python2'
 alias emacs="emacsclient -n"
+alias dumbo="python2 $HOME/dumbo/optools/dumbo.py"
