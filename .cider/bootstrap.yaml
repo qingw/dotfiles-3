@@ -9,6 +9,7 @@ casks:
 - firefox
 - flash-npapi
 - flash-ppapi
+- font-noto-sans-cjk-sc
 - font-sarasa-gothic
 - font-source-code-pro
 - font-source-code-pro-for-powerline
