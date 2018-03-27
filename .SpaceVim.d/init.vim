@@ -1,3 +1,4 @@
+" SpaceVim Options: {{{
 let g:spacevim_enable_debug = 1
 let g:spacevim_realtime_leader_guide = 1
 let g:spacevim_enable_vimfiler_welcome = 1
@@ -14,7 +15,9 @@ let g:spacevim_relativenumber = 0
 let g:spacevim_enable_googlesuggest = 1
 let g:spacevim_github_username = "SteamedFish"
 let g:spacevim_guifont = 'SauceCodePro\ Nerd\ Font:h12'
+" }}}
 
+" SpaceVim Layers: {{{
 call SpaceVim#layers#load('VersionControl')
 call SpaceVim#layers#load('autocomplete')
 " call SpaceVim#layers#load('chat')
@@ -82,7 +85,9 @@ call SpaceVim#layers#load('tmux')
 " call SpaceVim#layers#load('tools')
 " call SpaceVim#layers#load('unite')
 call SpaceVim#layers#load('vim')
+" }}}
 
+" Custom Options: {{{
 let g:deoplete#auto_complete_delay = 150
 
 let g:neomake_vim_enabled_makers = []
@@ -107,3 +112,4 @@ set fileencodings=ucs-bom,utf-8,gbk,cp936,default,latin1
 if has("gui_macvim")
     set transparency=15
 endif
+" }}}
