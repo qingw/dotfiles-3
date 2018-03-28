@@ -33,6 +33,7 @@ echo "updating vim plugins"
 vim +SPUpdate +qall
 
 echo "updating mac appstore"
+mas outdated
 mas upgrade
 
 echo "updating ConTeXt"
