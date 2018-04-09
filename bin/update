@@ -1,61 +1,87 @@
 #!/bin/bash -e
 
-cd $HOME
+cd "$HOME"
 
-if [[ "$(kextstat | grep "FakeSMC")" == "" ]]; then
-    echo "updating system"
-    sudo softwareupdate -i -a
-fi
-
-echo "Updating HomeBrew"
-brew update
-brew upgrade
-brew cleanup
-
-echo "Updating Pip"
-pip2 list --format=legacy | cut -d ' ' -f 1 | xargs -n1 pip2 install -U
-pip3 list --format=legacy | cut -d ' ' -f 1 | xargs -n1 pip3 install -U
-
-echo "updating cask"
-brew cask upgrade
-brew cask cleanup
-
-echo "updating git repo"
-if [ -d "$HOME/dotfiles" ]; then
-    cd $HOME/dotfiles
-    git pull
-    git submodule update --recursive --remote
-    git commit -a -m "daily update" || /usr/bin/true
-    git push || /usr/bin/true
-fi
-
-echo "updating vim plugins"
-vim +SPUpdate +qall
-
-echo "updating mac appstore"
-mas outdated
-mas upgrade
-
-echo "updating ConTeXt"
-_POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/MacData/ConTeXt /Volumes/SteamedFish/ConTeXt $HOME/ConTeXt"
-for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
-    if [ -d "${_CONTEXT_PATH}" ]; then
-        cd ${_CONTEXT_PATH}
-        rsync -av rsync://contextgarden.net/minimals/setup/first-setup.sh .
-        bash first-setup.sh --modules=all
-    fi
-done
-mtxrun --scripts fonts --reload
-unset _POSSIBLE_PATH
-unset _CONTEXT_PATH
-
-echo "updating optools"
-if [ -d "$HOME/dumbo" ]; then
-    for _PROJECT in $(ls "$HOME/dumbo"); do
-        if [ -d "$HOME/dumbo/${_PROJECT}/.git" ]; then
-            cd "$HOME/dumbo/${_PROJECT}"
-            git pull
-            git submodule update --remote --recursive
+update_context() {
+    echo "updating ConTeXt"
+    _POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/MacData/ConTeXt /Volumes/SteamedFish/ConTeXt $HOME/ConTeXt"
+    for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
+        if [ -d "${_CONTEXT_PATH}" ]; then
+            cd "${_CONTEXT_PATH}"
+            rsync -av rsync://contextgarden.net/minimals/setup/first-setup.sh .
+            bash first-setup.sh --modules=all
         fi
     done
-fi
+    mtxrun --scripts fonts --reload
+    unset _POSSIBLE_PATH
+    unset _CONTEXT_PATH
+}
+
+update_system() {
+    if [[ "$(kextstat | grep "FakeSMC")" == "" ]]; then
+        echo "updating system"
+        sudo softwareupdate -i -a
+    fi
+}
+
+update_mas() {
+    echo "updating mac appstore"
+    mas outdated
+    mas upgrade
+}
+
+update_homebrew() {
+    echo "Updating HomeBrew"
+    brew update
+    brew upgrade
+    brew cleanup
+    echo "updating cask"
+    brew cask upgrade
+    brew cask cleanup
+}
+
+update_pip() {
+    echo "Updating Pip"
+    pip2 list --format=legacy | cut -d ' ' -f 1 | xargs -n1 pip2 install -U
+    pip3 list --format=legacy | cut -d ' ' -f 1 | xargs -n1 pip3 install -U
+}
+
+
+self_update() {
+    echo "updating git repo"
+    if [ -d "$HOME/dotfiles" ]; then
+        cd "$HOME/dotfiles"
+        git pull
+        git submodule update --recursive --remote
+        git commit -a -m "daily update" || /usr/bin/true
+        git push || /usr/bin/true
+    fi
+}
+
+update_vim() {
+    echo "updating vim plugins"
+    vim +SPUpdate +qall
+}
+
+
+update_optools() {
+    echo "updating optools"
+    if [ -d "$HOME/dumbo" ]; then
+        for _PROJECT in "$HOME"/dumbo/*; do
+            if [ -d "$HOME/dumbo/${_PROJECT}/.git" ]; then
+                cd "$HOME/dumbo/${_PROJECT}"
+                git pull
+                git submodule update --remote --recursive
+            fi
+        done
+    fi
+}
+
+self_update
+update_context
+update_system
+update_mas
+update_homebrew
+update_pip
+update_vim
+update_optools
