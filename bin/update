@@ -68,8 +68,8 @@ update_optools() {
     echo "updating optools"
     if [ -d "$HOME/dumbo" ]; then
         for _PROJECT in "$HOME"/dumbo/*; do
-            if [ -d "$HOME/dumbo/${_PROJECT}/.git" ]; then
-                cd "$HOME/dumbo/${_PROJECT}"
+            if [ -d "${_PROJECT}/.git" ]; then
+                cd "${_PROJECT}"
                 git pull
                 git submodule update --remote --recursive
             fi
