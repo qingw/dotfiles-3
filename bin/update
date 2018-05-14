@@ -2,6 +2,13 @@
 
 cd "$HOME"
 
+run() {
+    _command="$@"
+    if ! $_command ; then
+        echo "run $_command failed!" >&2
+    fi
+}
+
 update_context() {
     echo "updating ConTeXt"
     _POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/MacData/ConTeXt /Volumes/SteamedFish/ConTeXt $HOME/ConTeXt"
