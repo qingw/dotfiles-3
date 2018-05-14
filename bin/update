@@ -15,11 +15,11 @@ update_context() {
     for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
         if [ -d "${_CONTEXT_PATH}" ]; then
             cd "${_CONTEXT_PATH}"
-            rsync -av rsync://contextgarden.net/minimals/setup/first-setup.sh .
-            bash first-setup.sh --modules=all
+            run rsync -av rsync://contextgarden.net/minimals/setup/first-setup.sh .
+            run bash first-setup.sh --modules=all
         fi
     done
-    mtxrun --scripts fonts --reload
+    run mtxrun --scripts fonts --reload
     unset _POSSIBLE_PATH
     unset _CONTEXT_PATH
 }
@@ -27,24 +27,24 @@ update_context() {
 update_system() {
     if [[ "$(kextstat | grep "FakeSMC")" == "" ]]; then
         echo "updating system"
-        sudo softwareupdate -i -a
+        run sudo softwareupdate -i -a
     fi
 }
 
 update_mas() {
     echo "updating mac appstore"
-    mas outdated
-    mas upgrade
+    run mas outdated
+    run mas upgrade
 }
 
 update_homebrew() {
     echo "Updating HomeBrew"
-    brew update
-    brew upgrade
-    brew cleanup
+    run brew update
+    run brew upgrade
+    run brew cleanup
     echo "updating cask"
-    brew cask upgrade
-    brew cask cleanup
+    run brew cask upgrade
+    run brew cask cleanup
 }
 
 update_pip() {
@@ -58,16 +58,16 @@ self_update() {
     echo "updating git repo"
     if [ -d "$HOME/dotfiles" ]; then
         cd "$HOME/dotfiles"
-        git pull
-        git submodule update --recursive --remote
-        git commit -a -m "daily update" || /usr/bin/true
-        git push || /usr/bin/true
+        run git pull
+        run git submodule update --recursive --remote
+        run git commit -a -m "daily update"
+        run git push
     fi
 }
 
 update_vim() {
     echo "updating vim plugins"
-    vim +SPUpdate +qall
+    run vim +SPUpdate +qall
 }
 
 
@@ -77,8 +77,8 @@ update_optools() {
         for _PROJECT in "$HOME"/dumbo/*; do
             if [ -d "${_PROJECT}/.git" ]; then
                 cd "${_PROJECT}"
-                git pull
-                git submodule update --remote --recursive
+                run git pull
+                run git submodule update --remote --recursive
             fi
         done
     fi
