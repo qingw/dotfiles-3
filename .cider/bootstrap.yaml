@@ -78,6 +78,7 @@ formulas:
 - figlet
 - fzf
 - git
+- git-flow
 - htop
 - ipcalc
 - lftp
