@@ -3,9 +3,8 @@
 cd "$HOME"
 
 run() {
-    _command="$@"
-    if ! $_command ; then
-        echo "run $_command failed!" >&2
+    if ! "$@"; then
+        echo "run $@ failed!" >&2
     fi
 }
 
