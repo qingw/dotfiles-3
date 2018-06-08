@@ -4,6 +4,7 @@ casks:
 - alfred
 - android-platform-tools
 - cocoapacketanalyzer
+- dash
 - dropbox
 - emacs-mac
 - firefox
