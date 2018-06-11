@@ -82,6 +82,7 @@ formulas:
 - git-flow
 - htop
 - ipcalc
+- jq
 - lftp
 - lnav
 - mas
