@@ -104,7 +104,6 @@ formulas:
 - percona-toolkit
 - progress
 - python
-- python@2
 - socat
 - sqlite
 - squashfs

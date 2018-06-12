@@ -14,7 +14,7 @@ export LESS="-R"
 export CVS_RSH=ssh
 export EDITOR="vim"
 export MYSQL_PS1="(\u@\h) [\d]> "
-export PATH=/usr/local/opt/python@2/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:~/bin
+export PATH=/usr/local/opt/python/libexec/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:~/bin
 
 # enable color support
 export CLICOLOR=true
@@ -42,12 +42,12 @@ fi
 
 # bash-powerline
 
-if [ -f /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
+if [ -f /usr/local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ]; then
     if [ "$TERM_PROGRAM" == "iTerm.app" ]; then
         /usr/local/bin/powerline-daemon -q
         POWERLINE_BASH_CONTINUATION=1
         POWERLINE_BASH_SELECT=1
-        . /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+        . /usr/local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
     fi
 fi
 
@@ -86,7 +86,5 @@ alias grep='grep --color=auto'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
-alias pip='pip2'
-alias python='python2'
 alias emacs="emacsclient -n"
-alias dumbo="python2 $HOME/dumbo/optools/dumbo.py"
+alias dumbo="python $HOME/dumbo/optools/dumbo.py"
