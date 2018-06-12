@@ -73,6 +73,7 @@ formulas:
 - bash-completion
 - brew-cask-completion
 - coreutils
+- cscope
 - csshx
 - curl
 - dos2unix
