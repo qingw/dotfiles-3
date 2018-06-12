@@ -6,6 +6,7 @@ pymysql
 netaddr
 simplejson
 pyflakes
+autoflack
 pylint
 flake8
 requests
