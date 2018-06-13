@@ -17,7 +17,6 @@ requests
 powerline-status
 celery[redis]
 sqlalchemy
-bashate
 )
 
 mas_apps=(
