@@ -44,6 +44,8 @@ values."
         spell-checking
         syntax-checking
         ; completion
+        (auto-complete :variables
+            auto-completion-enable-help-tooltip t)
         helm
         ; emacs
         better-defaults
