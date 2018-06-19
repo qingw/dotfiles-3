@@ -82,6 +82,12 @@ update_vim() {
 }
 
 
+update_emacs() {
+    echo "updating emacs packages"
+    run /usr/local/bin/emacs --no-window-system --load "$HOME/dotfiles/bin/update-emacs.el"
+}
+
+
 update_optools() {
     echo "updating optools"
     if [ -d "$HOME/dumbo" ]; then
@@ -95,11 +101,12 @@ update_optools() {
     fi
 }
 
-self_update
-update_context
-update_system
-update_mas
-update_homebrew
-update_pip
-update_vim
-update_optools
+#self_update
+#update_context
+#update_system
+#update_mas
+#update_homebrew
+#update_pip
+#update_vim
+update_emacs
+#update_optools

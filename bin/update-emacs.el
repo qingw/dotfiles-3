@@ -1,0 +1,6 @@
+(defadvice steamedfish-always-return-yes (around auto-confirm compile activate)
+  (flet ((yes-or-no-p (&rest args) t)
+         (y-or-n-p (&rest args) t))
+    configuration-layer/update-packages))
+(configuration-layer/update-packages)
+(spacemacs/kill-emacs)
