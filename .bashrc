@@ -14,7 +14,7 @@ export LESS="-R"
 export CVS_RSH=ssh
 export EDITOR="vim"
 export MYSQL_PS1="(\u@\h) [\d]> "
-export PATH=/usr/local/opt/python/libexec/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:~/bin
+export PATH=$PATH:~/bin
 
 # enable color support
 export CLICOLOR=true
@@ -56,7 +56,9 @@ _POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/MacData/ConTeXt /Volumes/SteamedF
 for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
     if [ -d "${_CONTEXT_PATH}" ]; then
         #source ${_CONTEXT_PATH}/tex/setuptex
-        export PATH=$PATH:${_CONTEXT_PATH}/tex/texmf-osx-64/bin
+        if ! [ -f '/etc/paths.d/ConTeXt' ]; then
+            echo "please run sudo echo ${_CONTEXT_PATH}/tex/texmf-osx-64/bin > /etc/paths.d/ConTeXt"
+        fi
         OSFONTDIR="/Library/Fonts/;/System/Library/Fonts/;$HOME/Library/Fonts/"
         break
     fi

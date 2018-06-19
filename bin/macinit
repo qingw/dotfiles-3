@@ -118,6 +118,14 @@ for apps in ${mas_apps[@]}; do
     mas install $apps
 done
 
+# setup system path
+if ! grep -q '/usr/local/opt/python/libexec/bin' /etc/paths; then
+    sudo gsed -i 1i/usr/local/opt/python/libexec/bin /etc/paths
+fi
+if ! grep -q '/usr/libexec' /etc/paths; then
+    sudo gsed -i '$a/usr/libexec' /etc/paths
+fi
+
 if [[ "$(kextstat | grep "FakeSMC")" != "" ]]; then
     # disable computer sleep
     sudo pmset -a sleep 0
