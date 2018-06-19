@@ -101,12 +101,12 @@ update_optools() {
     fi
 }
 
-#self_update
-#update_context
-#update_system
-#update_mas
-#update_homebrew
-#update_pip
-#update_vim
+self_update
+update_context
+update_system
+update_mas
+update_homebrew
+update_pip
+update_vim
 update_emacs
-#update_optools
+update_optools
