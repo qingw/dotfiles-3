@@ -83,6 +83,7 @@ formulas:
 - fzf
 - git
 - git-flow
+- gnu-sed
 - htop
 - ipcalc
 - ispell
