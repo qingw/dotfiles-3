@@ -65,6 +65,12 @@ update_pip() {
 }
 
 
+update_gem() {
+    echo "Updating ruby gems"
+    run gem update
+}
+
+
 self_update() {
     echo "updating git repo"
     if [ -d "$HOME/dotfiles" ]; then
@@ -107,6 +113,7 @@ update_system
 update_mas
 update_homebrew
 update_pip
+update_gem
 update_vim
 update_emacs
 update_optools
