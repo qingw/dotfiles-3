@@ -2,4 +2,3 @@
 (setq powerline-default-separator 'arrow)
 (spacemacs/toggle-transparency)
 (spacemacs//set-monospaced-font "Source Code Pro" "Hiragino Sans GB" 13 16)
-(setq pangu-spacing-real-insert-separtor t)
