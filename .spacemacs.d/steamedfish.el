@@ -2,3 +2,6 @@
 (setq powerline-default-separator 'arrow)
 (spacemacs/toggle-transparency)
 (spacemacs//set-monospaced-font "Source Code Pro" "Hiragino Sans GB" 13 16)
+(setq fcitx-active-evil-states '(insert emacs hybrid))
+(fcitx-aggressive-setup)
+(fcitx-prefix-keys-add "M-m")
