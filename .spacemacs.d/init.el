@@ -378,11 +378,9 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (spacemacs/toggle-transparency)
-  (spacemacs//set-monospaced-font "Source Code Pro" "Hiragino Sans GB" 13 16)
-  (setq fcitx-active-evil-states '(insert emacs hybrid))
-  (fcitx-aggressive-setup)
-  (fcitx-prefix-keys-add "M-m")
+  (when (file-exists-p "~/.spacemacs.d/personal-config.el")
+     (load-file "~/.spacemacs.d/personal-config.el")
+   )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
