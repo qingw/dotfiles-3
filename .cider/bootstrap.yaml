@@ -102,6 +102,7 @@ formulas:
 - p7zip
 - pandoc
 - parallel
+- percol
 - percona-toolkit
 - progress
 - python
