@@ -27,7 +27,7 @@ values."
    ;; If non-nil layers with lazy install support are lazy installed.
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers/")
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
@@ -108,6 +108,8 @@ values."
         ; web
         search-engine
         twitter
+        ; my own layers
+        sf-config
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -378,9 +380,8 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (when (file-exists-p "~/.spacemacs.d/personal-config.el")
-     (load-file "~/.spacemacs.d/personal-config.el")
-   )
+  (spacemacs/toggle-transparency)
+  (spacemacs//set-monospaced-font "Source Code Pro" "Hiragino Sans GB" 13 16)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
