@@ -53,7 +53,8 @@ values."
             ibuffer-group-buffers-by 'projects)
         (org :variables
             org-enable-github-support t
-            org-enable-reveal-js-support t)
+            org-enable-reveal-js-support t
+            org-projectile-file "TODOs.org")
         semantic
         smex
         typography
