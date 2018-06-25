@@ -14,7 +14,7 @@ let g:spacevim_colorscheme_bg = 'dark'
 let g:spacevim_relativenumber = 0
 let g:spacevim_enable_googlesuggest = 1
 let g:spacevim_github_username = "SteamedFish"
-let g:spacevim_guifont = 'SauceCodePro\ Nerd\ Font:h12'
+let g:spacevim_guifont = 'SauceCodePro Nerd Font:h12'
 " }}}
 
 " SpaceVim Layers: {{{
