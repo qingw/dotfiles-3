@@ -7,7 +7,7 @@
   relativenumber = false
   statusline_separator = 'arrow'
   enable_key_frequency = true
-  enable_cursorcolumn = true
+  enable_cursorcolumn = false
   enable_tabline_filetype_icon = true
   enable_os_fileformat_icon = true
   github_username = 'SteamedFish'
