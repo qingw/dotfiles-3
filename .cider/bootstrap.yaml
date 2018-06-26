@@ -15,8 +15,6 @@ casks:
 - font-source-code-pro
 - font-source-code-pro-for-powerline
 - font-source-han-sans
-- font-source-han-sans-el-r
-- font-source-han-sans-m-h
 - font-source-han-serif-el-m
 - font-source-han-serif-sb-h
 - font-source-sans-pro
@@ -38,7 +36,6 @@ casks:
 - minecraft
 - mysqlworkbench
 - neteasemusic
-- neteasepopo
 - omnifocus
 - omnigraffle
 - omnioutliner
@@ -46,6 +43,7 @@ casks:
 - openemu
 - opera
 - pencil
+- popo
 - qlcolorcode
 - qlmarkdown
 - qlprettypatch
@@ -142,5 +140,4 @@ symlinks:
 taps:
 - caskroom/cask
 - caskroom/fonts
-- steamedfish/casks
 - railwaycat/emacsmacport
