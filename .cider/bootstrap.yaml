@@ -86,6 +86,7 @@ formulas:
 - ipcalc
 - ispell
 - jq
+- jupyter
 - lftp
 - lnav
 - mas
