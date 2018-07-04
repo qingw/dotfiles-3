@@ -58,6 +58,7 @@ This function should only modify configuration layer settings."
      (org :variables
          org-enable-github-support t
          org-enable-reveal-js-support t
+         org-enable-bootstrap-support t
          org-projectile-file "TODOs.org")
      semantic
      smex
