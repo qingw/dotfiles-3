@@ -67,7 +67,8 @@ This function should only modify configuration layer settings."
      emoji
      ; international support
      (chinese :variables
-         chinese-enable-fcitx t)
+         chinese-enable-fcitx t
+              :packages (not pyim chinese-wbim pangu-spacing))
      ; programming
      csv
      emacs-lisp
@@ -132,11 +133,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(
-     pyim
-     chinese-wbim
-     pangu-spacing
-   )
+   dotspacemacs-excluded-packages '()
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
