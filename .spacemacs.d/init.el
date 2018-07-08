@@ -51,6 +51,7 @@ This function should only modify configuration layer settings."
          auto-completion-enable-snippets-in-popup t
          auto-completion-enable-sort-by-usage t)
      helm
+     templates
      ; emacs
      better-defaults
      (ibuffer :variables
@@ -63,6 +64,10 @@ This function should only modify configuration layer settings."
      semantic
      smex
      typography
+     ; filetree
+     treemacs
+     ; frameworks
+     django
      ; fun
      emoji
      ; international support
@@ -75,6 +80,7 @@ This function should only modify configuration layer settings."
      html
      ipython-notebook
      javascript
+     json
      latex
      markdown
      (python :variables
@@ -87,6 +93,10 @@ This function should only modify configuration layer settings."
      yaml
      ; os
      osx
+     ; readers
+     dash
+     epub
+     pdf
      ; source control
      git
      github
@@ -98,7 +108,6 @@ This function should only modify configuration layer settings."
      ; tools
      ansible
      chrome
-     dash
      docker
      imenu-list
      nginx
