@@ -548,7 +548,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (treemacs-projectile treemacs-evil treemacs pfuture yasnippet which-key undo-tree sql-indent rainbow-mode ox-gfm org-plus-contrib mmm-mode json-mode js2-mode hydra evil-unimpaired f s dash diff-hl csv-mode company-statistics company coffee-mode auctex async aggressive-indent adaptive-wrap ace-window avy))))
+    (yatemplate treemacs-projectile treemacs-evil treemacs pfuture pony-mode pdf-tools nov esxml yasnippet which-key undo-tree sql-indent rainbow-mode ox-gfm org-plus-contrib mmm-mode json-mode js2-mode hydra evil-unimpaired f s dash diff-hl csv-mode company-statistics company coffee-mode auctex async aggressive-indent adaptive-wrap ace-window avy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
