@@ -60,8 +60,8 @@ update_homebrew() {
 
 update_pip() {
     echo "Updating Pip"
-    run pip2 list --format=legacy | cut -d ' ' -f 1 | run xargs -n1 pip2 install -U
-    run pip3 list --format=legacy | cut -d ' ' -f 1 | run xargs -n1 pip3 install -U
+    run pip2 list --format=columns | cut -d ' ' -f 1 | run xargs -n1 pip2 install -U
+    run pip3 list --format=columns | cut -d ' ' -f 1 | run xargs -n1 pip3 install -U
 }
 
 
