@@ -44,7 +44,6 @@ update_homebrew() {
     run brew cleanup
     echo "updating cask"
     run brew cask upgrade
-    run brew cask cleanup
 
     # upgrade casks that version is not latest and auto_updates is true
     run brew cask list | \
@@ -56,6 +55,8 @@ update_homebrew() {
                 run brew cask upgrade $cask
             fi
         done
+
+    run brew cask cleanup
 }
 
 update_pip() {
