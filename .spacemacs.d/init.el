@@ -77,6 +77,7 @@ This function should only modify configuration layer settings."
      ; programming
      csv
      emacs-lisp
+     go
      html
      ipython-notebook
      javascript

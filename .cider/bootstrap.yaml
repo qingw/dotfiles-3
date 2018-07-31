@@ -81,6 +81,7 @@ formulas:
 - fzf
 - git
 - git-flow
+- golang
 - gnu-sed
 - htop
 - httpie

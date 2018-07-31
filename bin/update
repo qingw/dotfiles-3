@@ -72,6 +72,12 @@ update_gem() {
 }
 
 
+update_go() {
+    echo "Updating ruby gems"
+    run go get -u all
+}
+
+
 self_update() {
     echo "updating git repo"
     if [ -d "$HOME/dotfiles" ]; then
@@ -115,6 +121,7 @@ update_mas
 update_homebrew
 update_pip
 update_gem
+update_go
 update_vim
 update_emacs
 update_optools

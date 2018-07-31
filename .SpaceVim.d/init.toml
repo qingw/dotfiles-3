@@ -38,6 +38,8 @@
 [[layers]]
   name = "github"
 [[layers]]
+  name = "lang#go"
+[[layers]]
   name = "lang#html"
 [[layers]]
   name = "lang#javascript"
