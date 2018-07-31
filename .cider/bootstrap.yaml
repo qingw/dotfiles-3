@@ -83,6 +83,7 @@ formulas:
 - git-flow
 - gnu-sed
 - htop
+- httpie
 - ipcalc
 - ispell
 - jq
