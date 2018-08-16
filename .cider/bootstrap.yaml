@@ -74,6 +74,7 @@ formulas:
 - cscope
 - csshx
 - curl
+- dep
 - dos2unix
 - emacs
 - fcitx-remote-for-osx --with-input-method=squirrel-rime
@@ -81,8 +82,8 @@ formulas:
 - fzf
 - git
 - git-flow
-- golang
 - gnu-sed
+- golang
 - htop
 - httpie
 - ipcalc
