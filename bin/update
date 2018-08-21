@@ -3,7 +3,7 @@
 cd "$HOME"
 
 run() {
-    echo "start running $@" >&2
+    echo "start running $@ at $(pwd)" >&2
     if ! "$@"; then
         echo "run $@ failed!" >&2
     fi
