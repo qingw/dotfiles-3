@@ -55,6 +55,9 @@ update_homebrew() {
             fi
         done
 
+    # audit popo to check if it being updated
+    brew cask audit popo --download
+
     run brew cleanup
     run rm -rf $(brew --cache)
 }
