@@ -42,18 +42,7 @@ update_homebrew() {
     run brew update
     run brew upgrade
     echo "updating cask"
-    run brew cask upgrade
-
-    # upgrade casks that version is not latest and auto_updates is true
-    run brew cask list | \
-        while read cask; do
-            cask_info=$(run brew cask cat "$cask")
-            cask_version=$(echo "$cask_info" | grep -Ei '^\s*version' | awk '{print $2}')
-            cask_auto_updates=$(echo "$cask_info" | grep -Ei '^\s*auto_updates' | awk '{print $2}')
-            if [[ "$cask_version" != *":latest"* ]] && [[ "$cask_auto_updates" == *"true"* ]] ; then
-                run brew cask upgrade $cask
-            fi
-        done
+    run brew cask upgrade --greedy
 
     # audit popo to check if it being updated
     brew cask audit popo --download
