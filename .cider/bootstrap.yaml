@@ -134,6 +134,7 @@ symlinks:
     .emacs.d: '~'
     .gitconfig: '~'
     .gitignore: '~'
+    .i2csshrc: '~'
     .lftprc: '~'
     .oh-my-zsh: ~/.oh-my-zsh
     .spacemacs.d: '~'
