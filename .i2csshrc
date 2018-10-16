@@ -1,0 +1,18 @@
+---
+version: 2
+profile: UTF-8
+broadcast: true
+forward-agent: true
+clusters:
+  corp-front:
+    profile: GBK
+    hosts:
+      - corp-front01-corp
+      - corp-front02-corp
+      - corp-front03-corp
+      - corp-front04-corp
+      - corp-front05-corp
+      - corp-front06-corp
+      - corp-front07-corp
+      - corp-front08-corp
+      - corp-front09-corp
