@@ -18,6 +18,9 @@ NSGlobalDomain:
     NSAutomaticTextCompletionEnabled: false
     # natual trackpad scrolling
     com.apple.swipescrolldirection: true
+com.apple.desktopservices:
+    # Dont write DS_store
+    DSDontWriteNetworkStores: true
 com.apple.systempreferences:
     # no resume windows when boot
     NSQuitAlwaysKeepsWindows: false
