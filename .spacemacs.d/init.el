@@ -75,6 +75,8 @@ This function should only modify configuration layer settings."
          chinese-enable-fcitx t
               :packages (not pyim chinese-wbim pangu-spacing))
      ; programming
+     (c-c++ :variables
+         c-c++-enable-clang-support t)
      csv
      emacs-lisp
      go
@@ -517,7 +519,7 @@ configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
      (setq custom-file "~/.spacemacs.d/emacs-custom.el")
-     (when (file-exists-p custom-file) 
+     (when (file-exists-p custom-file)
        (load custom-file))
   )
 
