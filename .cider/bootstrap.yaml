@@ -131,6 +131,7 @@ symlinks:
     .cider: '~'
     .config/*: ~/.config/
     .curlrc: '~'
+    .doom.d: '~'
     .editorconfig: '~'
     .emacs.d: '~'
     .gitconfig: '~'
