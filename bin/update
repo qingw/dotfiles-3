@@ -89,8 +89,22 @@ update_vim() {
 
 
 update_emacs() {
-    echo "updating emacs packages"
-    run /usr/local/bin/emacs --no-window-system --load "$HOME/dotfiles/bin/update-emacs.el"
+    if [ -f "$HOME/.emacs.d/Makefile" ]; then
+        # Doom Emacs
+        echo "updating Doom Emacs"
+        cd "$HOME/.emacs.d/"
+        YES=1 run make upgrade
+        YES=1 run make update
+        YES=1 run make
+        YES=1 run make compile
+        YES=1 run make clean
+        run make doctor
+    else
+        # assume it spacemacs
+        # TODO not working currectly
+        echo "updating spacemacs packages"
+        run /usr/local/bin/emacs --no-window-system --load "$HOME/dotfiles/bin/update-emacs.el"
+    fi
 }
 
 
