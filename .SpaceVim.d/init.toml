@@ -52,6 +52,8 @@
 [[layers]]
   name = "lang#vim"
 [[layers]]
+  name = "lsp"
+[[layers]]
   name = "shell"
   default_position = 'bottom'
 [[layers]]
