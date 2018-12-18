@@ -1,5 +1,5 @@
-;;; ~/dotfiles/.doom.d/config.el -*- lexical-binding: t; -*-
 (setq user-full-name "SteamedFish")
+
 (defun toggle-transparency ()
   (interactive)
   (let ((alpha (frame-parameter nil 'alpha)))
