@@ -132,13 +132,14 @@
        ;; toward a specific purpose. They may have additional dependencies and
        ;; should be loaded late.
        :app
-       ;;(email +gmail)    ; emacs as an email client
+       (email +gmail)    ; emacs as an email client
        irc               ; how neckbeards socialize
        ;;(rss +org)        ; emacs as an RSS reader
        ;;twitter           ; twitter client https://twitter.com/vnought
        (write            ; emacs as a word processor (latex + org + markdown)
         +wordnut         ; wordnet (wn) search
         +langtool)       ; a proofreader (grammar/style check) for Emacs
+       ;;calendar         ;gcal support
 
        :collab
        ;;floobits          ; peer programming for a price
