@@ -1,4 +1,10 @@
-(setq user-full-name "SteamedFish")
+(setq-default
+ user-full-name "SteamedFish"
+ user-mail-address "steamedfish@hotmail.com")
+
+(when IS-MAC
+  (setq-default ns-use-thin-smoothing t)
+  )
 
 (defun toggle-transparency ()
   (interactive)
