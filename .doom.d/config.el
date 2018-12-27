@@ -22,3 +22,6 @@
    (:desc "toggle" :prefix "t"
      :desc "Transparency"  :n "t" #'toggle-transparency
      )))
+
+(setq-default fcitx-active-evil-states '(insert emacs hybrid))
+(fcitx-aggressive-setup)
