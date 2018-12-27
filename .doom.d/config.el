@@ -12,6 +12,9 @@
   (dolist (charset '(kana han cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font) charset
                       (font-spec :family "Hiragino Sans GB" :size 16)))
+
+  (add-hook 'window-setup-hook #'toggle-frame-maximized)
+  (add-hook 'window-setup-hook #'toggle-transparency)
 )
 
 (defun toggle-transparency ()
