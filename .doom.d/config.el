@@ -3,6 +3,7 @@
  user-mail-address "steamedfish@hotmail.com")
 
 (when IS-MAC
+ (when (display-graphic-p)
   (setq-default
    ns-use-thin-smoothing t)
 
@@ -15,7 +16,7 @@
 
   (add-hook 'window-setup-hook #'toggle-frame-maximized)
   (add-hook 'window-setup-hook #'toggle-transparency)
-)
+))
 
 (defun toggle-transparency ()
   (interactive)
