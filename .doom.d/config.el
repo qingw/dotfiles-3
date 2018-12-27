@@ -3,8 +3,16 @@
  user-mail-address "steamedfish@hotmail.com")
 
 (when IS-MAC
-  (setq-default ns-use-thin-smoothing t)
-  )
+  (setq-default
+   ns-use-thin-smoothing t)
+
+  ;; TODO: doom uses doom-font instead
+  (set-face-attribute 'default nil :font
+                      (format   "%s:pixelsize=%d"  "Source Code Pro" 14))
+  (dolist (charset '(kana han cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font) charset
+                      (font-spec :family "Hiragino Sans GB" :size 16)))
+)
 
 (defun toggle-transparency ()
   (interactive)
