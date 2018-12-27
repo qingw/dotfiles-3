@@ -1,11 +1,5 @@
-* Basic settings
-
-#+BEGIN_SRC emacs-lisp
 (setq user-full-name "SteamedFish")
-#+END_SRC
 
-* Transparency
-#+BEGIN_SRC emacs-lisp
 (defun toggle-transparency ()
   (interactive)
   (let ((alpha (frame-parameter nil 'alpha)))
@@ -22,4 +16,3 @@
    (:desc "toggle" :prefix "t"
      :desc "Transparency"  :n "t" #'toggle-transparency
      )))
-#+END_SRC
