@@ -7,12 +7,12 @@
    ns-use-thin-smoothing t)
 
   ;; TODO: doom uses the following configs, but I cannot make it right
-  ;;(setq-default
-  ;;  doom-font (font-spec :family "Source Code Pro" :size 14)
-  ;;  doom-variable-pitch-font (font-spec :family "Fira Sans")
-  ;;  doom-unicode-font (font-spec :family "DejaVu Sans Mono")
-  ;;  doom-big-font (font-spec :family "Source Code Pro" :size 21)
-  ;; )
+  (setq-default
+    doom-font (font-spec :family "Source Code Pro" :size 14)
+    doom-variable-pitch-font (font-spec :family "Fira Sans")
+    doom-unicode-font (font-spec :family "Hiragino Sans GB" :size 16)
+    doom-big-font (font-spec :family "Source Code Pro" :size 21)
+   )
   (set-face-attribute 'default nil :font
                       (format   "%s:pixelsize=%d"  "Source Code Pro" 14))
   (dolist (charset '(kana han cjk-misc bopomofo))
