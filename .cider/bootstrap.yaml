@@ -104,10 +104,12 @@ formulas:
 - mycli
 - mydumper
 - mysql
+- mu --with-emacs
 - ncdu
 - neofetch
 - nethack
 - nmap
+- offlineimap
 - p7zip
 - pandoc
 - parallel

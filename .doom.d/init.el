@@ -2,7 +2,7 @@
 ;; Copy me to ~/.doom.d/init.el or ~/.config/doom/init.el, then edit me!
 
 (doom! :feature
-       ;;debugger          ; FIXME stepping through code, to help you add bugs
+       debugger          ; FIXME stepping through code, to help you add bugs
        eval              ; run code, run (also, repls)
        (evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
@@ -20,7 +20,7 @@
        ;;ivy              ; a search engine for love and life
 
        :ui
-       ;;deft              ; notational velocity for Emacs
+       deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        doom-modeline     ; a snazzy Atom-inspired mode-line
@@ -35,7 +35,7 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       ;;pretty-code       ; replace bits of code with pretty symbols
+       pretty-code       ; replace bits of code with pretty symbols
        ;;tabbar            ; FIXME an (incomplete) tab bar for Emacs
        unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
@@ -43,17 +43,20 @@
        window-select     ; visually switch windows
 
        :editor
-       ;;(format +onsave)  ; automated prettiness
+       (format +onsave)  ; automated prettiness
        ;;lispy             ; vim for lisp, for people who dont like vim
        multiple-cursors  ; editing in many places at once
        ;;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
 
        :emacs
-       dired             ; making dired pretty [functional]
+       (dired            ; making dired pretty [functional]
+       +ranger         ; bringing the goodness of ranger to dired
+       +icons          ; colorful icons for dired-mode
+        )
        ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
-       ;;eshell            ; a consistent, cross-platform shell (WIP)
+       eshell            ; a consistent, cross-platform shell (WIP)
        hideshow          ; basic code-folding support
        imenu             ; an imenu sidebar and searchable code index
        term              ; terminals in Emacs
@@ -61,7 +64,7 @@
 
        :tools
        ansible
-       ;;docker
+       docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        gist              ; interacting with github gists
@@ -71,9 +74,9 @@
        ;;password-store    ; password manager for nerds
        pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
-       ;;rgb               ; creating color strings
-       ;;terraform         ; infrastructure as code
-       ;;tmux              ; an API for interacting with tmux
+       rgb               ; creating color strings
+       terraform         ; infrastructure as code
+       tmux              ; an API for interacting with tmux
        upload            ; map local to remote projects via ssh/ftp
        ;;wakatime
 
@@ -125,35 +128,32 @@
        (sh +fish)        ; she sells (ba|z|fi)sh shells on the C xor
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
-       ;;web               ; the tubes
+       web               ; the tubes
        ;;vala              ; GObjective-C
 
        ;; Applications are complex and opinionated modules that transform Emacs
        ;; toward a specific purpose. They may have additional dependencies and
        ;; should be loaded late.
        :app
-       ;;(email +gmail)    ; emacs as an email client
+       (email +gmail)    ; emacs as an email client
        irc               ; how neckbeards socialize
        ;;(rss +org)        ; emacs as an RSS reader
        ;;twitter           ; twitter client https://twitter.com/vnought
        (write            ; emacs as a word processor (latex + org + markdown)
         +wordnut         ; wordnet (wn) search
         +langtool)       ; a proofreader (grammar/style check) for Emacs
+       ;;calendar         ;gcal support
 
        :collab
        ;;floobits          ; peer programming for a price
        ;;impatient-mode    ; show off code over HTTP
 
        :config
-       (default
-        +bindings
-        +evil-commands)
        ;; For literate config users. This will tangle+compile a config.org
        ;; literate config in your `doom-private-dir' whenever it changes.
-       literate
+       ;; literate
 
        ;; The default module sets reasonable defaults for Emacs. It also
-       ;; provides a Spacemacs-inspired keybinding scheme, a custom yasnippet
-       ;; library, and additional ex commands for evil-mode. Use it as a
-       ;; reference for your own modules.
-       (default +bindings +evil-commands))
+       ;; provides a Spacemacs-inspired keybinding scheme and a smartparens
+       ;; config. Use it as a reference for your own modules.
+       (default +bindings +smartparens))
