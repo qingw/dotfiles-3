@@ -13,20 +13,19 @@
   github_username = 'SteamedFish'
   enable_vimfiler_gitstatus = true
   enable_vimfile_filetypeicon = true
+  colorscheme = 'gruvbox'
+  colorscheme_bg = 'dark'
+  enable_powerline_fonts = true
+  lint_on_the_fly = true
 
 [[layers]]
   name = "VersionControl"
 [[layers]]
   name = "autocomplete"
 [[layers]]
-  name = "chat"
-[[layers]]
   name = "checkers"
-  lint_on_the_fly = true
 [[layers]]
   name = "colorscheme"
-  colorscheme = 'gruvbox'
-  colorscheme_bg = 'dark'
 [[layers]]
   name = "cscope"
 [[layers]]
@@ -34,9 +33,19 @@
 [[layers]]
   name = "default"
 [[layers]]
+  name = "edit"
+[[layers]]
+  name = "floobits"
+[[layers]]
   name = "git"
 [[layers]]
   name = "github"
+[[layers]]
+  name = "lang#c"
+[[layers]]
+  name = "lang#dockerfile"
+[[layers]]
+  name = "lang#extra"
 [[layers]]
   name = "lang#go"
 [[layers]]
@@ -44,11 +53,19 @@
 [[layers]]
   name = "lang#javascript"
 [[layers]]
+  name = "lang#latex"
+[[layers]]
+  name = "lang#lisp"
+[[layers]]
   name = "lang#markdown"
 [[layers]]
   name = "lang#php"
 [[layers]]
   name = "lang#python"
+[[layers]]
+  name = "lang#puppet"
+[[layers]]
+  name = "lang#sh"
 [[layers]]
   name = "lang#vim"
 [[layers]]
@@ -58,6 +75,10 @@
   default_position = 'bottom'
 [[layers]]
   name = "tags"
+[[layers]]
+  name = "tests"
+[[layers]]
+  name = "tumx"
 [[layers]]
   name = "tools"
 [[layers]]
