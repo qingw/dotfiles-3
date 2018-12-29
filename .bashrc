@@ -37,7 +37,12 @@ shopt -s histappend
 source $HOME/.bashrc_secret
 
 if $CLICOLOR ;then
-    export PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;32m\]\h\[\033[00m\[:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    if [ "$TERM" == "eterm-color" ]; then
+        # emacs handles wrong with color reset
+        export PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;32m\]\h:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    else
+        export PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;32m\]\h\[\033[00m\[:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    fi
 fi
 
 
