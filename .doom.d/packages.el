@@ -2,3 +2,4 @@
 ;;; ~/dotfiles/.doom.d/packages.el
 
 (package! fcitx)
+(package! cnfonts)

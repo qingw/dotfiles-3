@@ -2,27 +2,21 @@
  user-full-name "SteamedFish"
  user-mail-address "steamedfish@hotmail.com")
 
-(when IS-MAC
- (when (display-graphic-p)
-  (setq-default
-   ns-use-thin-smoothing t)
+(when (display-graphic-p)
+ (when IS-MAC
+  (setq-default ns-use-thin-smoothing t))
 
-  ;; TODO: doom uses the following configs, but I cannot make it right
-  (setq-default
-    doom-font (font-spec :family "Source Code Pro" :size 14)
-    doom-variable-pitch-font (font-spec :family "Fira Sans")
-    doom-unicode-font (font-spec :family "Hiragino Sans GB" :size 16)
-    doom-big-font (font-spec :family "Source Code Pro" :size 21)
-   )
-  (set-face-attribute 'default nil :font
-                      (format   "%s:pixelsize=%d"  "Source Code Pro" 14))
-  (dolist (charset '(kana han cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font) charset
-                      (font-spec :family "Hiragino Sans GB" :size 16)))
+ (setq-default
+   doom-font (font-spec :family "Source Code Pro" :size 12.5)
+   doom-variable-pitch-font (font-spec :family "Fira Sans")
+   doom-unicode-font (font-spec :family "Hiragino Sans GB" :size 14.5)
+   doom-big-font (font-spec :family "Source Code Pro" :size 21)
+  )
+ (cnfonts-enable)
 
-  (add-hook 'window-setup-hook #'toggle-frame-maximized)
-  (add-hook 'window-setup-hook #'toggle-transparency)
-))
+ (add-hook 'window-setup-hook #'toggle-frame-maximized)
+ (add-hook 'window-setup-hook #'toggle-transparency)
+)
 
 (defun toggle-transparency ()
   (interactive)
