@@ -82,6 +82,9 @@ if [ -n "$BASH_VERSION" -a -z "$BASH_COMPLETION" ]; then
     if [ -r /etc/bash_completion ]; then
         . /etc/bash_completion
     fi
+    if [ -r /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    fi
     if [ -r $HOME/.bash_completion ]; then
         . $HOME/.bash_completion
     fi
