@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.bashrc
+[[ -f "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
 
 if [ -n "$(command -v figlet)" ];then
     figlet -f doh -w 300 SteamedFish
