@@ -17,14 +17,6 @@ export MYSQL_PS1="(\u@\h) [\d]> "
 export PATH=$PATH:~/bin
 export GOPATH=$HOME/.go
 
-# enable color support
-export CLICOLOR=true
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-elif [ -x /usr/local/bin/gdircolors ]; then
-    test -r ~/.dircolors && eval "$(gdircolors -b ~/.dircolors)" || eval "$(gdircolors -b)"
-fi
-
 # History
 export HISTCONTROL=ignoredups
 export HISTCONTROL=ignoreboth
@@ -36,7 +28,18 @@ shopt -s histappend
 # HomeBrew API tokens and other secret stuff
 source $HOME/.bashrc_secret
 
+# enable color support
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    export CLICOLOR=true
+fi
+
 if $CLICOLOR ;then
+    if [ -x /usr/bin/dircolors ]; then
+        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    elif [ -x /usr/local/bin/gdircolors ]; then
+        test -r ~/.dircolors && eval "$(gdircolors -b ~/.dircolors)" || eval "$(gdircolors -b)"
+    fi
+
     if [ "$TERM" == "eterm-color" ]; then
         # emacs handles wrong with color reset
         export PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;32m\]\h:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -44,7 +47,6 @@ if $CLICOLOR ;then
         export PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;32m\]\h\[\033[00m\[:\[\033[01;34m\]\w\[\033[00m\]\$ '
     fi
 fi
-
 
 # bash-powerline
 
@@ -110,9 +112,11 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
 fi
 
 # Aliases
-alias grep='grep --color=auto'
-alias egrep='egrep --colour=auto'
-alias fgrep='fgrep --colour=auto'
+if $CLICOLOR; then
+    alias grep='grep --color=auto'
+    alias egrep='egrep --colour=auto'
+    alias fgrep='fgrep --colour=auto'
+fi
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
