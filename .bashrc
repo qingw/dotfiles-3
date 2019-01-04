@@ -43,11 +43,6 @@ if $CLICOLOR ;then
     else
         export PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;32m\]\h\[\033[00m\[:\[\033[01;34m\]\w\[\033[00m\]\$ '
     fi
-    alias ls='ls --color=auto'
-    alias grep='grep --colour=auto'
-    alias egrep='egrep --colour=auto'
-    alias fgrep='fgrep --colour=auto'
-
 fi
 
 
@@ -98,18 +93,26 @@ if [ -n "$BASH_VERSION" -a -z "$BASH_COMPLETION" ]; then
     fi
 fi
 
-# Change the window title of X terminals
-case ${TERM} in
-  xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-    ;;
-  screen*)
-    PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-    ;;
-esac
+# Linux related
+if [ "$OSTYPE" == "linux-gnu" ]; then
+    # Change the window title of X terminals
+    case ${TERM} in
+      xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
+        PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+        ;;
+      screen*)
+        PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+        ;;
+    esac
+    if $CLICOLOR ; then
+        alias ls='ls --color=auto'
+    fi
+fi
 
 # Aliases
 alias grep='grep --color=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
