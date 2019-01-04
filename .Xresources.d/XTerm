@@ -1,0 +1,11 @@
+! vim: filetype=xdefaults:
+
+XTerm.menuLocale:   zh_CN.UTF-8
+XTerm.title:        Xterm
+XTerm.background:   black
+XTerm.foreground:   white
+XTerm.cjkWidth:     true
+XTerm.font:         xft:consolas:pixelsize=13,xft:StHei Ti
+XTerm.geometry:     84x33
+XTerm.locale:       true
+XTerm.utf8:         1

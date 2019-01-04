@@ -1,0 +1,111 @@
+! vim: filetype=xdefaults:
+
+URxvt.preeditType:       Root
+URxvt.inputMethod:       ibus
+URxvt.imLocale:          zh_CN.UTF-8
+URxvt.cursorColor:       IndianRed
+URxvt.cursorBlink:       true
+URxvt.transparent:       true
+
+!transparent=0000 opaque=ffff
+URxvt*background:        rgba:1111/1111/1111/dddd
+!URxvt.background:	     Black
+URxvt.foreground:	     White
+
+! Normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue
+! color5    purple
+! color6    cyan
+! color7    white
+! Light
+! color8    black
+! color9    red
+! color10    green
+! color11    yellow
+! color12    blue
+! color13    purple
+! color14    cyan
+! color15    white
+
+URxvt.color0: #000000
+URxvt.color1: #9e1828
+URxvt.color2: #249424
+URxvt.color3: #968a38
+URxvt.color4: #3456ac
+!URxvt.color4:            RoyalBlue4
+URxvt.color5: #963c59
+URxvt.color6: #238d8e
+URxvt.color7: #bebebe
+URxvt.color8: #666666
+URxvt.color9: #cf6171
+URxvt.color10: #37de37
+URxvt.color11: #fff796
+URxvt.color12: #527ce7
+!URxvt.color12:           SkyBlue2
+URxvt.color13: #cf9ebe
+URxvt.color14: #30c2c4
+URxvt.color15: #ffffff
+URxvt.colorBD:           yellow
+URxvt.colorUL:           green
+
+! font preference
+URxvt.font:              xft:Consolas:pixelsize=13,xft:SThei ti:pixelsize=13:hinting=false:antialias=false
+!URxvt*font:             -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldFont:         -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+!initial size
+URxvt.geometry:          84x33
+!internal whitespace
+URxvt*internalBorder:    0
+URxvt.externalBorder:    0
+!fade text n% upon unfocus
+URxvt*fading:            20
+!darken=(0 to 100) lighten=(-1 to -100)
+URxvt*shading:           10
+!tint background with this color
+URxvt*tintColor:         black
+!set to 32-bit for real transparency (compositing required)
+URxvt*depth:             32
+!save n lines of scrollback buffer
+URxvt*saveLines:         32767
+!flash screen for attention
+URxvt*visualBell:        true
+!jump to bottom (prompt) on keypress
+URxvt*scrollTtyKeypress: true
+!jump to bottom (prompt) when tty gets new lines
+URxvt*scrollWithBuffer:  false
+!jump to bottom (prompt) on tty output
+URxvt*scrollTtyOutput:   false
+!toggle scrollbar
+URxvt*scrollBar:         false
+!scrollbar styles: rxvt, plain, next or xterm
+URxvt*scrollstyle:       plain
+!scrollbar alignment
+!URxvt*scrollBar_right:true
+!URxvt*scrollColor:      #777777
+!URxvt*cursorColor:      #ffcc00
+!is this a login shell?
+!URxvt*loginShell:       true
+!set the TERM environment variable
+URxvt*termName:          rxvt-unicode
+!enable pseudo-transparency (requires depth: 24 (see above))
+URxvt*inheritPixmap:     true
+!delimiters for double-click mouse selection
+URxvt*cutchars:          "\"()*,<>[]{}|'"
+!screen dump settings
+URxvt*print-pipe:        cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+!secondary screen scroll (default enabled)
+URxvt*secondaryScroll:   true
+!de-iconify (map) on receipt of a bell character
+URxvt*mapAlert:          true
+!inhibit writing record into the system log file utmp
+URxvt*utmpInhibit:       true
+!! BEGIN urlLauncher settings !!
+URxvt*perl-lib:          /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:   default,matcher
+URxvt*urlLauncher:       /usr/bin/firefox
+URxvt*matcher.button:    1
+!! END urlLauncher settings !!
