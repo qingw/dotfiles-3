@@ -18,11 +18,6 @@
   (add-hook 'window-setup-hook #'+default/toggle-transparency)
   )
 
-(map!
- (:leader
-   (:desc "toggle" :prefix "t"
-     :desc "Transparency" :n "t" #'+default/toggle-transparency)))
-
 (after! deft
   (setq-default deft-directory "~/org/"))
 

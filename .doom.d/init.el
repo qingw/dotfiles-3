@@ -162,4 +162,5 @@
        chinese
 
        :private
-       steamedfish)
+       steamedfish
+       keybindings)
