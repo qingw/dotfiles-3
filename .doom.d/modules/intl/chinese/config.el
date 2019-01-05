@@ -3,7 +3,17 @@
 (when (display-graphic-p)
   (def-package! cnfonts
     :commands
-    (cnfonts-enable)))
+    (cnfonts-enable)
+    :config
+    (setq-default
+     cnfonts-default-step 4
+     cnfonts-directory (concat doom-etc-dir "cnfonts/")
+     cnfonts-personal-fontnames
+     '(
+       ("Noto Mono" "Noto Sans" "Noto Serif")
+       ("Hiragino Sans GB" "Source Han Sans SC" "Source Han Serif SC" "Noto Sans CJK SC" "Noto Sans Mono CJK SC" "Noto Serif CJK SC" "Sarasa Gothic SC" "Sarasa Mono T SC" "Sarasa UI SC" "Sarasa Mono SC")
+       ("Hiragino Sans GB" "Source Han Sans SC" "Source Han Serif SC" "Noto Sans CJK SC" "Noto Sans Mono CJK SC" "Noto Serif CJK SC" "Sarasa Gothic SC" "Sarasa Mono T SC" "Sarasa UI SC" "Sarasa Mono SC")
+       ))))
 
 (def-package! fcitx
   :config
