@@ -9,7 +9,9 @@
  (:prefix ("t" . "toggle")
    :desc "cnfonts-increase-fontsize"     :n "+"  #'cnfonts-increase-fontsize
    :desc "cnfonts-decrease-fontsize"     :n "-"  #'cnfonts-decrease-fontsize
-   :desc "cnfonts-reset-fontsize"        :n "0"  #'cnfonts-reset-fontsize))
+   :desc "cnfonts-reset-fontsize"        :n "0"  #'cnfonts-reset-fontsize)
+  :prefix ("h" . "help")
+   :desc "lookup dictionary"             :n "l"  #'youdao-dictionary-search-at-point)
  (:prefix ("F" . "Frame")
    :desc "Delete Frame"                  :n "d"  #'delete-frame
    :desc "Delete Other Frame"            :n "D"  #'delete-other-frame
