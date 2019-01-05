@@ -97,7 +97,6 @@ update_emacs() {
         YES=1 run make update
         YES=1 run make
         YES=1 run make compile
-        YES=1 run make clean
     else
         # assume it spacemacs
         # TODO not working currectly
