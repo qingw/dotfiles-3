@@ -76,13 +76,14 @@ self_update() {
         cd "$HOME/dotfiles"
         run git pull
         run git submodule update --recursive --remote
-        run git commit -a -m "daily update"
+        # run git commit -a -m "daily update"
         run git push
     fi
 }
 
 update_vim() {
-    echo "updating vim plugins"
+    echo "updating vim"
+    cd "$HOME/.vim" && run git pull && run git submodule update --recursive --init
     # TODO not working currectly
     run vim +SPUpdate +qall
 }
