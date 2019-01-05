@@ -11,3 +11,10 @@
    fcitx-active-evil-states '(insert emacs hybrid))
   :commands
   (fcitx-aggressive-setup))
+
+(def-package! youdao-dictionary
+  :config
+  (setq-default
+   url-automatic-caching t
+   youdao-dictionary-search-history-file (concat doom-cache-dir "youdao.cache")
+   youdao-dictionary-use-chinese-word-segmentation t))

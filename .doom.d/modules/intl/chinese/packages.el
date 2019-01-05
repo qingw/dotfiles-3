@@ -3,3 +3,4 @@
 
 (package! fcitx)
 (package! cnfonts)
+(package! youdao-dictionary)
