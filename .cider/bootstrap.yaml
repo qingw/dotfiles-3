@@ -10,13 +10,12 @@ casks:
 - firefox
 - flash-npapi
 - flash-ppapi
-- font-noto-sans-cjk-sc
+- font-noto-sans-cjk
+- font-noto-serif-cjk
 - font-sarasa-gothic
 - font-source-code-pro
-- font-source-code-pro-for-powerline
 - font-source-han-sans
-- font-source-han-serif-el-m
-- font-source-han-serif-sb-h
+- font-source-han-serif
 - font-source-sans-pro
 - font-source-serif-pro
 - font-sourcecodepro-nerd-font
@@ -110,6 +109,7 @@ formulas:
 - nethack
 - nmap
 - offlineimap
+- pass
 - p7zip
 - pandoc
 - parallel
