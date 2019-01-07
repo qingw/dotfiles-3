@@ -48,7 +48,7 @@ update_homebrew() {
     brew cask audit popo --download
 
     run brew cleanup
-    run rm -rf $(brew --cache)
+    run rm -rf "$(brew --cache)"
 }
 
 update_pip() {
