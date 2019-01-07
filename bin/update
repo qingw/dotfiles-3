@@ -136,6 +136,7 @@ update_optools() {
 case $OSTYPE in
     linux*)
         self_update
+        update_linux_system
         update_vim
         update_emacs
         ;;
