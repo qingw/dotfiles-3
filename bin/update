@@ -48,7 +48,11 @@ update_homebrew() {
     brew cask audit popo --download
 
     run brew cleanup
-    run rm -rf "$(brew --cache)"
+
+    _cachedir="$(brew --cache)"
+    if [ -d "$_cachedir" ] && [[ "$_cachedir" == "$HOME/Library/Caches/Homebrew" ]]; then
+        run rm -rf "$_cachedir"
+    fi
 }
 
 update_pip() {
