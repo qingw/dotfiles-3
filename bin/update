@@ -24,10 +24,19 @@ update_context() {
     unset _CONTEXT_PATH
 }
 
-update_system() {
+update_mac_system() {
     if [[ "$(kextstat | grep "FakeSMC")" == "" ]]; then
         echo "updating system"
         run sudo softwareupdate -i -a
+    fi
+}
+
+update_linux_system() {
+    if  [[ -f /etc/arch-release ]]; then
+        run yay -Syu
+    elif [[ -f /etc/debian_version ]]; then
+        run sudo apt update
+        run sudo apt upgrade
     fi
 }
 
@@ -124,14 +133,30 @@ update_optools() {
     fi
 }
 
-self_update
-update_context
-update_system
-update_mas
-update_homebrew
-update_pip
-update_gem
-update_go
-update_vim
-update_emacs
-update_optools
+case $OSTYPE in
+    linux*)
+        self_update
+        update_vim
+        update_emacs
+        ;;
+    darwin*)
+        self_update
+        update_context
+        update_mac_system
+        update_mas
+        update_homebrew
+        update_pip
+        update_gem
+        update_go
+        update_vim
+        update_emacs
+        update_optools
+        ;;
+    cygwin*)
+        echo "unsupported os type $OSTYPE"
+        ;;
+    *)
+        echo "unsupported os type $OSTYPE"
+        ;;
+esac
+
