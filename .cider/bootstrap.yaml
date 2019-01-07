@@ -140,15 +140,12 @@ symlinks:
     .curlrc: '~'
     .doom.d: '~'
     .editorconfig: '~'
-    .emacs.d: '~'
     .gitconfig: '~'
     .gitignore: '~'
     .i2csshrc: '~'
     .lftprc: '~'
-    .oh-my-zsh: ~/.oh-my-zsh
     .spacemacs.d: '~'
     .ssh/*: ~/.ssh/
-    .vim: '~'
     .zshrc: ~/.zshrc
     Library/Rime/*: ~/Library/Rime/
     bin/*: ~/bin/
