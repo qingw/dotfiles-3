@@ -76,13 +76,14 @@ self_update() {
         cd "$HOME/dotfiles"
         run git pull
         run git submodule update --recursive --remote
-        run git commit -a -m "daily update"
+        # run git commit -a -m "daily update"
         run git push
     fi
 }
 
 update_vim() {
-    echo "updating vim plugins"
+    echo "updating vim"
+    cd "$HOME/.vim" && run git pull && run git submodule update --recursive --init
     # TODO not working currectly
     run vim +SPUpdate +qall
 }
@@ -97,7 +98,6 @@ update_emacs() {
         YES=1 run make update
         YES=1 run make
         YES=1 run make compile
-        YES=1 run make clean
     else
         # assume it spacemacs
         # TODO not working currectly

@@ -1,0 +1,4 @@
+! vim: filetype=xdefaults:
+
+Emacs.font:		Consolas-8
+Emacs.FontBackend:	xft
