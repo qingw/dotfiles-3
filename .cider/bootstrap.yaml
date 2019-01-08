@@ -133,6 +133,7 @@ formulas:
 - youtube-dl
 symlinks:
     .SpaceVim.d: '~'
+    .aria2: '~'
     .bash_profile: '~'
     .bashrc: '~'
     .cider: '~'
