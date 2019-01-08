@@ -25,6 +25,11 @@ export HISTTIMEFORMAT="[%Y-%m-%d %H:%M:%S]  "
 export HISTSIZE=""
 shopt -s histappend
 
+# WSL
+if [[ "$(uname -r)" == *"-Microsoft" ]]; then
+  export DISPLAY=:0
+fi
+
 # HomeBrew API tokens and other secret stuff
 source $HOME/.bashrc_secret
 
