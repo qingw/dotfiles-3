@@ -30,9 +30,6 @@ if [[ "$(uname -r)" == *"-Microsoft" ]]; then
   export DISPLAY=:0
 fi
 
-# HomeBrew API tokens and other secret stuff
-source $HOME/.bashrc_secret
-
 # enable color support
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
     export CLICOLOR=true
@@ -114,6 +111,8 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
     if $CLICOLOR ; then
         alias ls='ls --color=auto'
     fi
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    source "$HOME/.bashrc_secret"
 fi
 
 # Aliases
