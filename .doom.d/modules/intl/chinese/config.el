@@ -21,12 +21,13 @@
      :desc "Decrease Fontsize"  :n "-"  #'cnfonts-decrease-fontsize
      :desc "Reset Fontsize"     :n "0"  #'cnfonts-reset-fontsize)))
 
-(def-package! fcitx
-  :config
-  (setq-default
-   fcitx-active-evil-states '(insert emacs hybrid))
-  :commands
-  (fcitx-aggressive-setup))
+(when (display-graphic-p)
+  (def-package! fcitx
+    :config
+    (setq-default
+     fcitx-active-evil-states '(insert emacs hybrid))
+    :commands
+    (fcitx-aggressive-setup)))
 
 (def-package! youdao-dictionary
   :config
