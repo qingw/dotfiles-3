@@ -4,7 +4,7 @@
  :leader
  ;;(:desc "toggle" :prefix "t"
  (:prefix ("t" . "toggle")
-   :desc "Transparency"                  :n "t"  #'+default/toggle-transparency)
+   :desc "Transparency"                  :n "t"  #'+steamedfish/toggle-transparency)
  (:when (featurep! :intl chinese)
  (:prefix ("t" . "toggle")
    :desc "cnfonts-increase-fontsize"     :n "+"  #'cnfonts-increase-fontsize

@@ -15,7 +15,7 @@
    )
 
   (add-hook 'window-setup-hook #'toggle-frame-maximized)
-  (add-hook 'window-setup-hook #'+default/toggle-transparency)
+  (add-hook 'window-setup-hook #'+steamedfish/toggle-transparency)
   )
 
 (after! deft
