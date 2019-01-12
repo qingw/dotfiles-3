@@ -7,6 +7,7 @@
  calendar-latitude 23.1247
  calendar-longitude 113.3612
  calendar-location-name "Tianhe, Guangzhou"
+ diary-file "~/org/diary"
  message-log-max 10000
  delete-by-moving-to-trash t)
 (when IS-MAC (setq-default mac-system-move-file-to-trash-use-finder t))
