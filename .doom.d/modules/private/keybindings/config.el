@@ -5,6 +5,9 @@
  ;;(:desc "toggle" :prefix "t"
  (:prefix ("t" . "toggle")
    :desc "Transparency"                  :n "t"  #'+steamedfish/toggle-transparency)
+ (:prefix ("b" . "buffer")
+   :desc "Read Only"                     :n "r"  #'view-mode
+   :desc "Revert Edit"                   :n "R"  #'revert-buffer--default)
  (:prefix ("F" . "Frame")
    :desc "Delete Frame"                  :n "d"  #'delete-frame
    :desc "Delete Other Frame"            :n "D"  #'delete-other-frame
