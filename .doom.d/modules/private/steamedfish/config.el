@@ -4,6 +4,7 @@
  user-full-name "SteamedFish"
  user-mail-address "steamedfish@hotmail.com"
  frame-title-format '("%b - " user-full-name "'s Emacs")
+ message-log-max 10000
  delete-by-moving-to-trash t)
 (when IS-MAC (setq-default mac-system-move-file-to-trash-use-finder t))
 
