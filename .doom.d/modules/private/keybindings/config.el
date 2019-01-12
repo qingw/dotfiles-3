@@ -11,7 +11,7 @@
    :desc "Decrease Fontsize"     :n "-"  #'cnfonts-decrease-fontsize
    :desc "Reset Fontsize"        :n "0"  #'cnfonts-reset-fontsize)
   :prefix ("h" . "help")
-   :desc "lookup dictionary"             :n "l"  #'youdao-dictionary-search-at-point)
+   :desc "Lookup Dictionary"             :n "l"  #'youdao-dictionary-search-at-point)
  (:prefix ("F" . "Frame")
    :desc "Delete Frame"                  :n "d"  #'delete-frame
    :desc "Delete Other Frame"            :n "D"  #'delete-other-frame
