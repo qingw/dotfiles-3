@@ -43,3 +43,13 @@
    :leader
    :prefix ("h" . "help")
    :desc "Lookup Dictionary"    :n "l"  #'youdao-dictionary-search-at-point))
+
+(def-package! cal-china-x
+  :config
+  (setq-default
+   mark-holidays-in-calendar t
+   cal-china-x-important-holidays cal-china-x-chinese-holidays
+   calendar-holidays
+   (append
+    cal-china-x-important-holidays
+    cal-china-x-general-holidays)))

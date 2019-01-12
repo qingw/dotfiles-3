@@ -4,3 +4,4 @@
 (package! fcitx)
 (package! cnfonts)
 (package! youdao-dictionary)
+(package! cal-china-x)
