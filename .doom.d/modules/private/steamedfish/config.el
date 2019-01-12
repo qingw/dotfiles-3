@@ -2,7 +2,8 @@
 
 (setq-default
  user-full-name "SteamedFish"
- user-mail-address "steamedfish@hotmail.com")
+ user-mail-address "steamedfish@hotmail.com"
+ frame-title-format '("%b - " user-full-name "'s Emacs"))
 
 (when (display-graphic-p)
   (when IS-MAC (setq-default ns-use-thin-smoothing t))
