@@ -17,8 +17,7 @@
        (company          ; the ultimate code completion backend
         +auto            ; complete on the fly
         +childframe)     ; use child frame instead of overlay
-       (helm             ; the *other* search engine for love and life
-        +childframe)
+       helm              ; the *other* search engine for love and life
        ;;ido              ; the other *other* search engine...
        ;;ivy              ; a search engine for love and life
 
