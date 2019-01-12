@@ -3,7 +3,9 @@
 (setq-default
  user-full-name "SteamedFish"
  user-mail-address "steamedfish@hotmail.com"
- frame-title-format '("%b - " user-full-name "'s Emacs"))
+ frame-title-format '("%b - " user-full-name "'s Emacs")
+ delete-by-moving-to-trash t)
+(when IS-MAC (setq-default mac-system-move-file-to-trash-use-finder t))
 
 (when (display-graphic-p)
   (when IS-MAC (setq-default ns-use-thin-smoothing t))
