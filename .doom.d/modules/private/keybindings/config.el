@@ -5,13 +5,6 @@
  ;;(:desc "toggle" :prefix "t"
  (:prefix ("t" . "toggle")
    :desc "Transparency"                  :n "t"  #'+steamedfish/toggle-transparency)
- (:when (featurep! :intl chinese)
-   (:prefix ("t" . "toggle")
-     :desc "Increase Fontsize"           :n "+"  #'cnfonts-increase-fontsize
-     :desc "Decrease Fontsize"           :n "-"  #'cnfonts-decrease-fontsize
-     :desc "Reset Fontsize"              :n "0"  #'cnfonts-reset-fontsize)
-   :prefix ("h" . "help")
-   :desc "Lookup Dictionary"             :n "l"  #'youdao-dictionary-search-at-point)
  (:prefix ("F" . "Frame")
    :desc "Delete Frame"                  :n "d"  #'delete-frame
    :desc "Delete Other Frame"            :n "D"  #'delete-other-frame

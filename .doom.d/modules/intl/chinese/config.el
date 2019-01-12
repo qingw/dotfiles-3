@@ -13,7 +13,13 @@
        ("Noto Mono" "Noto Sans" "Noto Serif")
        ("Hiragino Sans GB" "Source Han Sans SC" "Source Han Serif SC" "Noto Sans CJK SC" "Noto Sans Mono CJK SC" "Noto Serif CJK SC" "Sarasa Gothic SC" "Sarasa Mono T SC" "Sarasa UI SC" "Sarasa Mono SC")
        ("Hiragino Sans GB" "Source Han Sans SC" "Source Han Serif SC" "Noto Sans CJK SC" "Noto Sans Mono CJK SC" "Noto Serif CJK SC" "Sarasa Gothic SC" "Sarasa Mono T SC" "Sarasa UI SC" "Sarasa Mono SC")
-       ))))
+       ))
+    (map!
+     :leader
+     :prefix ("t" . "toggle")
+     :desc "Increase Fontsize"  :n "+"  #'cnfonts-increase-fontsize
+     :desc "Decrease Fontsize"  :n "-"  #'cnfonts-decrease-fontsize
+     :desc "Reset Fontsize"     :n "0"  #'cnfonts-reset-fontsize)))
 
 (def-package! fcitx
   :config
@@ -32,4 +38,7 @@
    :map youdao-dictionary-mode-map
    :n "q" #'quit-window
    :n "p" #'youdao-dictionary-play-voice-of-current-word
-   :n "y" #'youdao-dictionary-play-voice-at-point))
+   :n "y" #'youdao-dictionary-play-voice-at-point
+   :leader
+   :prefix ("h" . "help")
+   :desc "Lookup Dictionary"    :n "l"  #'youdao-dictionary-search-at-point))
