@@ -7,9 +7,9 @@
    :desc "Transparency"                  :n "t"  #'+steamedfish/toggle-transparency)
  (:when (featurep! :intl chinese)
  (:prefix ("t" . "toggle")
-   :desc "cnfonts-increase-fontsize"     :n "+"  #'cnfonts-increase-fontsize
-   :desc "cnfonts-decrease-fontsize"     :n "-"  #'cnfonts-decrease-fontsize
-   :desc "cnfonts-reset-fontsize"        :n "0"  #'cnfonts-reset-fontsize)
+   :desc "Increase Fontsize"     :n "+"  #'cnfonts-increase-fontsize
+   :desc "Decrease Fontsize"     :n "-"  #'cnfonts-decrease-fontsize
+   :desc "Reset Fontsize"        :n "0"  #'cnfonts-reset-fontsize)
   :prefix ("h" . "help")
    :desc "lookup dictionary"             :n "l"  #'youdao-dictionary-search-at-point)
  (:prefix ("F" . "Frame")
