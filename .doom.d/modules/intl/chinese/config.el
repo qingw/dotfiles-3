@@ -27,4 +27,9 @@
   (setq-default
    url-automatic-caching t
    youdao-dictionary-search-history-file (concat doom-cache-dir "youdao.cache")
-   youdao-dictionary-use-chinese-word-segmentation t))
+   youdao-dictionary-use-chinese-word-segmentation t)
+  (map!
+   :map youdao-dictionary-mode-map
+   :n "q" #'quit-window
+   :n "p" #'youdao-dictionary-play-voice-of-current-word
+   :n "y" #'youdao-dictionary-play-voice-at-point))
