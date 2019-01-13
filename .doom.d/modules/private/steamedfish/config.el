@@ -4,6 +4,7 @@
  user-full-name "SteamedFish"
  user-mail-address "steamedfish@hotmail.com"
  frame-title-format '("%b - " user-full-name "'s Emacs")
+ show-trailing-whitespace t
  calendar-latitude 23.1247
  calendar-longitude 113.3612
  calendar-location-name "Tianhe, Guangzhou"
