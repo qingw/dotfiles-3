@@ -11,10 +11,12 @@
  diary-file "~/org/diary"
  message-log-max 10000
  delete-by-moving-to-trash t)
-(when IS-MAC (setq-default mac-system-move-file-to-trash-use-finder t))
 
 (when (display-graphic-p)
-  (when IS-MAC (setq-default ns-use-thin-smoothing t))
+  (when IS-MAC
+    (setq-default
+     ns-use-thin-smoothing t
+     mac-system-move-file-to-trash-use-finder t))
 
   (setq-default
    doom-font (font-spec :family "Source Code Pro" :size 12.5)
