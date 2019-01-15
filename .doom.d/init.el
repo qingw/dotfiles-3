@@ -147,7 +147,7 @@
        (write            ; emacs as a word processor (latex + org + markdown)
         +wordnut         ; wordnet (wn) search
         +langtool)       ; a proofreader (grammar/style check) for Emacs
-       ;;calendar         ;gcal support
+       calendar         ;gcal support
 
        :collab
        ;;floobits          ; peer programming for a price
