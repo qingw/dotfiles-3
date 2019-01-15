@@ -74,7 +74,7 @@
        macos             ; MacOS-specific commands
        make              ; run make tasks from Emacs
        magit             ; a git porcelain for Emacs
-       ;;password-store    ; password manager for nerds
+       password-store    ; password manager for nerds
        pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
        rgb               ; creating color strings
