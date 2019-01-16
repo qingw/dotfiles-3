@@ -1,0 +1,58 @@
+#+TITLE:   emacs/vterm
+#+DATE:    January 16, 2019
+#+SINCE:   {replace with next tagged release version}
+#+STARTUP: inlineimages
+
+* Table of Contents :TOC_3:noexport:
+- [[Description][Description]]
+  - [[Module Flags][Module Flags]]
+  - [[Plugins][Plugins]]
+  - [[Hacks][Hacks]]
+- [[Prerequisites][Prerequisites]]
+- [[Features][Features]]
+- [[Configuration][Configuration]]
+- [[Troubleshooting][Troubleshooting]]
+
+* Description
+a emacs-libvterm module
+
+FIXME: currently working in progress.
+
+** Module Flags
+This module provides no flags.
+
+** Plugins
+
+** Hacks
+
+* Prerequisites
+
+You need to have =libvterm= installed in your system.
+
+On Ubuntu or Debian:
+
+#+BEGIN_SRC sh
+sudo apt install libvterm-dev
+#+END_SRC
+
+On macOS:
+
+#+BEGIN_SRC sh
+brew install libvterm
+#+END_SRC
+
+After you install =emacs-libvterm= with =make install= you have to compile it.
+
+#+BEGIN_SRC sh
+cd ~/.emacs.d/.local/packages/quelpa/build/vterm/
+mkdir build
+cd build
+cmake ..
+make
+#+END_SRC
+
+* Features
+
+* Configuration
+
+* Troubleshooting
