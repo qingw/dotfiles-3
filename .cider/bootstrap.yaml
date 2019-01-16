@@ -6,7 +6,6 @@ casks:
 - cocoapacketanalyzer
 - dash
 - dropbox
-- emacs-mac
 - firefox
 - flash-npapi
 - flash-ppapi
@@ -83,6 +82,7 @@ formulas:
 - dep
 - dos2unix
 - emacs
+- emacs-mac --with-dbus --with-modules --with-xml2
 - fcitx-remote-for-osx --with-input-method=squirrel-rime
 - figlet
 - fzf
