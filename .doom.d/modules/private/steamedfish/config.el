@@ -4,7 +4,6 @@
  user-full-name "SteamedFish"
  user-mail-address "steamedfish@hotmail.com"
  frame-title-format '("%b - " user-full-name "'s Emacs")
- show-trailing-whitespace t
  calendar-latitude 23.1247
  calendar-longitude 113.3612
  calendar-location-name "Tianhe, Guangzhou"
@@ -28,6 +27,9 @@
   (add-hook 'window-setup-hook #'toggle-frame-maximized)
   (add-hook 'window-setup-hook #'+steamedfish/toggle-transparency)
   )
+
+(add-hook! (text-mode prog-mode conf-mode snippet-mode)
+  (setq show-trailing-whitespace t))
 
 (after! deft
   (setq-default deft-directory "~/org/"))
