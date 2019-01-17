@@ -21,7 +21,7 @@
    :desc "Reset Fontsize"     :n "0"  #'cnfonts-reset-fontsize))
 
 (def-package! fcitx
-  :when (display-graphic-p)
+  :when IS-MAC
   :config
   (setq-default
    fcitx-active-evil-states '(insert emacs hybrid))
