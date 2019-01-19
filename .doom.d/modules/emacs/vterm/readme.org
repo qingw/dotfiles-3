@@ -41,16 +41,6 @@ On macOS:
 brew install libvterm
 #+END_SRC
 
-After you install =emacs-libvterm= with =make install= you have to compile it.
-
-#+BEGIN_SRC sh
-cd ~/.emacs.d/.local/packages/quelpa/build/vterm/
-mkdir build
-cd build
-cmake ..
-make
-#+END_SRC
-
 * Features
 
 * Configuration
