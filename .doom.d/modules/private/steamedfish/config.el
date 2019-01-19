@@ -26,6 +26,7 @@
 
 (after! google-this
   (google-this-mode 1)
+  ;; FIXME this keybinding is not working correctly
   (map!
    :leader
    :prefix ("h" . "help")
