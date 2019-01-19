@@ -31,6 +31,17 @@
    :prefix ("h" . "help")
    :desc "Google Search"               :n "g"  #'google-this-mode-submap))
 
+(after! dired
+  ;; emacs by default disable this command
+  (put 'dired-find-alternate-file 'disabled nil)
+  (map!
+   :map dired-mode-map
+   ;; don't create new buffer when navigating
+   :n "<return>"  #'dired-find-alternate-file
+   :n "^"         #'(lambda ()
+                      (interactive)
+                      (find-alternate-file ".."))))
+
 (add-hook! (text-mode prog-mode conf-mode snippet-mode)
   (setq show-trailing-whitespace t))
 
