@@ -27,6 +27,10 @@ This module provides no flags.
 
 * Prerequisites
 
+You have to compile emacs with =--with-modules= option.
+
+Lookat the =system-configuration-options= variable to see if your emacs has this option.
+
 You need to have =libvterm= installed in your system.
 
 On Ubuntu or Debian:
