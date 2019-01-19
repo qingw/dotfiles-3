@@ -35,6 +35,12 @@ On Ubuntu or Debian:
 sudo apt install libvterm-dev
 #+END_SRC
 
+On ArchLinux or Manjaro:
+
+#+BEGIN_SRC sh
+sudo pacman -S libvterm
+#+END_SRC
+
 On macOS:
 
 #+BEGIN_SRC sh
