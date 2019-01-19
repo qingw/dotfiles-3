@@ -25,8 +25,7 @@
    )
 
   (add-hook 'window-setup-hook #'toggle-frame-maximized)
-  (add-hook 'window-setup-hook #'+steamedfish/toggle-transparency)
-  )
+  (add-hook 'window-setup-hook #'+steamedfish/toggle-transparency))
 
 (after! google-this
   (google-this-mode 1)
