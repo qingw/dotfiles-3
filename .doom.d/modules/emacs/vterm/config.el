@@ -19,4 +19,5 @@
      :leader
      :prefix ("o" . "open")
      :desc "Terminal"          "t" #'+vterm/open
-     :desc "Terminal in popup" "T" #'+vterm/open-popup-in-project)))
+     :desc "Terminal in popup" "T" #'+vterm/open-popup-in-project))
+  (add-hook 'vterm-mode-hook #'doom|mark-buffer-as-real))
