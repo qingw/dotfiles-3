@@ -28,6 +28,13 @@
   (add-hook 'window-setup-hook #'+steamedfish/toggle-transparency)
   )
 
+(after! google-this
+  (google-this-mode 1)
+  (map!
+   :leader
+   :prefix ("h" . "help")
+   :desc "Google Search"               :n "g"  #'google-this-mode-submap))
+
 (add-hook! (text-mode prog-mode conf-mode snippet-mode)
   (setq show-trailing-whitespace t))
 
