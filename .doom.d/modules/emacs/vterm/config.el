@@ -1,8 +1,7 @@
 ;;; emacs/vterm/config.el -*- lexical-binding: t; -*-
 
-(add-to-list 'load-path (concat doom-packages-dir "/quelpa/build/vterm"))
-
 (def-package! vterm
+  :load-path (lambda () (list (concat doom-packages-dir "/quelpa/build/vterm")))
   :init
   (unless
       (file-executable-p
