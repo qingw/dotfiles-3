@@ -26,14 +26,10 @@
   :config
   (set-env! "SHELL")
   (add-hook 'vterm-mode-hook #'doom|mark-buffer-as-real)
-
+  ;; Automatically kill buffer when vterm exits.
+  (setq-default vterm-exit-functions #'kill-buffer)
   (when (featurep! :feature evil)
-
-    ;; Automatically kill buffer when vterm exits.
-    (setq-default vterm-exit-functions #'kill-buffer)
-
     (evil-set-initial-state 'vterm-mode 'insert)
-
     ;; Go back to normal state but don't move cursor backwards.
     ;; Moving cursor backwards is the default Vim behavior but
     ;; it is not appropriate in some cases like terminals.
