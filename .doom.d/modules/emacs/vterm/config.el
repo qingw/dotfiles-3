@@ -6,6 +6,7 @@
   (unless (file-executable-p (concat
                               (file-name-directory (locate-library "vterm"))
                               "vterm-module.so"))
+    ;; let vterm compile `vterm-modules.so'
     (setq-default vterm-install t))
   :when (string-match-p "MODULES" system-configuration-features)
   :config
