@@ -51,6 +51,8 @@ On macOS:
 brew install libvterm
 #+END_SRC
 
+You also need to have =make= =cmake= and a c compiler in your system to compile libvterm-module.
+
 * Features
 
 * Configuration
