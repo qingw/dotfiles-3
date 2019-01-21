@@ -25,6 +25,7 @@
   :when (string-match-p "MODULES" system-configuration-features)
   :config
   (set-env! "SHELL")
+  (add-hook 'vterm-mode-hook #'doom|mark-buffer-as-real)
   (setq-default
    vterm-max-scrollback 10000)
   (unless (featurep! :emacs term)
@@ -32,6 +33,4 @@
      :leader
      :prefix ("o" . "open")
      :desc "Terminal"          "t" #'+vterm/open
-     :desc "Terminal in popup" "T" #'+vterm/open-popup-in-project))
-  (add-hook 'vterm-mode-hook #'doom|mark-buffer-as-real))
-
+     :desc "Terminal in popup" "T" #'+vterm/open-popup-in-project)))
