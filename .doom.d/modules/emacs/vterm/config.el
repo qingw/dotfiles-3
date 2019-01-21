@@ -26,6 +26,11 @@
   :config
   (set-env! "SHELL")
   (add-hook 'vterm-mode-hook #'doom|mark-buffer-as-real)
+
+  (when (featurep! :feature evil)
+
+    ;; Automatically kill buffer when vterm exits.
+    (setq-default vterm-exit-functions #'kill-buffer))
   (setq-default
    vterm-max-scrollback 10000)
   (unless (featurep! :emacs term)
