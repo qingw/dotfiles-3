@@ -3,11 +3,9 @@
 (def-package! vterm
   :load-path (lambda () (list (concat doom-packages-dir "/quelpa/build/vterm")))
   :init
-  (unless
-      (file-executable-p
-       (concat
-        (file-name-directory (locate-library "vterm"))
-        "vterm-module.so"))
+  (unless (file-executable-p (concat
+                              (file-name-directory (locate-library "vterm"))
+                              "vterm-module.so"))
     (setq-default vterm-install t))
   :when (string-match-p "MODULES" system-configuration-features)
   :config
