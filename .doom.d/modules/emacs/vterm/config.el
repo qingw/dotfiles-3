@@ -30,7 +30,9 @@
   (when (featurep! :feature evil)
 
     ;; Automatically kill buffer when vterm exits.
-    (setq-default vterm-exit-functions #'kill-buffer))
+    (setq-default vterm-exit-functions #'kill-buffer)
+
+    (evil-set-initial-state 'vterm-mode 'insert))
   (setq-default
    vterm-max-scrollback 10000)
   (unless (featurep! :emacs term)
