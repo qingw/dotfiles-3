@@ -5,6 +5,7 @@
 
 * Table of Contents :TOC_3:noexport:
 - [[Description][Description]]
+  - [[Known bugs][Known bugs]]
   - [[Module Flags][Module Flags]]
   - [[Plugins][Plugins]]
   - [[Hacks][Hacks]]
@@ -17,6 +18,13 @@
 a emacs-libvterm module
 
 FIXME: currently working in progress.
+
+** Known bugs
+- Does not automaticaly go to insert mode when use evil.
+- Does not automaticaly kill the buffer or switch to normal mode when terminal ends.
+- =C-d= cannot be used inside the terminal.
+- The =+vterm/open-popup= function does not working. It is now functions the
+  same as =+vterm/open=.
 
 ** Module Flags
 This module provides no flags.
