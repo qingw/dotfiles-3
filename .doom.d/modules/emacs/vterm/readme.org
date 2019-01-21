@@ -20,8 +20,6 @@ a emacs-libvterm module
 FIXME: currently working in progress.
 
 ** Known bugs
-- Does not automaticaly go to insert mode when use evil.
-- Does not automaticaly kill the buffer or switch to normal mode when terminal ends.
 - =C-d= cannot be used inside the terminal.
 - The =+vterm/open-popup= function does not working. It is now functions the
   same as =+vterm/open=.
