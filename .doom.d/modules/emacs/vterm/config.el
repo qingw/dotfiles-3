@@ -10,6 +10,7 @@
         (file-name-directory (locate-library "vterm"))
         "vterm-module.so"))
    (+vterm/vterm-module-compile))
+  :when (string-match-p "MODULES" system-configuration-features)
   :config
   (set-env! "SHELL")
   (setq-default
