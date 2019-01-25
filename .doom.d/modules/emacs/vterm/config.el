@@ -14,6 +14,10 @@
   (add-hook 'vterm-mode-hook #'doom|mark-buffer-as-real)
   ;; Automatically kill buffer when vterm exits.
   (setq-default vterm-exit-functions #'kill-buffer)
+  (when (featurep! :ui popup +defaults)
+    (set-popup-rules!
+      '(("^vterm"
+         :size 0.25 :vslot -4 :select t :quit nil :ttl 0))))
   (when (featurep! :feature evil)
     ;; (evil-set-initial-state 'vterm-mode 'insert)
     (add-to-list 'evil-emacs-state-modes 'vterm-mode)
