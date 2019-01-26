@@ -20,7 +20,7 @@
          :size 0.25 :vslot -4 :select t :quit nil :ttl 0))))
   (when (featurep! :feature evil)
     (evil-set-initial-state 'vterm-mode 'insert)
-    ;; Those keys commonly needed by terminals.
+    ;; Those keys are commonly needed by terminals.
     (evil-define-key 'insert vterm-mode-map
       (kbd "C-d") #'vterm--self-insert)
     ;; Go back to normal state but don't move cursor backwards.
