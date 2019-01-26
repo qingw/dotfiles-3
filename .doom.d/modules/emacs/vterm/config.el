@@ -19,8 +19,7 @@
       '(("^vterm"
          :size 0.25 :vslot -4 :select t :quit nil :ttl 0))))
   (when (featurep! :feature evil)
-    ;; (evil-set-initial-state 'vterm-mode 'insert)
-    (add-to-list 'evil-emacs-state-modes 'vterm-mode)
+    (evil-set-initial-state 'vterm-mode 'insert)
     ;; Go back to normal state but don't move cursor backwards.
     ;; Moving cursor backwards is the default Vim behavior but
     ;; it is not appropriate in some cases like terminals.
