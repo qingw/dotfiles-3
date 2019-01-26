@@ -37,6 +37,10 @@ update_linux_system() {
     elif [[ -f /etc/debian_version ]]; then
         run sudo apt update
         run sudo apt upgrade
+    elif [[ $(uname -o) == "Android" ]]; then
+        run apt update
+        run apt upgrade
+        run pkg upgrade
     fi
 }
 
