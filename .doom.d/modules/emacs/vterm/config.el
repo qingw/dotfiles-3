@@ -8,7 +8,8 @@
                               "vterm-module.so"))
     ;; let vterm compile `vterm-modules.so'
     (setq-default vterm-install t))
-  :when (string-match-p "MODULES" system-configuration-features)
+  :when (and (string-match-p "MODULES" system-configuration-features)
+             (display-graphic-p))
   :config
   (set-env! "SHELL")
   (add-hook 'vterm-mode-hook #'doom|mark-buffer-as-real)
