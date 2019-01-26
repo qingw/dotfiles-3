@@ -2,7 +2,7 @@
 
 [[ -f "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
 
-if [ -n "$(command -v figlet)" -a "$(uname -o)" != "Android" ];then
+if [ -n "$(command -v figlet)" -a "$(uname -o 2>&1)" != "Android" ]; then
     figlet -f doh -w 300 SteamedFish
 fi
 
