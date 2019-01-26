@@ -5,37 +5,33 @@
 
 * Table of Contents :TOC_3:noexport:
 - [[Description][Description]]
-  - [[Known bugs][Known bugs]]
-  - [[Module Flags][Module Flags]]
-  - [[Plugins][Plugins]]
-  - [[Hacks][Hacks]]
 - [[Prerequisites][Prerequisites]]
-- [[Features][Features]]
-- [[Configuration][Configuration]]
-- [[Troubleshooting][Troubleshooting]]
+  - [[Emacs requirement][Emacs requirement]]
+  - [[Compiler requirement][Compiler requirement]]
+  - [[System requirement][System requirement]]
 
 * Description
-a emacs-libvterm module
-
-FIXME: currently working in progress.
-
-** Known bugs
-- =C-d= cannot be used inside the terminal.
-- The =+vterm/open-popup= function does not working. It is now functions the
-  same as =+vterm/open=.
-
-** Module Flags
-This module provides no flags.
-
-** Plugins
-
-** Hacks
+An [[https://github.com/akermu/emacs-libvterm][emacs-libvterm]] module.
 
 * Prerequisites
+
+** Emacs requirement
 
 You have to compile emacs with =--with-modules= option.
 
 Lookat the =system-configuration-options= variable to see if your emacs has this option.
+
+** Compiler requirement
+
+Your system need to have =make= =cmake= and a c compiler to compile
+=libvterm-module=, Emacs will automatically compile the module for you.
+
+You can also put your pre-compiled =vterm-module.so= to your vterm installation
+folder, which is usually =~/.emacs.d/.local/packages/quelpa/build/vterm/=,
+and make sure =vterm-module.so= file is executable, instead of let emacs compile
+it for you.
+
+** System requirement
 
 You need to have =libvterm= installed in your system.
 
@@ -57,10 +53,3 @@ On macOS:
 brew install libvterm
 #+END_SRC
 
-You also need to have =make= =cmake= and a c compiler in your system to compile libvterm-module.
-
-* Features
-
-* Configuration
-
-* Troubleshooting
