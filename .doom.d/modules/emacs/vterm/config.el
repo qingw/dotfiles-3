@@ -14,7 +14,8 @@
   (set-env! "SHELL")
   (add-hook 'vterm-mode-hook #'doom|mark-buffer-as-real)
   ;; Automatically kill buffer when vterm exits.
-  (setq-default vterm-exit-functions #'kill-buffer)
+  (add-hook 'vterm-exit-functions #'(lambda (buffer)
+                                      (when buffer (kill-buffer buffer))))
   (when (featurep! :ui popup +defaults)
     (set-popup-rules!
       '(("^vterm"
