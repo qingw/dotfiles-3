@@ -1,6 +1,6 @@
 # All SpaceVim option below [option] section
 [options]
-  enable_googlesuggest = true
+  enable_googlesuggest = false
   enable_statusline_mode = true
   max_column = 80
   guifont = 'SauceCodePro Nerd Font:h12'
