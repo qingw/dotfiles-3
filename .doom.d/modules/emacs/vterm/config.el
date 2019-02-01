@@ -24,7 +24,9 @@
     (evil-set-initial-state 'vterm-mode 'insert)
     ;; Those keys are commonly needed by terminals.
     (evil-define-key 'insert vterm-mode-map
-      (kbd "C-d") #'vterm--self-insert)
+      (kbd "C-d") #'vterm--self-insert
+      (kbd "C-n") #'vterm--self-insert
+      (kbd "C-p") #'vterm--self-insert)
     ;; Go back to normal state but don't move cursor backwards.
     ;; Moving cursor backwards is the default Vim behavior but
     ;; it is not appropriate in some cases like terminals.
