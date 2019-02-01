@@ -171,4 +171,5 @@
 
        :private
        steamedfish
-       keybindings)
+       keybindings
+       accounts)
