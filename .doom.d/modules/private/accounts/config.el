@@ -2,7 +2,10 @@
 
 (when (featurep! :app irc)
   (after! circe
-    (evil-set-initial-state 'circe-chat-mode 'insert))
+    (evil-set-initial-state 'circe-chat-mode 'insert)
+    (setq-default
+     circe-default-quit-message "Ahhhhhhhhh!"
+     circe-default-part-message "Ahhhhhhhhh!"))
   (map!
    :leader
    :prefix ("o" . "open")
