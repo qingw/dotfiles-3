@@ -7,7 +7,6 @@
  calendar-latitude 23.1247
  calendar-longitude 113.3612
  calendar-location-name "Tianhe, Guangzhou"
- diary-file "~/org/diary"
  message-log-max 10000
  delete-by-moving-to-trash t)
 
@@ -51,3 +50,11 @@
 
 (after! yasnippet
   (push "~/.doom.d/snippets" yas-snippet-dirs))
+
+(after! org
+  (setq-default org-directory (expand-file-name "~/org/")
+                diary-file (expand-file-name "~/org/diary")
+                ;; all files but later.org should be put in agenda
+                org-agenda-files
+                (delete (expand-file-name "~/org/later.org")
+                        (file-expand-wildcards (concat org-directory "*.org")))))
