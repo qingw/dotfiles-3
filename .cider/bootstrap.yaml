@@ -97,6 +97,7 @@ formulas:
 - ispell
 - jq
 - jupyter
+- languagetool
 - lftp
 - lnav
 - mas
