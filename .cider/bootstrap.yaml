@@ -130,6 +130,7 @@ formulas:
 - vim
 - vitorgalvao/tiny-scripts/cask-repair
 - wget
+- wordnet
 - you-get
 - youtube-dl
 symlinks:
