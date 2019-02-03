@@ -65,4 +65,6 @@
                         (file-expand-wildcards (concat org-directory "*.org")))
                 ;; one archive file instead of many
                 org-archive-location
-                (concat org-directory "archive.org::* From %s")))
+                (concat org-directory "archive.org::* From %s")
+                org-log-done 'time
+                org-log-done-with-time t))
