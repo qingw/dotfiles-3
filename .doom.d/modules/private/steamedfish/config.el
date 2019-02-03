@@ -62,4 +62,7 @@
                 ;; all files but later.org should be put in agenda
                 org-agenda-files
                 (delete (expand-file-name "~/org/later.org")
-                        (file-expand-wildcards (concat org-directory "*.org")))))
+                        (file-expand-wildcards (concat org-directory "*.org")))
+                ;; one archive file instead of many
+                org-archive-location
+                (concat org-directory "archive.org::* From %s")))
