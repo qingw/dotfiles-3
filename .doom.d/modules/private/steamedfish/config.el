@@ -67,4 +67,13 @@
                 org-archive-location
                 (concat org-directory "archive.org::* From %s")
                 org-log-done 'time
-                org-log-done-with-time t))
+                org-log-done-with-time t)
+  (map!
+   :map evil-org-mode-map
+   :localleader
+   :desc "Create/Edit Todo"  "t"  #'org-todo
+   :desc "Schedule"          "s"  #'org-schedule
+   :desc "Deadline"          "d"  #'org-deadline
+   :desc "Refile"            "r"  #'org-refile
+   :desc "Filter"            "f"  #'org-match-sparse-tree
+   :desc "Tag heading"       "T"  #'org-set-tags-command))
