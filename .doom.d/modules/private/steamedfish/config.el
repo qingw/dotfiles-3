@@ -23,6 +23,11 @@
   (add-hook 'window-setup-hook #'toggle-frame-maximized)
   (add-hook 'window-setup-hook #'+steamedfish/toggle-transparency))
 
+(after! projectile
+  (projectile-add-known-project "~/dotfiles")
+  (projectile-add-known-project "~/.emacs.d"))
+  ;; TODO add all dumbo repo here
+
 (after! google-this
   (google-this-mode 1)
   ;; FIXME this keybinding is not working correctly
