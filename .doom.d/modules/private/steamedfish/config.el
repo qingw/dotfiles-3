@@ -71,9 +71,13 @@
   (map!
    :map evil-org-mode-map
    :localleader
-   :desc "Create/Edit Todo"  "t"  #'org-todo
-   :desc "Schedule"          "s"  #'org-schedule
+   :desc "Agenda"            "a"  #'org-agenda
+   :desc "Attach"            "A"  #'org-attach
+   :desc "Capture"           "c"  #'org-capture
    :desc "Deadline"          "d"  #'org-deadline
-   :desc "Refile"            "r"  #'org-refile
    :desc "Filter"            "f"  #'org-match-sparse-tree
+   :desc "Priority"          "p"  #'org-priority
+   :desc "Refile"            "r"  #'org-refile
+   :desc "Schedule"          "s"  #'org-schedule
+   :desc "Create/Edit Todo"  "t"  #'org-todo
    :desc "Tag heading"       "T"  #'org-set-tags-command))
