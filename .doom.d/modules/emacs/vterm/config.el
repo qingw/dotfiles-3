@@ -17,9 +17,7 @@
   (add-hook 'vterm-exit-functions #'(lambda (buffer)
                                       (when buffer (kill-buffer buffer))))
   (when (featurep! :ui popup +defaults)
-    (set-popup-rules!
-      '(("^vterm"
-         :size 0.25 :vslot -4 :select t :quit nil :ttl 0))))
+    (set-popup-rule! "^vterm" :size 0.25 :vslot -4 :select t :quit nil :ttl 0))
   (when (featurep! :feature evil)
     (evil-set-initial-state 'vterm-mode 'insert)
     ;; Those keys are commonly needed by terminals.
