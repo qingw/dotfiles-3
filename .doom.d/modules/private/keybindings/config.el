@@ -16,3 +16,6 @@
    :desc "Switch to buffer Other Frame"  :n "f"  #'switch-to-buffer-other-frame
    :desc "Toggle Frame Maximized"        :n "F"  #'toggle-frame-maximized
    :desc "Display buffer Other Frame"    :n "O"  #'display-buffer-other-frame))
+
+(when (featurep! :lang org)
+  (load! "+org"))
