@@ -97,6 +97,12 @@ if [ -n "$BASH_VERSION" -a -z "$BASH_COMPLETION" ]; then
     fi
 fi
 
+# emacs-vterm
+if [ -n "$INSIDE_EMACS" ]; then
+    alias vi='emacsclient -n'
+    alias vim='emacsclient -n'
+fi
+
 # Linux related
 if [ "$OSTYPE" == "linux-gnu" ]; then
     # Change the window title of X terminals
