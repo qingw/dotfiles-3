@@ -101,6 +101,7 @@ fi
 if [ -n "$INSIDE_EMACS" ]; then
     alias vi='emacsclient -n'
     alias vim='emacsclient -n'
+    alias emacs="emacsclient -n"
 fi
 
 # Linux related
@@ -130,5 +131,5 @@ fi
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
-alias emacs="emacsclient -n"
+alias e="emacsclient -n"
 alias dumbo="python $HOME/dumbo/optools/dumbo.py"
