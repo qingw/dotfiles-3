@@ -22,7 +22,8 @@ export HISTCONTROL=ignoredups
 export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT="%F %T"
 export HISTTIMEFORMAT="[%Y-%m-%d %H:%M:%S]  "
-export HISTSIZE=""
+export HISTSIZE="-1"
+export HISTFILESIZE="-1"
 shopt -s histappend
 
 # WSL
