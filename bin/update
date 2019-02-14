@@ -86,7 +86,7 @@ update_gem() {
 
 
 update_go() {
-    echo "Updating ruby gems"
+    echo "Updating go packages"
     run go get -u all
 }
 
