@@ -77,7 +77,11 @@ update_pip() {
 
 update_gem() {
     echo "Updating ruby gems"
-    run gem update
+    if [[ -x "/usr/local/opt/ruby/bin/gem" ]]; then
+        run /usr/local/opt/ruby/bin/gem update
+    else
+        run gem update
+    fi
 }
 
 
