@@ -65,7 +65,6 @@
        imenu             ; an imenu sidebar and searchable code index
        ;;term              ; terminals in Emacs
        vc                ; version-control and Emacs, sitting in a tree
-       vterm
 
        :tools
        ansible
@@ -84,6 +83,7 @@
        tmux              ; an API for interacting with tmux
        upload            ; map local to remote projects via ssh/ftp
        ;;wakatime
+       vterm
 
        :lang
        ;;assembly          ; assembly for fun or debugging
