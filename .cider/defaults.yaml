@@ -18,6 +18,7 @@ NSGlobalDomain:
     NSAutomaticTextCompletionEnabled: false
     # natual trackpad scrolling
     com.apple.swipescrolldirection: true
+    AppleInterfaceTheme: 'Dark'
 com.apple.dock:
     orientation: 'left'
 com.apple.desktopservices:
