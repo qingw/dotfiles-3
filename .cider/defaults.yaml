@@ -18,6 +18,8 @@ NSGlobalDomain:
     NSAutomaticTextCompletionEnabled: false
     # natual trackpad scrolling
     com.apple.swipescrolldirection: true
+com.apple.dock:
+    orientation -string 'left'
 com.apple.desktopservices:
     # Dont write DS_store
     DSDontWriteNetworkStores: true
