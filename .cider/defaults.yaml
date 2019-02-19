@@ -21,6 +21,7 @@ NSGlobalDomain:
     AppleInterfaceTheme: 'Dark'
 com.apple.dock:
     orientation: 'left'
+    magnification: true
 com.apple.desktopservices:
     # Dont write DS_store
     DSDontWriteNetworkStores: true
