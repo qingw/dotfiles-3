@@ -33,6 +33,8 @@ com.apple.finder:
     ShowPreviewPane: true
     ShowSidebar: true
     ShowStatusBar: true
+    PathBarRootAtHome: true
+    QuitMenuItem: true
 com.apple.Safari:
     AutoOpenSafeDownloads: false
     AutoFillCreditCardData: false
