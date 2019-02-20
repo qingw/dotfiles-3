@@ -57,21 +57,6 @@ if [ -f $_SITE_PACKAGES/powerline/bindings/bash/powerline.sh ]; then
 fi
 unset _SITE_PACKAGES
 
-# ConTeXt minimals
-_POSSIBLE_PATH="/Volumes/DATA/ConTeXt /Volumes/MacData/ConTeXt /Volumes/SteamedFish/ConTeXt $HOME/ConTeXt"
-for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
-    if [ -d "${_CONTEXT_PATH}" ]; then
-        #source ${_CONTEXT_PATH}/tex/setuptex
-        if ! [ -f '/etc/paths.d/ConTeXt' ]; then
-            echo "please run sudo echo ${_CONTEXT_PATH}/tex/texmf-osx-64/bin > /etc/paths.d/ConTeXt"
-        fi
-        OSFONTDIR="/Library/Fonts/;/System/Library/Fonts/;$HOME/Library/Fonts/"
-        break
-    fi
-done
-unset _POSSIBLE_PATH
-unset _CONTEXT_PATH
-
 # bash-completion
 if [ -n "$BASH_VERSION" -a -z "$BASH_COMPLETION" ]; then
     if [ -r /usr/local/etc/bash_completion ]; then
