@@ -76,24 +76,6 @@ if [ -n "$BASH_VERSION" -a -z "$BASH_COMPLETION" ]; then
     fi
 fi
 
-# Linux related
-if [ "$OSTYPE" == "linux-gnu" ]; then
-    # Change the window title of X terminals
-    case ${TERM} in
-      xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-        PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-        ;;
-      screen*)
-        PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-        ;;
-    esac
-    if $CLICOLOR ; then
-        alias ls='ls --color=auto'
-    fi
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    source "$HOME/.bashrc_secret"
-fi
-
 # Aliases
 if $CLICOLOR; then
     alias grep='grep --color=auto'
