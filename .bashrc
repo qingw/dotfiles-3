@@ -25,11 +25,6 @@ export HISTTIMEFORMAT="[%Y-%m-%d %H:%M:%S]  "
 export HISTFILESIZE=-1
 shopt -s histappend
 
-# WSL
-if [[ "$(uname -r)" == *"-Microsoft" ]]; then
-  export DISPLAY=:0
-fi
-
 # enable color support
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
     export CLICOLOR=true
