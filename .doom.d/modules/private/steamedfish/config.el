@@ -51,17 +51,17 @@
   (setq show-trailing-whitespace t))
 
 (after! deft
-  (setq-default deft-directory "~/org/"))
+  (setq-default deft-directory "~/Dropbox/org/"))
 
 (after! yasnippet
   (push "~/.doom.d/snippets" yas-snippet-dirs))
 
 (after! org
-  (setq-default org-directory (expand-file-name "~/org/")
-                diary-file (expand-file-name "~/org/diary")
+  (setq-default org-directory (expand-file-name "~/Dropbox/org/")
+                diary-file (expand-file-name "~/Dropbox/org/diary")
                 ;; all files but later.org should be put in agenda
                 org-agenda-files
-                (delete (expand-file-name "~/org/later.org")
+                (delete (expand-file-name "~/Dropbox/org/later.org")
                         (file-expand-wildcards (concat org-directory "*.org")))
                 ;; one archive file instead of many
                 org-archive-location
