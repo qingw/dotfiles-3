@@ -46,7 +46,6 @@ if $CLICOLOR ;then
 fi
 
 # bash-powerline
-
 _SITE_PACKAGES=$(python -c "import sys; print(next(p for p in sys.path if 'site-packages' in p))")
 if [ -f $_SITE_PACKAGES/powerline/bindings/bash/powerline.sh ]; then
     if [ "$TERM_PROGRAM" == "iTerm.app" ] && [ -z "$INSIDE_EMACS" ]; then
