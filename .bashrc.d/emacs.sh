@@ -13,4 +13,5 @@ if [ -d "$HOME/spacemacs" ] && \
    [ -f "$HOME/.emacs-profiles.el" ] && \
    [ -f "$HOME/.emacs" ]; then
     alias spacemacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=spacemacs &"
+    alias doom="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=doom &"
 fi
