@@ -97,13 +97,6 @@ if [ -n "$BASH_VERSION" -a -z "$BASH_COMPLETION" ]; then
     fi
 fi
 
-# emacs-vterm
-if [ -n "$INSIDE_EMACS" ]; then
-    alias vi='emacsclient -n'
-    alias vim='emacsclient -n'
-    alias emacs="emacsclient -n"
-fi
-
 # Linux related
 if [ "$OSTYPE" == "linux-gnu" ]; then
     # Change the window title of X terminals
@@ -131,5 +124,13 @@ fi
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
-alias e="emacsclient -n"
 alias dumbo="python $HOME/dumbo/optools/dumbo.py"
+
+if [ -d "$HOME/.bashrc.d" ]; then
+    for i in $HOME/.bashrc.d/*.sh; do
+        if [ -r $i ]; then
+            source $i
+        fi
+    done
+    unset i
+fi
