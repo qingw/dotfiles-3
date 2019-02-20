@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # emacs-vterm
 if [ -n "$INSIDE_EMACS" ]; then
     alias vi='emacsclient -n'
