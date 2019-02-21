@@ -84,6 +84,7 @@
        upload            ; map local to remote projects via ssh/ftp
        ;;wakatime
        vterm
+       telega
 
        :lang
        ;;assembly          ; assembly for fun or debugging
