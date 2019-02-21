@@ -76,6 +76,8 @@
 [[layers]]
   name = "tags"
 [[layers]]
+  name = "sudo"
+[[layers]]
   name = "tests"
 [[layers]]
   name = "tumx"
