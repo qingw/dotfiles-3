@@ -9,20 +9,20 @@
        (lookup           ; helps you navigate your code and documentation
         +docsets)        ; ...or in Dash docsets locally
        snippets          ; my elves. They type so I don't have to
-       spellcheck        ; tasing you for misspelling mispelling
-       (syntax-checker   ; tasing you for every semicolon you forget
-        +childframe)     ; use child frame instead of overlay
        workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
        (company          ; the ultimate code completion backend
         +auto            ; complete on the fly
+        ;;+tng
         +childframe)     ; use child frame instead of overlay
        (helm              ; the *other* search engine for love and life
         ;+childframe
         +fuzzy)
        ;;ido              ; the other *other* search engine...
-       ;;ivy              ; a search engine for love and life
+       ;;(ivy              ; a search engine for love and life
+       ;;+childframe
+       ;;+fuzzy)
 
        :ui
        deft              ; notational velocity for Emacs
@@ -48,8 +48,9 @@
        window-select     ; visually switch windows
 
        :editor
+       fold              ; (nigh) universal code folding
        (format +onsave)  ; automated prettiness
-       ;;lispy             ; vim for lisp, for people who dont like vim
+       lispy             ; vim for lisp, for people who dont like vim
        multiple-cursors  ; editing in many places at once
        parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
@@ -58,10 +59,8 @@
        (dired            ; making dired pretty [functional]
         +ranger          ; bringing the goodness of ranger to dired
         +icons)          ; colorful icons for dired-mode
-       ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
        eshell            ; a consistent, cross-platform shell (WIP)
-       hideshow          ; basic code-folding support
        imenu             ; an imenu sidebar and searchable code index
        ;;term              ; terminals in Emacs
        vc                ; version-control and Emacs, sitting in a tree
@@ -71,13 +70,18 @@
        docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
+       (flycheck          ; tasing you for every semicolon you forget
+        +childframe)
+       flyspell          ; tasing you for misspelling mispelling
        gist              ; interacting with github gists
+       ;;lsp
        macos             ; MacOS-specific commands
-       make              ; run make tasks from Emacs
        magit             ; a git porcelain for Emacs
-       password-store    ; password manager for nerds
+       make              ; run make tasks from Emacs
+       (password-store    ; password manager for nerds
+        +auth)
        pdf               ; pdf enhancements
-       ;;prodigy           ; FIXME managing external services & code builders
+       prodigy           ; FIXME managing external services & code builders
        rgb               ; creating color strings
        terraform         ; infrastructure as code
        tmux              ; an API for interacting with tmux
@@ -87,6 +91,7 @@
        telega
 
        :lang
+       ;;agda
        ;;assembly          ; assembly for fun or debugging
        (cc +irony +rtags); C/C++/Obj-C madness
        ;;clojure           ; java with a lisp
@@ -147,11 +152,13 @@
        ;;(email +gmail)    ; emacs as an email client
        irc               ; how neckbeards socialize
        ;;(rss +org)        ; emacs as an RSS reader
-       ;;twitter           ; twitter client https://twitter.com/vnought
+       twitter           ; twitter client https://twitter.com/vnought
        (write            ; emacs as a word processor (latex + org + markdown)
         +wordnut         ; wordnet (wn) search
         +langtool)       ; a proofreader (grammar/style check) for Emacs
        calendar         ;gcal support
+       ;;notmuch           ; notmuch mail
+       regex
 
        :collab
        ;;floobits          ; peer programming for a price
