@@ -16,13 +16,13 @@
         +auto            ; complete on the fly
         ;;+tng
         +childframe)     ; use child frame instead of overlay
-       (helm              ; the *other* search engine for love and life
-        ;+childframe
-        +fuzzy)
+       ;;(helm              ; the *other* search engine for love and life
+       ;; ;+childframe
+       ;; +fuzzy)
        ;;ido              ; the other *other* search engine...
-       ;;(ivy              ; a search engine for love and life
-       ;;+childframe
-       ;;+fuzzy)
+       (ivy              ; a search engine for love and life
+        ;; +childframe
+        +fuzzy)
 
        :ui
        deft              ; notational velocity for Emacs
