@@ -13,7 +13,7 @@ for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
         elif [ "$OSTYPE" == "linux-gnu" ]; then
             export PATH="$PATH:${_POSSIBLE_PATH}/tex/texmf-linux-64/bin"
             export OSFONTDIR="/usr/local/share/fonts;$HOME/.fonts"
-                break
+            break
         fi
     fi
 done
