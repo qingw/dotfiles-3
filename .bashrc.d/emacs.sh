@@ -12,6 +12,11 @@ alias e="emacsclient -n"
 if [ -d "$HOME/emacs-distros/spacemacs" ] && \
    [ -f "$HOME/.emacs-profiles.el" ] && \
    [ -f "$HOME/.emacs" ]; then
-    alias spacemacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=spacemacs &"
-    alias doom="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=doom &"
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        alias spacemacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=spacemacs &"
+        alias doom="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=doom &"
+    elif [ "$OSTYPE" == "linux-gnu" ]; then
+        alias spacemacs="/usr/bin/emacs --with-profile=spacemacs &"
+        alias doom="/usr/bin/emacs --with-profile=doom &"
+    fi
 fi
