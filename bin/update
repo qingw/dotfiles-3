@@ -125,6 +125,13 @@ update_emacs() {
         echo "updating spacemacs packages"
         run /usr/local/bin/emacs --no-window-system --load "$HOME/dotfiles/bin/update-emacs.el"
     fi
+    for _PROJECT in "$HOME"/emacs-distros/*; do
+        if [ -d "${_PROJECT}/.git" ]; then
+            cd "${_PROJECT}"
+            run git pull
+            run git submodule update --remote --recursive
+        fi
+    done
 }
 
 
