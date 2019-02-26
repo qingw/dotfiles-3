@@ -2,7 +2,7 @@
 
 
 (("default" . ((user-emacs-directory . "~/.emacs.d")))
- ("spacemacs" . ((user-emacs-directory . "~/spacemacs")
+ ("spacemacs" . ((user-emacs-directory . "~/emacs-distros/spacemacs")
                  (env . (("SPACEMACSDIR" . "~/.spacemacs.d")))))
- ("doom" . ((user-emacs-directory . "~/doom-emacs")
+ ("doom" . ((user-emacs-directory . "~/emacs-distros/doom-emacs")
             (env . (("DOOMDIR" . "~/.doom.d"))))))

@@ -9,7 +9,7 @@ fi
 
 alias e="emacsclient -n"
 
-if [ -d "$HOME/spacemacs" ] && \
+if [ -d "$HOME/emacs-distros/spacemacs" ] && \
    [ -f "$HOME/.emacs-profiles.el" ] && \
    [ -f "$HOME/.emacs" ]; then
     alias spacemacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=spacemacs &"
