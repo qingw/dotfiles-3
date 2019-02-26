@@ -11,7 +11,7 @@ for _CONTEXT_PATH in ${_POSSIBLE_PATH}; do
             export OSFONTDIR="/Library/Fonts/;/System/Library/Fonts/;$HOME/Library/Fonts/"
             break
         elif [ "$OSTYPE" == "linux-gnu" ]; then
-            export PATH="$PATH:${_POSSIBLE_PATH}/tex/texmf-linux-64/bin"
+            export PATH="$PATH:${_CONTEXT_PATH}/tex/texmf-linux-64/bin"
             export OSFONTDIR="/usr/local/share/fonts;$HOME/.fonts"
             break
         fi
