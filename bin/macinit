@@ -4,7 +4,7 @@ pip2_apps=(
 )
 
 pip3_apps=(
-cider
+#cider
 pymysql
 netaddr
 simplejson
@@ -52,7 +52,7 @@ dirs=(
 )
 
 # check if ssh key exist
-if ! [ -f "~/.ssh/id_rsa" ]; then
+if ! [ -f "$HOME/.ssh/id_rsa" ]; then
     echo "please copy your ssh key first"
     exit 1
 fi
@@ -85,6 +85,7 @@ if ! /usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables; then
 fi
 
 # accept Xcode license
+# TODO nolonger working
 sudo xcodebuild -license accept
 
 # install homebrew
@@ -105,10 +106,10 @@ xcode_id=$(/usr/local/bin/mas search Xcode | /usr/bin/grep -E '^[0-9]* *Xcode$' 
 
 # setup cider
 /usr/local/bin/brew install python
-/usr/local/opt/python/libexec/bin/pip install cider
-ln -s dotfiles/.cider ~/.cider
-echo "restoreing cider"
-/usr/local/bin/cider restore
+#/usr/local/opt/python/libexec/bin/pip install cider
+#ln -s dotfiles/.cider ~/.cider
+#echo "restoreing cider"
+#/usr/local/bin/cider restore
 
 for apps in ${pip2_apps[@]}; do
     :
@@ -146,8 +147,6 @@ if [[ "$(kextstat | grep "FakeSMC")" != "" ]]; then
     # disable computer sleep
     sudo pmset -a sleep 0
 fi
-
-open '/usr/local/Caskroom/lastpass/latest/LastPass Installer/LastPass Installer.app'
 
 # add crontab for NetEase AUTH
 if /sbin/ping -q -c 3 ita.netease.com > /dev/null ; then
