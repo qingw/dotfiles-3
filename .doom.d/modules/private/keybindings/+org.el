@@ -5,7 +5,8 @@
  :localleader
  :desc "Show Subtree"      "<tab>" #'org-show-subtree
  :desc "Agenda"            "a"     #'org-agenda
- :desc "Attach"            "A"     #'org-attach
+ :desc "Archive"           "A"     #'org-archive-subtree
+ :desc "Attach"            "C-a"   #'org-attach
  :desc "Capture"           "c"     #'org-capture
  :desc "Deadline"          "d"     #'org-deadline
  :desc "Goto"              "g"     #'org-goto
