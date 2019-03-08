@@ -58,7 +58,7 @@ update_homebrew() {
     run brew cask upgrade --greedy
 
     # audit popo to check if it being updated
-    brew cask audit popo --download || /bin/true
+    brew cask audit popo --download || /usr/bin/true
 
     run brew cleanup
 
