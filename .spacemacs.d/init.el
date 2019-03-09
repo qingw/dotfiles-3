@@ -60,6 +60,8 @@ This function should only modify configuration layer settings."
          org-enable-github-support t
          org-enable-reveal-js-support t
          org-enable-bootstrap-support t
+         org-enable-hugo-support t
+         org-enable-trello-support t
          org-projectile-file "TODOs.org")
      semantic
      smex
@@ -75,6 +77,7 @@ This function should only modify configuration layer settings."
          chinese-enable-fcitx t
               :packages (not pyim chinese-wbim pangu-spacing))
      ; programming
+     asciidoc
      (c-c++ :variables
          c-c++-enable-clang-support t)
      csv
@@ -85,6 +88,7 @@ This function should only modify configuration layer settings."
      javascript
      json
      latex
+     major-modes
      markdown
      (python :variables
          python-test-runner '(pytest nose)
@@ -111,10 +115,15 @@ This function should only modify configuration layer settings."
      ; tools
      ansible
      chrome
+     cmake
+     command-log
+     debug
      docker
      imenu-list
      nginx
      pandoc
+     pass
+     prettier
      puppet
      (ranger :variables
          ranger-show-preview t)
