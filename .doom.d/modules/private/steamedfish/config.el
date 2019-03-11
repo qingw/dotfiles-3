@@ -68,3 +68,8 @@
                 (concat org-directory "archive.org::* From %s")
                 org-log-done 'time
                 org-log-done-with-time t))
+
+(after! projectile
+  (setq projectile-project-search-path
+        '("~/work/" "~/dumbo/" "~/Dropbox/" "~/Qsync/" "~/dotfiles/")
+        projectile-switch-project-action #'projectile-dired))
