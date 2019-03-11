@@ -15,3 +15,10 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
         alias ls='ls --color=auto'
     fi
 fi
+
+# LinuxBrew
+if [ -d /home/linuxbrew/.linuxbrew ]; then
+    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+elif [ -d "$HOME/.linuxbrew" ]; then
+    export PATH="$HOME/.linuxbrew/bin:$PATH"
+fi
