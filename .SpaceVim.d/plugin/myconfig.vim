@@ -9,3 +9,8 @@ set wrap
 if has("gui_macvim")
     set transparency=15
 endif
+
+" better diff auglrithm
+if has("patch-8.1.0360")
+    set diffopt+=internal,algorithm:patience
+endif
