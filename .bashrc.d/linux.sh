@@ -18,7 +18,7 @@ fi
 
 # LinuxBrew
 if [ -d /home/linuxbrew/.linuxbrew ]; then
-    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/$PATH"
 elif [ -d "$HOME/.linuxbrew" ]; then
-    export PATH="$HOME/.linuxbrew/bin:$PATH"
+    export PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
 fi
