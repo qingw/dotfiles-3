@@ -70,7 +70,7 @@
                 org-log-done-with-time t))
 
 (after! projectile
-  (loop for dir in '("~/work/" "~/dumbo/" "~/Dropbox/" "~/Qsync/Work/" "~/dotfiles/")
-        (when (file-directory-p dir)
-          (add-to-list projectile-project-search-path dir)))
-  (setq projectile-switch-project-action #'projectile-dired))
+  (setq projectile-switch-project-action #'projectile-dired)
+  (dolist (dir '("~/work/" "~/dumbo/" "~/Dropbox/" "~/Qsync/Work/" "~/dotfiles/"))
+    (when (file-directory-p dir)
+      (add-to-list 'projectile-project-search-path dir))))
