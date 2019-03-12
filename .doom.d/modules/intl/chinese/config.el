@@ -22,12 +22,12 @@
 
 (def-package! fcitx
   :config
-  (when IS-LINUX
-    (setq-default
-     fcitx-use-dbus t))
-  (setq-default
-   fcitx-active-evil-states '(insert emacs hybrid))
-  (fcitx-aggressive-setup))
+  (if IS-LINUX
+      (setq fcitx-use-dbus t)
+    ;; Mac's fcitx causes hangup
+    ;; (setq fcitx-active-evil-states '(insert emacs hybrid)
+    ;; (fcitx-aggressive-setup)
+    ))
 
 (def-package! youdao-dictionary
   :config
