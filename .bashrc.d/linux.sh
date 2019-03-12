@@ -14,6 +14,7 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
     if $CLICOLOR ; then
         alias ls='ls --color=auto'
     fi
+    alias open='xdg-open'
 fi
 
 # LinuxBrew
