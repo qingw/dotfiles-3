@@ -71,5 +71,5 @@
 
 (after! projectile
   (setq projectile-project-search-path
-        '("~/work/" "~/dumbo/" "~/Dropbox/" "~/Qsync/" "~/dotfiles/")
+        '("~/work/" "~/dumbo/" "~/Dropbox/" "~/Qsync/Work/" "~/dotfiles/")
         projectile-switch-project-action #'projectile-dired))
