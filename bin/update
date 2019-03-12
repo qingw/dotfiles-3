@@ -68,6 +68,20 @@ update_homebrew() {
     fi
 }
 
+update_linuxbrew() {
+    if [ -d "/home/linuxbrew/.linuxbrew" ] || [ -d "$HOME/.linuxbrew" ]; then
+        echo "Updating LinuxBrew"
+        run brew update
+        run brew upgrade
+        run brew cleanup
+
+        _cachedir="$(brew --cache)"
+        if [ -d "$_cachedir" ] && [[ "$_cachedir" == "$HOME/.cache/Homebrew" ]]; then
+            run rm -rf "$_cachedir"
+        fi
+    fi
+}
+
 update_pip() {
     echo "Updating Pip"
     run pip2 list --format=columns | cut -d ' ' -f 1 | run xargs -n1 pip2 install -U
@@ -152,6 +166,7 @@ case $OSTYPE in
     linux*)
         self_update
         update_linux_system
+        update_linuxbrew
         update_vim
         update_emacs
         ;;
