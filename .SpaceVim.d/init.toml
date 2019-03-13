@@ -70,6 +70,10 @@
   name = "lang#vim"
 [[layers]]
   name = "lsp"
+  filetypes = [
+    "python",
+    "sh"
+  ]
 [[layers]]
   name = "shell"
   default_position = 'bottom'

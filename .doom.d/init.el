@@ -74,7 +74,7 @@
         +childframe)
        flyspell          ; tasing you for misspelling mispelling
        gist              ; interacting with github gists
-       ;;lsp
+       lsp
        macos             ; MacOS-specific commands
        magit             ; a git porcelain for Emacs
        make              ; run make tasks from Emacs
