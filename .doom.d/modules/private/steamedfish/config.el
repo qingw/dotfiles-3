@@ -76,5 +76,4 @@
       (add-to-list 'projectile-project-search-path dir))))
 
 (after! lsp-mode
-  (add-hook 'python-mode-hook 'lsp)
   (add-hook 'sh-mode-hook 'lsp))
