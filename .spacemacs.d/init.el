@@ -88,6 +88,7 @@ This function should only modify configuration layer settings."
      javascript
      json
      latex
+     lsp
      major-modes
      markdown
      (python :variables
