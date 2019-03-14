@@ -76,6 +76,5 @@
       (add-to-list 'projectile-project-search-path dir))))
 
 (after! lsp-mode
-  (add-hook 'sh-mode-hook 'lsp)
   (if (featurep 'xwidget-internal)
       (setq lsp-ui-doc-use-webkit t)))

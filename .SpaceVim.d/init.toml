@@ -71,8 +71,7 @@
 [[layers]]
   name = "lsp"
   filetypes = [
-    "python",
-    "sh"
+    "python"
   ]
 [[layers]]
   name = "shell"
