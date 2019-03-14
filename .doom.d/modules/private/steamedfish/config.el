@@ -76,5 +76,9 @@
       (add-to-list 'projectile-project-search-path dir))))
 
 (after! lsp-mode
+  (setq lsp-ui-doc-position 'at-point
+        lsp-ui-flycheck-enable t
+        lsp-ui-sideline-ignore-duplicate t
+        lsp-ui-sideline-update-mode 'point)
   (if (featurep 'xwidget-internal)
       (setq lsp-ui-doc-use-webkit t)))
