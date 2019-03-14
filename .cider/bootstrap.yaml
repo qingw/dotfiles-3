@@ -154,7 +154,15 @@ symlinks:
     Library/Rime/*: ~/Library/Rime/
     bin/*: ~/bin/
 taps:
-- caskroom/cask
-- caskroom/fonts
-- railwaycat/emacsmacport
 - andresv/homebrew-gnuradio
+- homebrew/cask
+- homebrew/cask-drivers
+- homebrew/cask-eid
+- homebrew/cask-fonts
+- homebrew/cask-versions
+- homebrew/core
+- homebrew/services
+- parera10/csshx
+- railwaycat/emacsmacport
+- twlz0ne/ccls
+- vitorgalvao/tiny-scripts
