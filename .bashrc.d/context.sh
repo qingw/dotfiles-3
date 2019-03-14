@@ -2,7 +2,7 @@
 
 # ConTeXt minimals
 if [ -d "$HOME/ConTeXt" ]; then
-    if [[ "$OS_TYPE" == "darwin"* ]]; then
+    if [[ "$OSTYPE" == "darwin"* ]]; then
         if ! [ -f '/etc/paths.d/ConTeXt' ]; then
             echo "please run sudo echo $HOME/ConTeXt/tex/texmf-osx-64/bin > /etc/paths.d/ConTeXt"
         fi
