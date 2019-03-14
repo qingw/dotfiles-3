@@ -1,34 +1,5 @@
 ;;; intl/chinese/config.el  -*- lexical-binding: t; -*-
 
-;; (def-package! cnfonts
-;;   :when (display-graphic-p)
-;;   :init (cnfonts-enable)
-;;   :config
-;;   (setq-default
-;;    cnfonts-default-step 4
-;;    cnfonts-directory (concat doom-etc-dir "cnfonts/")
-;;    cnfonts-personal-fontnames
-;;    '(
-;;      ("Noto Mono" "Noto Sans" "Noto Serif")
-;;      ("Hiragino Sans GB" "Source Han Sans SC" "Source Han Serif SC" "Noto Sans CJK SC" "Noto Sans Mono CJK SC" "Noto Serif CJK SC" "Sarasa Gothic SC" "Sarasa Mono T SC" "Sarasa UI SC" "Sarasa Mono SC")
-;;      ("Hiragino Sans GB" "Source Han Sans SC" "Source Han Serif SC" "Noto Sans CJK SC" "Noto Sans Mono CJK SC" "Noto Serif CJK SC" "Sarasa Gothic SC" "Sarasa Mono T SC" "Sarasa UI SC" "Sarasa Mono SC")
-;;      ))
-;;   (map!
-;;    :leader
-;;    :prefix ("t" . "toggle")
-;;    :desc "Increase Fontsize"  :n "+"  #'cnfonts-increase-fontsize
-;;    :desc "Decrease Fontsize"  :n "-"  #'cnfonts-decrease-fontsize
-;;    :desc "Reset Fontsize"     :n "0"  #'cnfonts-reset-fontsize))
-
-(def-package! fcitx
-  :config
-  (if IS-LINUX
-      (setq fcitx-use-dbus t)
-    ;; Mac's fcitx causes hangup
-    ;; (setq fcitx-active-evil-states '(insert emacs hybrid)
-    ;; (fcitx-aggressive-setup)
-    ))
-
 (def-package! youdao-dictionary
   :config
   (setq-default
