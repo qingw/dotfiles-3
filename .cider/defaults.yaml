@@ -49,3 +49,7 @@ com.apple.Safari:
     AlwaysShowTabBar: true
     SendDoNotTrackHTTPHeader: true
     WebKitDefaultTextEncodingName: "utf-8"
+org.gnu.Emacs:
+    Emacs.ToolBar: 'no'
+    Emacs.ScrollBar: 'no'
+    Emacs.MenuBar: 'no'
