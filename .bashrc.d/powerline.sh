@@ -9,7 +9,7 @@ if [ -z "$INSIDE_EMACS" ]; then
                 POWERLINE_BASH_CONTINUATION=1
                 POWERLINE_BASH_SELECT=1
                 . $_SITE_PACKAGES/powerline/bindings/bash/powerline.sh
-            fi
         fi
         unset _SITE_PACKAGES
     fi
+fi
