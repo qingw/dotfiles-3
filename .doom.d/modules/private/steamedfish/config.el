@@ -44,9 +44,7 @@
    :map dired-mode-map
    ;; don't create new buffer when navigating
    :n "<return>"  #'dired-find-alternate-file
-   :n "^"         #'(lambda ()
-                      (interactive)
-                      (find-alternate-file ".."))))
+   :n "^"         (λ! (find-alternate-file ".."))))
 
 (add-hook! (text-mode prog-mode conf-mode snippet-mode)
   (setq show-trailing-whitespace t))
