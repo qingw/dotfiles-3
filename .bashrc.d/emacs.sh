@@ -30,7 +30,7 @@ function emacs {
         fi
     done
     if [[ "$OSTYPE" == "darwin"* ]]; then
-        setsid emacsclient -n -a /Applications/Emacs.app/Contents/MacOS/Emacs ${args[*]}
+        emacsclient -n -a /Applications/Emacs.app/Contents/MacOS/Emacs ${args[*]}
     elif [ "$OSTYPE" == "linux-gnu" ]; then
         setsid emacsclient -n -a /usr/bin/emacs ${args[*]}
     fi
