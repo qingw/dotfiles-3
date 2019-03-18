@@ -7,6 +7,7 @@ set wrap
 
 " only MacVim GUI has transparency
 if has("gui_macvim")
+    set macligatures
     set transparency=15
 endif
 
