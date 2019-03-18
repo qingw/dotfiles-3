@@ -9,6 +9,13 @@ casks:
 - firefox
 - flash-npapi
 - flash-ppapi
+- font-fira-code
+  font-fira-mono
+  font-fira-sans
+  font-firacode-nerd-font
+  font-firacode-nerd-font-mono
+  font-firamono-nerd-font
+  font-firamono-nerd-font-mono
 - font-noto-sans-cjk
 - font-noto-serif-cjk
 - font-sarasa-gothic
