@@ -17,7 +17,7 @@
      mac-system-move-file-to-trash-use-finder t))
   (setq-default
    doom-font (font-spec :family "Fira Mono" :size 12.5)
-   doom-variable-pitch-font (font-spec :family "Fira Code")
+   doom-variable-pitch-font (font-spec :family "Fira Sans")
    doom-unicode-font (font-spec :family "Hiragino Sans GB" :size 14.5)
    doom-big-font (font-spec :family "Fira Mono" :size 21))
   (add-hook 'window-setup-hook #'toggle-frame-maximized)
