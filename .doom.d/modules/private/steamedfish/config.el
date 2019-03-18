@@ -14,7 +14,8 @@
   (when IS-MAC
     (setq-default
      ns-use-thin-smoothing t
-     mac-system-move-file-to-trash-use-finder t))
+     mac-system-move-file-to-trash-use-finder t)
+    (mac-auto-operator-composition-mode))
   (setq-default
    doom-font (font-spec :family "Fira Mono" :size 12.5)
    doom-variable-pitch-font (font-spec :family "Fira Sans")
