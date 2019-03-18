@@ -1,6 +1,7 @@
 ;;; private/keybindings/config.el  -*- lexical-binding: t; -*-
 
 (map!
+ "s-u"                                            #'+steamedfish/toggle-transparency
  :leader
  (:prefix ("t" . "toggle")
    :desc "Transparency"                  :n "t"   #'+steamedfish/toggle-transparency)
