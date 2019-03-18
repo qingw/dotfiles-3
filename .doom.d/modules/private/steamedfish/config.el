@@ -66,7 +66,6 @@
 (after! projectile
   (projectile-add-known-project "~/dotfiles")
   (projectile-add-known-project "~/.emacs.d")
-  (setq projectile-switch-project-action #'projectile-dired)
   (dolist (dir '("~/work/" "~/dumbo/" "~/Dropbox/" "~/Qsync/Work/" "~/dotfiles/"))
     (when (file-directory-p dir)
       (add-to-list 'projectile-project-search-path dir))))
