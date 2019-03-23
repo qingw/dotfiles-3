@@ -9,6 +9,6 @@ if [ -d "$HOME/ConTeXt" ]; then
         export OSFONTDIR="/Library/Fonts/;/System/Library/Fonts/;$HOME/Library/Fonts/"
     elif [ "$OSTYPE" == "linux-gnu" ]; then
         export PATH="$PATH:$HOME/ConTeXt/tex/texmf-linux-64/bin"
-        export OSFONTDIR="/usr/local/share/fonts;$HOME/.fonts"
+        export OSFONTDIR="/usr/share/fonts;$HOME/.fonts"
     fi
 fi
