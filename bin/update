@@ -151,15 +151,17 @@ update_emacs() {
 
 update_optools() {
     echo "updating optools"
-    if [ -d "$HOME/dumbo" ]; then
-        for _PROJECT in "$HOME"/dumbo/*; do
-            if [ -d "${_PROJECT}/.git" ]; then
-                cd "${_PROJECT}"
-                run git pull
-                run git submodule update --remote --recursive
-            fi
-        done
-    fi
+    for _DIR in "dumbo" "work"; do
+        if [ -d "$HOME/${_DIR}" ]; then
+            for _PROJECT in "$HOME"/${_DIR}/*; do
+                if [ -d "${_PROJECT}/.git" ]; then
+                    cd "${_PROJECT}"
+                    run git pull
+                    run git submodule update --remote --recursive
+                fi
+            done
+        fi
+    done
 }
 
 case $OSTYPE in
