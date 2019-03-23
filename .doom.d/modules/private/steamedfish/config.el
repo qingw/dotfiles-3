@@ -77,3 +77,16 @@
         lsp-ui-sideline-update-mode 'point)
   (if (featurep 'xwidget-internal)
       (setq lsp-ui-doc-use-webkit t)))
+
+;; when at the edge of buffers, go to the next node
+(after! info
+  (map!
+   :map Info-mode-map
+   :n "j"    (lambda!
+              (condition-case nil
+                  (evil-next-line)
+                (error (Info-scroll-up))))
+   :n "k"    (lambda!
+              (condition-case nil
+                  (evil-previous-line)
+                (error (Info-scroll-down))))))
