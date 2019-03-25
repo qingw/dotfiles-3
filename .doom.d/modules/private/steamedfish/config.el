@@ -90,3 +90,7 @@
               (condition-case nil
                   (evil-previous-line)
                 (error (Info-scroll-down))))))
+
+(after! ivy-posframe
+  (when (display-graphic-p)
+    (setq ivy-display-function #'ivy-posframe-display-at-frame-bottom-left)))
