@@ -78,6 +78,6 @@
   (if (featurep 'xwidget-internal)
       (setq lsp-ui-doc-use-webkit t)))
 
-(after! ivy-posframe
-  (when (display-graphic-p)
-    (setq ivy-display-function #'ivy-posframe-display-at-frame-bottom-left)))
+;; (after! ivy-posframe
+;;   (when (display-graphic-p)
+;;     (setq ivy-display-function #'ivy-posframe-display-at-frame-bottom-left)))
