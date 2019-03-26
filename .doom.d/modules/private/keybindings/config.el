@@ -22,11 +22,11 @@
 (after! info
   (map!
    :map Info-mode-map
-   :n "j"    (lambda!
+   :n "j"    (λ!
               (condition-case nil
                   (evil-next-line)
                 (error (Info-scroll-up))))
-   :n "k"    (lambda!
+   :n "k"    (λ!
               (condition-case nil
                   (evil-previous-line)
                 (error (Info-scroll-down))))))
