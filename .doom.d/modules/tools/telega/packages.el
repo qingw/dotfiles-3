@@ -4,4 +4,5 @@
 (package! telega :recipe
   (:fetcher github
    :repo "zevlg/telega.el"
+   :branch "telega-with-inserters"
    :files ("*")))

@@ -5,4 +5,9 @@
   :commands (telega)
   :defer t
   :config
-  (add-hook 'telega-root-mode-hook (lambda () (telega-notifications-mode t))))
+  ;; (setq telega-debug t))
+  (telega-notifications-mode t)
+  (add-hook telega-chat-mode-hook
+            (lambda ()
+              (setq company-backends '(telega-company-emoji))
+              (company-mode 1))))
