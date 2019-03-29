@@ -14,7 +14,9 @@
   (when IS-MAC
     (setq-default
      ns-use-thin-smoothing t
-     mac-system-move-file-to-trash-use-finder t)
+     mac-system-move-file-to-trash-use-finder t))
+  ; emacs-mac special
+  (when (string-equal window-system "mac")
     (mac-auto-operator-composition-mode))
   (setq-default
    doom-font (font-spec :family "Fira Mono" :size 12.5)
