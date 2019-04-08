@@ -10,12 +10,12 @@ casks:
 - flash-npapi
 - flash-ppapi
 - font-fira-code
-  font-fira-mono
-  font-fira-sans
-  font-firacode-nerd-font
-  font-firacode-nerd-font-mono
-  font-firamono-nerd-font
-  font-firamono-nerd-font-mono
+- font-fira-mono
+- font-fira-sans
+- font-firacode-nerd-font
+- font-firacode-nerd-font-mono
+- font-firamono-nerd-font
+- font-firamono-nerd-font-mono
 - font-noto-sans-cjk
 - font-noto-serif-cjk
 - font-sarasa-gothic
@@ -26,6 +26,7 @@ casks:
 - font-source-serif-pro
 - font-sourcecodepro-nerd-font
 - font-sourcecodepro-nerd-font-mono
+- font-symbola
 - gns3
 - google-chrome
 - google-earth-pro
