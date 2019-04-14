@@ -7,6 +7,7 @@ if [ -n "$INSIDE_EMACS" ]; then
     alias emacs="emacsclient -n"
 fi
 
+# https://wiki.archlinux.org/index.php/Emacs#Multiplexing_emacs_and_emacsclient
 function emacs {
     if [[ $# -eq 0 ]]; then
         if [[ "$OSTYPE" == "darwin"* ]]; then
