@@ -97,6 +97,7 @@
        ;;wakatime
        vterm
        telega
+       speed-type
 
        :lang
        ;;agda
