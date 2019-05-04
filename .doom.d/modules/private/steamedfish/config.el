@@ -75,7 +75,7 @@
                  :base-extension "org"
 
                  ;; Path to your Jekyll project.
-                 :publishing-directory "~/work/SteamedFish.github.io/"
+                 :publishing-directory "~/work/SteamedFish.github.io/_posts"
                  :recursive t
                  :publishing-function org-html-publish-to-html
                  :language cn
@@ -86,7 +86,7 @@
                `("org-blog-static"
                  :base-directory "~/work/SteamedFish.github.io/org/"
                  :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|php"
-                 :publishing-directory "~/work/SteamedFish.github.io/"
+                 :publishing-directory "~/work/SteamedFish.github.io/_posts"
                  :recursive t
                  :publishing-function org-publish-attachment))
   (add-to-list 'org-publish-project-alist
