@@ -10,7 +10,6 @@
 
 (doom! :completion
        (company          ; the ultimate code completion backend
-        +auto            ; complete on the fly
         ;;+tng
         +childframe)     ; use child frame instead of overlay
        ;;(helm              ; the *other* search engine for love and life
