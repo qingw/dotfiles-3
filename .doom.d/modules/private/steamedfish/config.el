@@ -43,9 +43,6 @@
    :n "<return>"  #'dired-find-alternate-file
    :n "^"         (λ! (find-alternate-file ".."))))
 
-(add-hook! (text-mode prog-mode conf-mode snippet-mode)
-  (setq show-trailing-whitespace t))
-
 (after! deft
   (setq-default deft-directory "~/Dropbox/org/"))
 
