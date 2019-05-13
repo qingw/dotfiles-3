@@ -7,3 +7,5 @@
     (package! cnfonts))
 (package! youdao-dictionary)
 (package! cal-china-x)
+(package! pangu-spacing
+  :disable t)
