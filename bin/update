@@ -129,10 +129,10 @@ update_emacs() {
         # Doom Emacs
         echo "updating Doom Emacs"
         cd "$HOME/.emacs.d/"
-        YES=1 run make upgrade
-        YES=1 run make update
-        YES=1 run make
-        YES=1 run make compile
+        run "$HOME"/.emacs.d/bin/doom -y upgrade
+        run "$HOME"/.emacs.d/bin/doom -y update
+        run "$HOME"/.emacs.d/bin/doom -y refresh
+        run "$HOME"/.emacs.d/bin/doom -y recompile
     else
         # assume it spacemacs
         # TODO not working currectly
