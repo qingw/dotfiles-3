@@ -130,8 +130,6 @@ update_emacs() {
         echo "updating Doom Emacs"
         cd "$HOME/.emacs.d/"
         run "$HOME"/.emacs.d/bin/doom -y upgrade
-        run "$HOME"/.emacs.d/bin/doom -y update
-        run "$HOME"/.emacs.d/bin/doom -y refresh
         run "$HOME"/.emacs.d/bin/doom -y recompile
     else
         # assume it spacemacs
