@@ -66,10 +66,13 @@
         ;;+ranger          ; bringing the goodness of ranger to dired
         +icons)          ; colorful icons for dired-mode
        electric          ; smarter, keyword-based electric-indent
-       eshell            ; a consistent, cross-platform shell (WIP)
        imenu             ; an imenu sidebar and searchable code index
-       ;;term              ; terminals in Emacs
        vc                ; version-control and Emacs, sitting in a tree
+
+       :term
+       eshell            ; a consistent, cross-platform shell (WIP)
+       ;;term              ; terminals in Emacs
+       vterm             ; another terminals in Emacs
 
        :tools
        ansible
@@ -99,7 +102,6 @@
        tmux              ; an API for interacting with tmux
        upload            ; map local to remote projects via ssh/ftp
        ;;wakatime
-       vterm
        telega
        speed-type
 
