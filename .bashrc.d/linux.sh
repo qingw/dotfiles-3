@@ -23,3 +23,8 @@ if [ -d /home/linuxbrew/.linuxbrew ]; then
 elif [ -d "$HOME/.linuxbrew" ]; then
     export PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
 fi
+
+# snap
+if [ -d /snap/bin ]; then
+    export PATH="/snap/bin:$PATH"
+fi

@@ -82,6 +82,13 @@ update_linuxbrew() {
     fi
 }
 
+update_snap() {
+    if [ -d "/snap" ] ; then
+        echo "Updating snap"
+        run sudo snap refresh
+    fi
+}
+
 update_pip() {
     echo "Updating Pip"
     run pip2 list --format=columns | cut -d ' ' -f 1 | run xargs -n1 pip2 install -U
@@ -169,6 +176,7 @@ case $OSTYPE in
         self_update
         update_linux_system
         update_linuxbrew
+        update_snap
         update_vim
         update_emacs
         ;;
