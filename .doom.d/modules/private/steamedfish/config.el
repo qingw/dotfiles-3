@@ -62,6 +62,8 @@
                 org-log-done 'time
                 org-log-done-with-time t)
 
+  (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
+
   ;; setup blog publish
   (unless (boundp 'org-publish-project-alist)
     (setq org-publish-project-alist nil))
