@@ -171,33 +171,44 @@ update_optools() {
     done
 }
 
-case $OSTYPE in
-    linux*)
-        self_update
-        update_linux_system
-        update_linuxbrew
-        update_snap
-        update_vim
-        update_emacs
-        ;;
-    darwin*)
-        self_update
-        update_context
-        update_mac_system
-        update_mas
-        update_homebrew
-        update_pip
-        update_gem
-        update_go
-        update_vim
-        update_emacs
-        update_optools
-        ;;
-    cygwin*)
-        echo "unsupported os type $OSTYPE"
-        ;;
-    *)
-        echo "unsupported os type $OSTYPE"
-        ;;
-esac
+update() {
+    case $OSTYPE in
+        linux*)
+            self_update
+            update_linux_system
+            update_linuxbrew
+            update_snap
+            update_vim
+            update_emacs
+            ;;
+        darwin*)
+            self_update
+            update_context
+            update_mac_system
+            update_mas
+            update_homebrew
+            update_pip
+            update_gem
+            update_go
+            update_vim
+            update_emacs
+            update_optools
+            ;;
+        cygwin*)
+            echo "unsupported os type $OSTYPE"
+            ;;
+        *)
+            echo "unsupported os type $OSTYPE"
+            ;;
+    esac
+}
 
+main() {
+    if [ "$#" -eq 0 ]; then
+        update
+    else
+        eval "update_$1"
+    fi
+}
+
+main "$@"
