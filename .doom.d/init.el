@@ -105,6 +105,7 @@
        ;;wakatime
        telega
        speed-type
+       imenu-list
 
        :lang
        ;;agda
