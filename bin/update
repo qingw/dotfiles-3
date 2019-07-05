@@ -161,7 +161,10 @@ update_optools() {
     for _DIR in "dumbo" "work"; do
         if [ -d "$HOME/${_DIR}" ]; then
             for _PROJECT in "$HOME"/${_DIR}/*; do
-                if [ -d "${_PROJECT}/.git" ]; then
+                if [ -d "${_PROJECT}/.git/svn" ]; then
+                    cd "${_PROJECT}"
+                    run git svn fetch
+                elif [ -d "${_PROJECT}/.git" ]; then
                     cd "${_PROJECT}"
                     run git pull
                     run git submodule update --remote --recursive
