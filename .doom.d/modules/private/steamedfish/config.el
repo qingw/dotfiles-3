@@ -98,11 +98,12 @@
     (when (file-directory-p dir)
       (add-to-list 'projectile-project-search-path dir))))
 
-(after! lsp-mode
+(after! lsp-ui
   (setq lsp-ui-doc-position 'at-point
         lsp-ui-flycheck-enable t
         lsp-ui-sideline-ignore-duplicate t
-        lsp-ui-sideline-update-mode 'point)
+        lsp-ui-sideline-update-mode 'point
+        lsp-ui-doc-enable t)
   (if (featurep 'xwidget-internal)
       (setq lsp-ui-doc-use-webkit t)))
 
