@@ -73,6 +73,7 @@
 
        :term
        eshell            ; a consistent, cross-platform shell (WIP)
+       shell             ; a terminal REPL for Emacs
        ;;term              ; terminals in Emacs
        vterm             ; another terminals in Emacs
 
@@ -109,7 +110,7 @@
        imenu-list
 
        :lang
-       ;;agda
+       ;;agda              ; types of types of types of types...
        ;;assembly          ; assembly for fun or debugging
        (cc               ; C/C++/Obj-C madness
         +lsp)
@@ -124,6 +125,7 @@
        ;;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ;;ess               ; emacs speaks statistics
+       ;;fsharp           ; ML stands for Microsoft's Language
        (go                ; the hipster dialect
         +lsp)
        ;;(haskell +intero) ; a language that's lazier than I am
@@ -150,7 +152,7 @@
         +protocol)       ; Support for org-protocol:// links
        perl              ; write code no one else can comprehend
        php               ; perl's insecure younger brother
-       ;;plantuml          ; diagrams for confusing people more
+       plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
        (python             ; beautiful is better than ugly
         +pyenv
