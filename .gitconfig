@@ -1,6 +1,7 @@
 [user]
     name = SteamedFish
     email = i@steamedfish.org
+    signingkey = 4236AB19C47EE373D906ED9C7BD83D6E2E868CC8
 [github]
     user = SteamedFish
 [grep]
