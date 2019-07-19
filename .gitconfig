@@ -14,3 +14,9 @@
 	includeIssuesSection = false
 [commit]
 	gpgsign = true
+[gitflow "release.branch"]
+	sign = true
+[gitflow "release.finish"]
+	sign = true
+[gitflow "hotfix.finish"]
+	sign = true
