@@ -40,6 +40,10 @@
   name = "git"
 [[layers]]
   name = "github"
+#[[layers]]
+#  name = "gtags"
+[[layers]]
+  name = "lang#asciidoc"
 [[layers]]
   name = "lang#c"
 [[layers]]
@@ -48,6 +52,8 @@
   name = "lang#extra"
 [[layers]]
   name = "lang#go"
+[[layers]]
+  name = "lang#graphql"
 [[layers]]
   name = "lang#html"
 [[layers]]
@@ -59,7 +65,11 @@
 [[layers]]
   name = "lang#markdown"
 [[layers]]
+  name = "lang#perl"
+[[layers]]
   name = "lang#php"
+[[layers]]
+  name = "lang#plantuml"
 [[layers]]
   name = "lang#python"
 [[layers]]
