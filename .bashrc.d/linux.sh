@@ -11,7 +11,9 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
             PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
             ;;
     esac
-    if $CLICOLOR ; then
+    if [ -n "$(command -v lsd)" ];then
+        alias ls='lsd'
+    elif $CLICOLOR ; then
         alias ls='ls --color=auto'
     fi
     alias open='xdg-open'
