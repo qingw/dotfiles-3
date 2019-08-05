@@ -76,6 +76,9 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 alias dumbo="python $HOME/dumbo/optools/dumbo.py"
+if [ -n "$(command -v lsd)" ];then
+    alias ls='lsd'
+fi
 
 if [ -d "$HOME/.bashrc.d" ]; then
     for i in $HOME/.bashrc.d/*.sh; do
