@@ -10,8 +10,8 @@
  message-log-max 10000
  delete-by-moving-to-trash t)
 
-(add-hook! '(prog-mode text-mode conf-mode)
-           #'doom-enable-show-trailing-whitespace-h)
+(add-hook! (prog-mode text-mode conf-mode)
+           (setq show-trailing-whitespace t))
 
 (when (display-graphic-p)
   (when IS-MAC
