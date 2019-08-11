@@ -122,6 +122,9 @@
         doom-modeline-enable-word-count t
         doom-modeline-indent-info t))
 
+(after! evil-escape
+  (setq evil-escape-key-sequence nil))
+
 ;; (after! ivy-posframe
 ;;   (when (display-graphic-p)
 ;;     (setq ivy-display-function #'ivy-posframe-display-at-frame-bottom-left)))
