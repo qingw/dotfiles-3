@@ -110,6 +110,15 @@
   (if (featurep 'xwidget-internal)
       (setq lsp-ui-doc-use-webkit t)))
 
+(after! doom-modeline
+  (setq doom-modeline-icon t
+        doom-modeline-major-mode-icon t
+        doom-modeline-major-mode-color-icon t
+        doom-modeline-buffer-state-icon t
+        doom-modeline-buffer-modification-icon t
+        doom-modeline-enable-word-count t
+        doom-modeline-indent-info t))
+
 ;; (after! ivy-posframe
 ;;   (when (display-graphic-p)
 ;;     (setq ivy-display-function #'ivy-posframe-display-at-frame-bottom-left)))
