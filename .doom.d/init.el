@@ -22,7 +22,7 @@
        ;;ido              ; the other *other* search engine...
        (ivy              ; a search engine for love and life
         ;+childframe
-        ;+prescient
+        +prescient
         +icons
         +fuzzy)
 
@@ -144,13 +144,10 @@
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        (org              ; organize your plain life in plain text
-        +attach          ; custom attachment system
-        +babel           ; running code in org
-        +capture         ; org-capture in and outside of Emacs
-        +export          ; Exporting org to whatever you want
-        +habit           ; Keep track of your habits
-        +present         ; Emacs for presentations
-        +protocol)       ; Support for org-protocol:// links
+        +dragndrop       ; file drag & drop support
+        +ipython         ; ipython support for babel
+        +pandoc          ; pandoc integration into org's exporter
+        +present)        ; using Emacs for presentations
        perl              ; write code no one else can comprehend
        php               ; perl's insecure younger brother
        plantuml          ; diagrams for confusing people more
@@ -158,6 +155,7 @@
        (python             ; beautiful is better than ugly
         +pyenv
         +lsp
+        +conda
         +ipython)
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
