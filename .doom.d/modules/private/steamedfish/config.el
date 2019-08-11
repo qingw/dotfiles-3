@@ -29,6 +29,9 @@
   (add-hook 'window-setup-hook #'toggle-frame-maximized)
   (add-hook 'window-setup-hook #'+steamedfish/toggle-transparency))
 
+(when IS-ANDROID
+  (setq browse-url-browser-function 'browse-url-xdg-open))
+
 (after! google-this
   (google-this-mode 1)
   ;; FIXME this keybinding is not working correctly
