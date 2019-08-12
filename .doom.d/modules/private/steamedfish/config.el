@@ -15,9 +15,11 @@
 
 (when (display-graphic-p)
   (when IS-MAC
-    (setq-default
+    (setq
      ns-use-thin-smoothing t
-     mac-system-move-file-to-trash-use-finder t))
+     mac-system-move-file-to-trash-use-finder t
+     mac-command-modifier 'super
+     mac-option-modifier  'meta))
   ; emacs-mac special
   (when (string-equal window-system "mac")
     (mac-auto-operator-composition-mode))
