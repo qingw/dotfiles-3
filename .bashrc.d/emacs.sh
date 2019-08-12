@@ -43,10 +43,12 @@ if [ -d "$HOME/emacs-distros/spacemacs" ] && \
     if [[ "$OSTYPE" == "darwin"* ]]; then
         alias spacemacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=spacemacs &"
         alias doom="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=doom &"
+        alias centaur="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=centaur &"
         alias emacstest="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=test &"
     elif [ "$OSTYPE" == "linux-gnu" ]; then
         alias spacemacs="/usr/bin/emacs --with-profile=spacemacs &"
         alias doom="/usr/bin/emacs --with-profile=doom &"
+        alias centaur="/usr/bin/emacs --with-profile=centaur &"
         alias emacstest="/usr/bin/emacs --with-profile=test &"
     fi
 fi
