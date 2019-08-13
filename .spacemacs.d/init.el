@@ -39,108 +39,160 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ; chat
+
+     ;; chat
      erc
      slack
-     ; checkers
-     spell-checking
+
+     ;; checkers
+     (spell-checking
+      :variables
+      enable-flyspell-auto-completion t)
      syntax-checking
-     ; completion
-     (auto-completion :variables
-         auto-completion-enable-help-tooltip t
-         auto-completion-enable-snippets-in-popup t
-         auto-completion-enable-sort-by-usage t)
+
+     ;; completion
+     (auto-completion
+      :variables
+      auto-completion-enable-help-tooltip t
+      auto-completion-enable-snippets-in-popup t
+      auto-completion-enable-sort-by-usage t)
      helm
      templates
-     ; emacs
-     better-defaults
-     (ibuffer :variables
-         ibuffer-group-buffers-by 'projects)
-     (org :variables
-         org-enable-github-support t
-         org-enable-reveal-js-support t
-         org-enable-bootstrap-support t
-         org-enable-hugo-support t
-         org-enable-trello-support t
-         org-projectile-file "TODOs.org")
+
+     ;; emacs
+     (better-defaults
+      :variables
+      better-defaults-move-to-beginning-of-code-first t
+      better-defaults-move-to-end-of-code-first t)
+     (ibuffer
+      :variables
+      ibuffer-group-buffers-by 'projects)
+     (org
+      :variables
+      org-enable-github-support t
+      org-enable-reveal-js-support t
+      org-enable-bootstrap-support t
+      org-enable-hugo-support t
+      org-enable-trello-support t
+      org-projectile-file "TODOs.org")
      semantic
-     smex
+     ;;smex
      typography
-     ; filetree
+
+     ;; filetree
      treemacs
-     ; frameworks
+
+     ;; frameworks
      django
-     ; fun
+
+     ;; fun
      emoji
-     ; international support
-     (chinese :variables
-         chinese-enable-fcitx t
-              :packages (not pyim chinese-wbim pangu-spacing))
-     ; programming
+     games
+
+     ;; international support
+     (chinese
+      :variables
+      chinese-enable-fcitx t
+      chinese-enable-youdao-dict t
+      :packages (not pyim chinese-wbim pangu-spacing))
+
+     ;; programming
      asciidoc
-     (c-c++ :variables
-         c-c++-enable-clang-support t)
+     (c-c++
+      :variables
+      c-c++-enable-clang-support t)
      csv
      emacs-lisp
      go
+     graphviz
      html
      ipython-notebook
      javascript
      json
-     latex
+     (latex
+      :variables
+      latex-enable-auto-fill t
+      latex-enable-folding t)
      lsp
      major-modes
      markdown
-     (python :variables
-         python-test-runner '(pytest nose)
-         python-sort-imports-on-save t)
+     plantuml
+     (python
+      :variables
+      python-test-runner '(pytest nose)
+      python-enable-yapf-format-on-save t
+      python-sort-imports-on-save t)
      rust
      shell-scripts
      sql
      vimscript
      yaml
-     ; os
+
+     ;; os
+     nixos
      osx
-     ; readers
-     dash
-     epub
-     pdf
-     ; source control
-     git
+
+     ;; source control
+     (git
+      :variables
+      git-enable-magit-svn-plugin t)
      github
-     version-control
-     ; tags
+     (version-control
+      :variables
+      version-control-global-margin t)
+
+     ;; tags
      cscope
-     ; themes
-     colors
-     ; tools
+
+     ;; themes
+     (colors
+      :variables
+      colors-enable-nyan-cat-progress-bar t)
+
+     ;; tools
      ansible
      chrome
      cmake
      command-log
+     dash
      debug
      docker
+     fasd
+     finance
+     (geolocation
+      :variables
+      geolocation-enable-location-service t
+      geolocation-enable-weather-forecast t)
      imenu-list
      nginx
      pandoc
+     pdf-tools
      pass
      prettier
      puppet
-     (ranger :variables
-         ranger-show-preview t)
-     (shell :variables
-         shell-default-shell 'eshell)
+     (ranger
+      :variables
+      ranger-show-preview t)
+     restclient
+     salt
+     (shell
+      :variables
+      shell-default-shell 'eshell)
      systemd
      tmux
      vagrant
-     ; vim
+     ;;ycmd
+
+     ;; vim
      vim-empty-lines
-     ; web
+
+     ;; web
      search-engine
      twitter
-     ; my own layers
-     sf-config
-     )
+
+     ;; my own layers
+     sf-config)
+
 
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
