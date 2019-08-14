@@ -78,6 +78,7 @@ alias rm='rm -iv'
 alias dumbo="python $HOME/dumbo/optools/dumbo.py"
 if [ -n "$(command -v lsd)" ];then
     alias ls='lsd'
+    alias tree='lsd --tree'
 fi
 
 if [ -d "$HOME/.bashrc.d" ]; then
