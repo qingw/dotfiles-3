@@ -1,0 +1,34 @@
+---
+- name: 配置配置文件
+  block:
+      - name: 配置 dotfiles
+        git:
+            clone: yes
+            dest: ~/dotfiles
+            force: no
+            repo: git@github.com:SteamedFish/dotfiles.git
+            recursive: yes
+            track_submodules: yes
+            update: yes
+      - name: 配置 .config
+        file:
+            force: yes
+            path: ~/.config
+            state: directory
+      - name: 配置 .bashrc.d
+        file:
+            force: yes
+            path: ~/.bashrc.d
+            state: directory
+      - name: 配置 .bashrc
+        file:
+            force: yes
+            path: ~/.bashrc
+            src: dotfiles/.bashrc
+            state: link
+      - name: 配置 .bash_profile
+        file:
+            force: yes
+            path: ~/.bash_profile
+            src: dotfiles/.bash_profile
+            state: link

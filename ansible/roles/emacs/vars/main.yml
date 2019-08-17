@@ -1,0 +1,23 @@
+---
+packages:
+    - ripgrep
+    - cscope
+    - ctags
+    - coreutils
+    - make
+    - cmake
+    - pandoc
+    - git
+    - shellcheck
+    - hugo
+packages_mac:
+    - ccls
+    - dbus
+    - fcitx-remote-for-osx
+    - libvterm
+packages_arch:
+    - emacs-git
+    - ccls-git
+    - libvterm
+packages_debian:
+    - emacs-nox

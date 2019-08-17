@@ -1,0 +1,26 @@
+---
+- name: 配置 SpaceVim
+  block:
+      - name: 配置 SpaceVim 的 git
+        git:
+            clone: yes
+            dest: ~/.vim
+            force: no
+            repo: https://github.com/SpaceVim/SpaceVim.git
+            recursive: yes
+            track_submodules: yes
+            update: yes
+      - name: 配置 .SpaceVim.d
+        file:
+            force: yes
+            path: ~/.SpaceVim.d
+            src: dotfiles/.SpaceVim.d
+            state: link
+      - name: 配置 neovim
+        file:
+            force: yes
+            path: ~/.config/nvim
+            src: ../.vim
+            state: link
+
+# TODO 安装 SpaceVim 的依赖

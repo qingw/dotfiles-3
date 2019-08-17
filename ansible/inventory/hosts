@@ -1,0 +1,7 @@
+localhost ansible_connection=local
+192.168.1.97:22
+192.168.1.30
+mc.steamedfish.org
+tc.steamedfish.org
+sa.steamedfish.org
+steamedfish.org

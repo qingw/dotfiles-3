@@ -1,0 +1,75 @@
+---
+packages:
+    - htop
+    - lftp
+    - bash
+    - bash-completion
+    - dos2unix
+    - figlet
+    - git
+    - hugo
+    - exa
+    - p7zip
+    - ripgrep
+    - telnet
+    - tree
+    - unrar
+    - unzip
+    - wget
+    - rsync
+
+packages_macpip:
+    - ansible
+    - neovim
+
+packages_linux:
+    - bind9-host
+    - dstat
+    - dnsutils
+    - build-essential
+    - busybox
+    - bsdutils
+    - diffutils
+    - dmidecode
+    - dnsutils
+    - ansible
+
+packages_mac:
+    - csshx
+    - python
+    - python@2
+    - youtube-dl
+    - you-get
+    - ipcalc
+    - fd
+    - lsd
+
+packages_cask:
+    - android-platform-tools
+    - dropbox
+    - google-chrome
+    - gpg-suite
+    - iina
+    - iterm2
+    - keycastr
+    - minecraft
+    - popo
+    - qsync-client
+    - shadowsocksx-ng
+    - squirrel
+    - steam
+    - teensy
+    - telegram
+    - tor-browser
+    - tunnelblick
+    - visual-studio-code
+    - x-lite
+    - zoomus
+
+packages_arch:
+    - youtube-dl
+    - you-get
+    - fd
+    - lsd
+
+packages_debian:
