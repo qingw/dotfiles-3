@@ -9,5 +9,4 @@
       - { role: emacs }
       - { role: vim }
       - { role: context }
-  when: ansible_distribution != "QTS"
   ignore_errors: yes
