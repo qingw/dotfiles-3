@@ -15,20 +15,3 @@
             force: yes
             path: ~/.config
             state: directory
-      - name: 配置 .bashrc.d
-        file:
-            force: yes
-            path: ~/.bashrc.d
-            state: directory
-      - name: 配置 .bashrc
-        file:
-            force: yes
-            path: ~/.bashrc
-            src: dotfiles/.bashrc
-            state: link
-      - name: 配置 .bash_profile
-        file:
-            force: yes
-            path: ~/.bash_profile
-            src: dotfiles/.bash_profile
-            state: link

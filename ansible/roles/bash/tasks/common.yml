@@ -1,0 +1,57 @@
+---
+- name: 配置配置文件
+  block:
+      - name: 配置 .bashrc.d
+        file:
+            force: yes
+            path: ~/.bashrc.d
+            state: directory
+      - name: 配置 .bashrc
+        file:
+            force: yes
+            path: ~/.bashrc
+            src: dotfiles/.bashrc
+            state: link
+      - name: 配置 .bash_profile
+        file:
+            force: yes
+            path: ~/.bash_profile
+            src: dotfiles/.bash_profile
+            state: link
+      - name: 配置 linux.sh
+        when: ansible_distribution == "Debian" or
+              ansible_distribution == "ArchLinux"
+        file:
+            force: yes
+            path: ~/.bashrc.d/linux.sh
+            src: ../dotfiles/.bashrc.d/linux.sh
+            state: link
+      - name: 配置 mac.sh
+        when: ansible_distribution == "MacOSX"
+        file:
+            force: yes
+            path: ~/.bashrc.d/mac.sh
+            src: ../dotfiles/.bashrc.d/mac.sh
+            state: link
+      - name: 配置 wsl.sh
+        # TODO: add a when here
+        file:
+            force: yes
+            path: ~/.bashrc.d/wsl.sh
+            src: ../dotfiles/.bashrc.d/wsl.sh
+            state: link
+
+- name: powerline
+  block:
+      - name: 配置 powerline.sh
+        file:
+            force: yes
+            path: ~/.bashrc.d/powerline.sh
+            src: ../dotfiles/.bashrc.d/powerline.sh
+            state: link
+      - name: 配置 powerline config
+        file:
+            force: yes
+            path: ~/.config/powerline
+            src: ../dotfiles/.config/powerline
+            state: link
