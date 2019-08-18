@@ -3,9 +3,11 @@
   hosts: all
   roles:
       - { role: dotfiles }
+      - { role: bash }
       - { role: packages-upgrade }
       - { role: system }
       - { role: emacs }
       - { role: vim }
       - { role: context }
+  when: ansible_distribution != "QTS"
   ignore_errors: yes
