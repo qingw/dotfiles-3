@@ -38,17 +38,18 @@ function emacs {
 }
 
 if [ -d "$HOME/emacs-distros/spacemacs" ] && \
-   [ -f "$HOME/.emacs-profiles.el" ] && \
-   [ -f "$HOME/.emacs" ]; then
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-        alias spacemacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=spacemacs &"
-        alias doom="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=doom &"
-        alias centaur="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=centaur &"
-        alias emacstest="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=test &"
-    elif [ "$OSTYPE" == "linux-gnu" ]; then
-        alias spacemacs="/usr/bin/emacs --with-profile=spacemacs &"
-        alias doom="/usr/bin/emacs --with-profile=doom &"
-        alias centaur="/usr/bin/emacs --with-profile=centaur &"
-        alias emacstest="/usr/bin/emacs --with-profile=test &"
-    fi
+    [ -f "$HOME/.emacs-profiles.el" ]; then
+    for distro in centaur doom spacemacs; do
+        eval "
+        function $distro {
+            ln -s emacs-distros/chemacs/.emacs ~/
+            if [[ \"$OSTYPE\" == \"darwin\"* ]]; then
+                /Applications/Emacs.app/Contents/MacOS/Emacs --with-profile=$distro &
+            elif [ \"$OSTYPE\" == \"linux-gnu\" ]; then
+                /usr/bin/emacs --with-profile=$distro &
+            fi
+            sleep 10 && rm -f ~/.emacs &
+        }
+        "
+    done
 fi
