@@ -28,9 +28,12 @@
             update_homebrew: yes
             upgrade_all: yes
       - name: 升级 homebrew cask
-        homebrew_cask:
-            greedy: yes
-            upgrade_all: yes
+        # homebrew_cask 不知道为何有问题，实际上不能升级，改用命令
+        # homebrew_cask:
+        #     greedy: yes
+        #     upgrade_all: yes
+        #     update_homebrew: yes
+        command: /usr/local/bin/brew cask upgrade --greedy
       - name: 执行 brew cleanup
         command: /usr/local/bin/brew cleanup
         changed_when: false
