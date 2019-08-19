@@ -45,6 +45,7 @@
 (after! dired
   ;; emacs by default disable this command
   (put 'dired-find-alternate-file 'disabled nil)
+  (add-hook 'dired-mode-hook 'auto-revert-mode)
   (map!
    :map dired-mode-map
    ;; don't create new buffer when navigating
