@@ -20,7 +20,7 @@
             state: link
       - name: 配置 linux.sh
         when: ansible_distribution == "Debian" or
-              ansible_distribution == "ArchLinux"
+              ansible_distribution == "Archlinux"
         file:
             force: yes
             path: ~/.bashrc.d/linux.sh
