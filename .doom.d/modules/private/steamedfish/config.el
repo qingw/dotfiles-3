@@ -59,6 +59,7 @@
   (push "~/.doom.d/snippets" yas-snippet-dirs))
 
 (after! org
+  (set-face-attribute 'org-ellipsis nil :foreground "gray")
   (setq-default org-directory (expand-file-name "~/Dropbox/org/")
                 diary-file (expand-file-name "~/Dropbox/org/diary")
                 ;; all files but later.org should be put in agenda
