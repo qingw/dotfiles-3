@@ -4,7 +4,7 @@
   ;; make org-ellipsis's face same as current heading,
   ;; instead of having its own
   (custom-set-faces!
-   `(org-ellipsis :foreground nil))
+   '(org-ellipsis :foreground nil))
   (setq org-directory (expand-file-name "~/Dropbox/org/")
         diary-file (expand-file-name "~/Dropbox/org/diary")
         ;; all files but later.org should be put in agenda
