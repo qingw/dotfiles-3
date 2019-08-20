@@ -11,7 +11,7 @@
  delete-by-moving-to-trash t)
 
 (add-hook! (prog-mode text-mode conf-mode)
-           (setq show-trailing-whitespace t))
+  (setq show-trailing-whitespace t))
 
 (when (display-graphic-p)
   (when IS-MAC
@@ -20,7 +20,7 @@
      mac-system-move-file-to-trash-use-finder t
      mac-command-modifier 'super
      mac-option-modifier  'meta))
-  ; emacs-mac special
+  ;; emacs-mac special
   (when (string-equal window-system "mac")
     (mac-auto-operator-composition-mode))
   (setq
@@ -62,17 +62,17 @@
   (custom-set-faces!
    `(org-ellipsis :foreground nil))
   (setq org-directory (expand-file-name "~/Dropbox/org/")
-                diary-file (expand-file-name "~/Dropbox/org/diary")
-                ;; all files but later.org should be put in agenda
-                org-agenda-files
-                (delete (expand-file-name "~/Dropbox/org/later.org")
-                        (file-expand-wildcards (concat org-directory "*.org")))
-                ;; one archive file instead of many
-                org-archive-location
-                (concat org-directory "archive.org::* From %s")
-                org-log-done 'time
-                org-log-done-with-time t
-                org-ellipsis (if (char-displayable-p ?⬎) "  ⬎" nil))
+        diary-file (expand-file-name "~/Dropbox/org/diary")
+        ;; all files but later.org should be put in agenda
+        org-agenda-files
+        (delete (expand-file-name "~/Dropbox/org/later.org")
+                (file-expand-wildcards (concat org-directory "*.org")))
+        ;; one archive file instead of many
+        org-archive-location
+        (concat org-directory "archive.org::* From %s")
+        org-log-done 'time
+        org-log-done-with-time t
+        org-ellipsis (if (char-displayable-p ?⬎) "  ⬎" nil))
 
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
 
