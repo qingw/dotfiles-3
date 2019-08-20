@@ -55,4 +55,4 @@
   (setq
    nyan-animate-nyancat t
    nyan-wavy-trail t)
-  (nyan-mode))
+  (nyan-mode 1))
