@@ -45,6 +45,7 @@
 (after! dired
   ;; emacs by default disable this command
   (put 'dired-find-alternate-file 'disabled nil)
+  ;; make dired automatically refresh buffer after any file change
   (add-hook 'dired-mode-hook 'auto-revert-mode)
   (map!
    :map dired-mode-map
@@ -59,6 +60,8 @@
   (push "~/.doom.d/snippets" yas-snippet-dirs))
 
 (after! org
+  ;; make org-ellipsis's face same as current heading,
+  ;; instead of having its own
   (custom-set-faces!
    `(org-ellipsis :foreground nil))
   (setq org-directory (expand-file-name "~/Dropbox/org/")
@@ -74,6 +77,7 @@
         org-log-done-with-time t
         org-ellipsis (if (char-displayable-p ?⬎) "  ⬎" nil))
 
+  ;; refresh images after C-c C-c
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
 
   ;; setup blog publish
