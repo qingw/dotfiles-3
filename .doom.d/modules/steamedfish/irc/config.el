@@ -1,4 +1,4 @@
-;;; private/accounts/config.el -*- lexical-binding: t; -*-
+;;; steamedfish/irc/config.el -*- lexical-binding: t; -*-
 
 (when (featurep! :app irc)
   (after! circe

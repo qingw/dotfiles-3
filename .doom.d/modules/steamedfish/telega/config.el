@@ -1,4 +1,4 @@
-;;; tools/telega/config.el -*- lexical-binding: t; -*-
+;;; steamedfish/telega/config.el -*- lexical-binding: t; -*-
 
 
 (def-package! telega

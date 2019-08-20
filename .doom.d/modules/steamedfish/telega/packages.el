@@ -1,5 +1,5 @@
 ;; -*- no-byte-compile: t; -*-
-;;; tools/telega/packages.el
+;;; steamedfish/telega/packages.el
 
 (package! telega :recipe
   (:host github

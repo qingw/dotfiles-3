@@ -1,4 +1,4 @@
 ;; -*- no-byte-compile: t; -*-
-;;; private/steamedfish/packages.el
+;;; steamedfish/basic/packages.el
 
 (package! google-this)

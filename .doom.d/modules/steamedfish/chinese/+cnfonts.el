@@ -1,4 +1,4 @@
-;;; intl/chinese/+cnfonts.el -*- lexical-binding: t; -*-
+;;; steamedfish/chinese/+cnfonts.el -*- lexical-binding: t; -*-
 
 (def-package! cnfonts
   :when (display-graphic-p)

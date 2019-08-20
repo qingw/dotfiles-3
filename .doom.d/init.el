@@ -114,9 +114,6 @@
        tmux              ; an API for interacting with tmux
        upload            ; map local to remote projects via ssh/ftp
        ;;wakatime
-       telega
-       speed-type
-       imenu-list
 
        :lang
        ;;agda              ; types of types of types of types...
@@ -207,11 +204,12 @@
        ;; config. Use it as a reference for your own modules.
        (default +bindings +smartparens)
 
-       :intl
+       :steamedfish
+       basic
        (:if (not (and IS-WINDOWS IS-ANDROID))
         chinese)
-
-       :private
-       steamedfish
        keybindings
-       accounts)
+       irc
+       telega
+       speed-type
+       imenu-list)

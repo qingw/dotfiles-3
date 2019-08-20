@@ -1,4 +1,4 @@
-;;; tools/imenu-list/config.el -*- lexical-binding: t; -*-
+;;; steamedfish/imenu-list/config.el -*- lexical-binding: t; -*-
 
 (after! imenu-list
   (map!

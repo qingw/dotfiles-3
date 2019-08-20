@@ -1,5 +1,5 @@
 ;; -*- no-byte-compile: t; -*-
-;;; ~/dotfiles/.doom.d/modules/intl/chinese/packages.el
+;;; steamedfish/chinese/packages.el
 
 (if (featurep! cnfontx)
     (package! cnfonts))

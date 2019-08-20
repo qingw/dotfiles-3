@@ -1,4 +1,4 @@
-;;; tools/imenu-list/autoload.el -*- lexical-binding: t; -*-
+;;; steamedfish/imenu-list/autoload.el -*- lexical-binding: t; -*-
 
 ;;;###autoload
 (defun +imenu-list/toggle

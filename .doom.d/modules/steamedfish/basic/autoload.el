@@ -1,7 +1,7 @@
-;;; private/steamedfish/autoload.el  -*- lexical-binding: t; -*-
+;;; steamedfish/basic/autoload.el  -*- lexical-binding: t; -*-
 
 ;;;###autoload
-(defun +steamedfish/toggle-transparency ()
+(defun +basic/toggle-transparency ()
   (interactive)
   (let ((alpha (frame-parameter nil 'alpha)))
     (set-frame-parameter
