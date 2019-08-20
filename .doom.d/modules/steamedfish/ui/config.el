@@ -21,6 +21,12 @@
   (add-hook 'window-setup-hook #'toggle-frame-maximized)
   (add-hook 'window-setup-hook #'+ui/toggle-transparency))
 
+(map!
+ "s-u"                         #'+ui/toggle-transparency
+ :leader
+ (:prefix ("t" . "toggle")
+   :desc "Transparency" :n "t" #'+ui/toggle-transparency))
+
 (after! doom-modeline
   (setq doom-modeline-icon t
         doom-modeline-major-mode-icon t
