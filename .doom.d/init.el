@@ -205,6 +205,7 @@
        (default +bindings +smartparens)
 
        :steamedfish
+       ansible
        basic
        (:if (not (and IS-WINDOWS IS-ANDROID))
         chinese)
