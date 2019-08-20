@@ -1,10 +1,7 @@
 ;;; steamedfish/keybindings/config.el  -*- lexical-binding: t; -*-
 
 (map!
- "s-u"                                            #'+basic/toggle-transparency
  :leader
- (:prefix ("t" . "toggle")
-   :desc "Transparency"                  :n "t"   #'+basic/toggle-transparency)
  (:prefix ("b" . "buffer")
    :desc "Read Only"                     :n "r"   #'view-mode
    :desc "Revert Edit"                   :n "R"   #'revert-buffer)

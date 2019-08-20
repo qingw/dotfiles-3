@@ -206,6 +206,7 @@
 
        :steamedfish
        basic
+       ui
        (:if (not (and IS-WINDOWS IS-ANDROID))
         chinese)
        keybindings
