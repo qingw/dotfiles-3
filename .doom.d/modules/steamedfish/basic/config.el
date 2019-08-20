@@ -34,14 +34,6 @@
 (when IS-ANDROID
   (setq browse-url-browser-function 'browse-url-xdg-open))
 
-(after! google-this
-  (google-this-mode 1)
-  ;; FIXME this keybinding is not working correctly
-  (map!
-   :leader
-   :prefix ("h" . "help")
-   :desc "Google Search"               :n "g"  #'google-this-mode-submap))
-
 (after! dired
   ;; emacs by default disable this command
   (put 'dired-find-alternate-file 'disabled nil)
