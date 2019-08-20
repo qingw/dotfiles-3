@@ -1,6 +1,6 @@
 ;;; private/steamedfish/config.el  -*- lexical-binding: t; -*-
 
-(setq-default
+(setq
  user-full-name "SteamedFish"
  user-mail-address "steamedfish@hotmail.com"
  frame-title-format '("%b - " user-full-name "'s Emacs")
@@ -23,7 +23,7 @@
   ; emacs-mac special
   (when (string-equal window-system "mac")
     (mac-auto-operator-composition-mode))
-  (setq-default
+  (setq
    doom-font (font-spec :family "Fira Mono" :size 12.5)
    doom-variable-pitch-font (font-spec :family "Fira Sans")
    doom-unicode-font (font-spec :family "Hiragino Sans GB" :size 14.5)
@@ -53,7 +53,7 @@
    :n "^"         (λ! (find-alternate-file ".."))))
 
 (after! deft
-  (setq-default deft-directory "~/Dropbox/org/"))
+  (setq deft-directory "~/Dropbox/org/"))
 
 (after! yasnippet
   (push "~/.doom.d/snippets" yas-snippet-dirs))
@@ -61,7 +61,7 @@
 (after! org
   (custom-set-faces!
    `(org-ellipsis :foreground nil))
-  (setq-default org-directory (expand-file-name "~/Dropbox/org/")
+  (setq org-directory (expand-file-name "~/Dropbox/org/")
                 diary-file (expand-file-name "~/Dropbox/org/diary")
                 ;; all files but later.org should be put in agenda
                 org-agenda-files
