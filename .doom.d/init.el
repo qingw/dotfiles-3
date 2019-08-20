@@ -206,11 +206,12 @@
 
        :steamedfish
        basic
-       ui
        (:if (not (and IS-WINDOWS IS-ANDROID))
         chinese)
-       keybindings
+       imenu-list
        irc
-       telega
+       keybindings
+       orgmode
        speed-type
-       imenu-list)
+       telega
+       ui)
