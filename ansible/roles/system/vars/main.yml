@@ -23,10 +23,8 @@ packages_macpip:
     - neovim
 
 packages_linux:
-    - bind9-host
     - dstat
     - dnsutils
-    - build-essential
     - busybox
     - diffutils
     - dmidecode
@@ -66,6 +64,7 @@ packages_cask:
     - zoomus
 
 packages_arch:
+    - bind-tools
     - youtube-dl
     - you-get
     - fd
@@ -73,3 +72,5 @@ packages_arch:
 
 packages_debian:
     - bsdutils
+    - bind9-host
+    - build-essential
