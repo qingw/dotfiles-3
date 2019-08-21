@@ -10,6 +10,7 @@ packages:
     - git
     - shellcheck
     - hugo
+    - plantuml
 packages_mac:
     - ccls
     - dbus
