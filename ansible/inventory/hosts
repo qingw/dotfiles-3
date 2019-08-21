@@ -4,4 +4,4 @@ mc.steamedfish.org
 tc.steamedfish.org
 sa.steamedfish.org
 steamedfish.org
-i.steamedfish.org
+i.steamedfish.org ansible_python_interpreter=/opt/bin/python
