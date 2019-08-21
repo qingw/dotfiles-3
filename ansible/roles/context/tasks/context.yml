@@ -7,11 +7,14 @@
             path: ~/ConTeXt
             state: directory
       - name: 下载安装升级脚本
-        synchronize:
-            compress: yes
-            dest: ~/ConTeXt/first-setup.sh
-            mode: pull
-            src: rsync://contextgarden.net/minimals/setup/first-setup.sh
+        # synchronize:
+        #     compress: yes
+        #     dest: ~/ConTeXt/first-setup.sh
+        #     mode: pull
+        #     src: rsync://contextgarden.net/minimals/setup/first-setup.sh
+        command: rsync -a rsync://contextgarden.net/minimals/setup/first-setup.sh ~/ConTeXt/
+        args:
+            chdir: ~/ConTeXt/
       - name: 执行安装升级脚本
         command: ~/ConTeXt/first-setup.sh --modules=all
         args:
