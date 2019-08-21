@@ -28,7 +28,6 @@ packages_linux:
     - dnsutils
     - build-essential
     - busybox
-    - bsdutils
     - diffutils
     - dmidecode
     - dnsutils
@@ -73,3 +72,4 @@ packages_arch:
     - lsd
 
 packages_debian:
+    - bsdutils
