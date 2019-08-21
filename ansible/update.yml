@@ -10,3 +10,5 @@
       - { role: vim }
       - { role: context }
   ignore_errors: yes
+  environment:
+      PATH: /opt/bin:/usr/local/bin:/usr/local/sbin:{{ ansible_env.PATH }}
