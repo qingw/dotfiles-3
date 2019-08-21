@@ -50,9 +50,10 @@
 ;;   (when (display-graphic-p)
 ;;     (setq ivy-display-function #'ivy-posframe-display-at-frame-bottom-left)))
 
-(def-package! nyan-mode
-  :init
-  (setq
-   nyan-animate-nyancat t
-   nyan-wavy-trail t)
-  (nyan-mode 1))
+;; nyan-mode currently has some conflict with doom-modeline
+;; (def-package! nyan-mode
+;;   :init
+;;   (setq
+;;    nyan-animate-nyancat t
+;;    nyan-wavy-trail t)
+;;   (nyan-mode 1))
