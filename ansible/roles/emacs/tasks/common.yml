@@ -6,7 +6,7 @@
             clone: yes
             dest: ~/.emacs.d
             force: no
-            version: straight
+            version: develop
             repo: https://github.com/hlissner/doom-emacs.git
             recursive: yes
             track_submodules: yes
