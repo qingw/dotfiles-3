@@ -3,7 +3,6 @@
 (when (display-graphic-p)
   (when IS-MAC
     (setq
-     ns-use-thin-smoothing t
      mac-system-move-file-to-trash-use-finder t
      mac-command-modifier 'super
      mac-option-modifier  'meta))
@@ -11,6 +10,8 @@
   ;; emacs-mac special
   (when (string-equal window-system "mac")
     (mac-auto-operator-composition-mode))
+  (when (string-equal window-system "ns")
+    (setq ns-use-thin-smoothing t))
 
   (setq
    doom-font (font-spec :family "Fira Mono" :size 12.5)
