@@ -36,3 +36,8 @@
           (:exports . "results")
           (:cmdline . "-charset UTF-8"))
         "Default arguments for evaluating a plantuml source block."))))
+
+(after! org-clock
+  (setq
+   org-clock-into-drawer t
+   org-clock-out-remove-zero-time-clocks t))
