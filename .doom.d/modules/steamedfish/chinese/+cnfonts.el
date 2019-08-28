@@ -1,6 +1,7 @@
 ;;; steamedfish/chinese/+cnfonts.el -*- lexical-binding: t; -*-
 
-(def-package! cnfonts
+(use-package! cnfonts
+  :defer t
   :when (display-graphic-p)
   :init (cnfonts-enable)
   :config

@@ -52,7 +52,8 @@
 ;;     (setq ivy-display-function #'ivy-posframe-display-at-frame-bottom-left)))
 
 ;; nyan-mode currently has some conflict with doom-modeline
-;; (def-package! nyan-mode
+;; (use-package! nyan-mode
+;;   :defer t
 ;;   :init
 ;;   (setq
 ;;    nyan-animate-nyancat t

@@ -1,6 +1,6 @@
 ;;; steamedfish/chinese/config.el  -*- lexical-binding: t; -*-
 
-(def-package! youdao-dictionary
+(use-package! youdao-dictionary
   :config
   (setq-default
    url-automatic-caching t
@@ -15,7 +15,8 @@
    :prefix ("h" . "help")
    :desc "Lookup Dictionary"    :n "l"  #'youdao-dictionary-search-at-point-tooltip))
 
-(def-package! cal-china-x
+(use-package! cal-china-x
+  :after calendar
   :config
   (setq-default
    mark-holidays-in-calendar t
