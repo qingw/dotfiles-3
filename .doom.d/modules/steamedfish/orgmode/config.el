@@ -23,5 +23,17 @@
     (add-to-list 'org-src-lang-modes
                  '("plantuml" . plantuml)))
 
+  ;; this is defined in ob-plantuml.el
+  ;; we want to add utf-8 support by default
+  (if (boundp 'org-babel-default-header-args:plantuml)
+      (add-to-list 'org-babel-default-header-args:plantuml
+                   '((:cmdline . "-charset UTF-8")))
+    (defvar org-babel-default-header-args:plantuml
+      '(
+        (:results . "file")
+        (:exports . "results")
+        (:cmdline . "-charset UTF-8"))
+      "Default arguments for evaluating a plantuml source block."))
+
   ;; refresh images after C-c C-c
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images))
