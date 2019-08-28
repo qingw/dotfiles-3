@@ -24,20 +24,15 @@
 
   (when (featurep! :lang plantuml)
     (add-to-list 'org-src-lang-modes
-                 '("plantuml" . plantuml))
-    ;; this is defined in ob-plantuml.el
-    ;; we want to add utf-8 support by default
-    (if (boundp 'org-babel-default-header-args:plantuml)
-        (add-to-list 'org-babel-default-header-args:plantuml
-                     '((:cmdline . "-charset UTF-8")))
-      (defvar org-babel-default-header-args:plantuml
-        '(
-          (:results . "file")
-          (:exports . "results")
-          (:cmdline . "-charset UTF-8"))
-        "Default arguments for evaluating a plantuml source block."))))
+                 '("plantuml" . plantuml))))
 
 (after! org-clock
   (setq
    org-clock-into-drawer t
    org-clock-out-remove-zero-time-clocks t))
+
+(use-package! ob-plantuml
+  :after plantuml-mode
+  :config
+  (add-to-list 'org-babel-default-header-args:plantuml
+               '(:cmdline . "-charset UTF-8")))
