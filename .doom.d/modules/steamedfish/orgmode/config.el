@@ -19,5 +19,9 @@
         org-ellipsis (if (char-displayable-p ?⬎) "  ⬎" nil)
         org-startup-with-inline-images t)
 
+  (when (featurep! :lang plantuml)
+    (add-to-list 'org-src-lang-modes
+                 '("plantuml" . plantuml)))
+
   ;; refresh images after C-c C-c
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images))
