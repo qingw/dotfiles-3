@@ -19,6 +19,9 @@
         org-ellipsis (if (char-displayable-p ?⬎) "  ⬎" nil)
         org-startup-with-inline-images t)
 
+  ;; refresh images after C-c C-c
+  (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
+
   (when (featurep! :lang plantuml)
     (add-to-list 'org-src-lang-modes
                  '("plantuml" . plantuml))
@@ -32,7 +35,4 @@
           (:results . "file")
           (:exports . "results")
           (:cmdline . "-charset UTF-8"))
-        "Default arguments for evaluating a plantuml source block.")))
-
-  ;; refresh images after C-c C-c
-  (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images))
+        "Default arguments for evaluating a plantuml source block."))))
