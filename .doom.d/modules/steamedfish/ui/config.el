@@ -53,7 +53,7 @@
 
 ;; nyan-mode currently has some conflict with doom-modeline
 ;; (use-package! nyan-mode
-;;   :defer t
+;;   :after doom-modeline
 ;;   :init
 ;;   (setq
 ;;    nyan-animate-nyancat t
