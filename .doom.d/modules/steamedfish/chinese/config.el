@@ -13,7 +13,7 @@
    :n "y" #'youdao-dictionary-play-voice-at-point
    :leader
    :prefix ("h" . "help")
-   :desc "Lookup Dictionary"    :n "l"  #'youdao-dictionary-search-at-point-tooltip))
+   :desc "Lookup Dictionary"    :n "y"  #'youdao-dictionary-search-at-point-tooltip))
 
 (use-package! cal-china-x
   :after calendar
