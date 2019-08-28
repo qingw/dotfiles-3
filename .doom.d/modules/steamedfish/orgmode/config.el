@@ -16,7 +16,8 @@
         (concat org-directory "archive.org::* From %s")
         org-log-done 'time
         org-log-done-with-time t
-        org-ellipsis (if (char-displayable-p ?⬎) "  ⬎" nil))
+        org-ellipsis (if (char-displayable-p ?⬎) "  ⬎" nil)
+        org-startup-with-inline-images t)
 
   ;; refresh images after C-c C-c
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images))
