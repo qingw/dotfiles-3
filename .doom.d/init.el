@@ -156,7 +156,8 @@
         +present)        ; using Emacs for presentations
        perl              ; write code no one else can comprehend
        php               ; perl's insecure younger brother
-       plantuml          ; diagrams for confusing people more
+       (plantuml          ; diagrams for confusing people more
+        :if (not IS-ANDROID))
        ;;purescript        ; javascript, but functional
        (python             ; beautiful is better than ugly
         +pyenv
