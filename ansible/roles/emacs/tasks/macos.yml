@@ -6,16 +6,9 @@
             name: railwaycat/emacsmacport
             state: present
       - name: 安装 emacs-mac
-        homebrew:
-            install_options: with-dbus,with-modules,with-xml2
+        homebrew_cask:
             name: emacs-mac
             state: present
-      - name: 配置 emacs-mac 的链接
-        file:
-            force: no
-            path: /Applications/Emacs.app
-            src: /usr/local/opt/emacs-mac/Emacs.app
-            state: link
       - name: 配置 emacs-mac 的 osx-defaults
         when: ansible_distribution == "MacOSX"
         block:
