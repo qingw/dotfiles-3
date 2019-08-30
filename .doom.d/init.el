@@ -14,7 +14,7 @@
        (not (equal user-login-name "steamedfish"))))
 
 (doom! :input
-       (:if (not (and IS-WINDOWS IS-ANDROID))
+       (:if (not (or IS-WINDOWS IS-ANDROID))
         chinese)
        ;;japanese
 
@@ -83,7 +83,7 @@
        eshell            ; a consistent, cross-platform shell (WIP)
        shell             ; a terminal REPL for Emacs
        ;;term              ; terminals in Emacs
-       (:if (not (and IS-WINDOWS IS-ANDROID))
+       (:if (not (or IS-WINDOWS IS-ANDROID))
         vterm)             ; another terminals in Emacs
 
        :tools
@@ -101,7 +101,7 @@
        gist              ; interacting with github gists
        (lookup           ; helps you navigate your code and documentation
         +docsets)        ; ...or in Dash docsets locally
-       (:if (not (and IS-WINDOWS IS-ANDROID))
+       (:if (not (or IS-WINDOWS IS-ANDROID))
         lsp)
        macos             ; MacOS-specific commands
        magit             ; a git porcelain for Emacs
@@ -209,13 +209,13 @@
        :steamedfish
        ansible
        basic
-       (:if (not (and IS-WINDOWS IS-ANDROID))
+       (:if (not (or IS-WINDOWS IS-ANDROID))
         chinese)
        imenu-list
        irc
        keybindings
        orgmode
        speed-type
-       (:if (not (and IS-WINDOWS IS-ANDROID))
+       (:if (not (or IS-WINDOWS IS-ANDROID))
         telega)
        ui)
