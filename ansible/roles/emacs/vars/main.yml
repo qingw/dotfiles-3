@@ -1,4 +1,7 @@
 ---
+homebrew_taps:
+    - railwaycat/emacsmacport
+    - twlz0ne/ccls
 packages:
     - ripgrep
     - cscope

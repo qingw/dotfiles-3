@@ -3,11 +3,7 @@
   block:
       - name: 配置 homebrew 的 tap
         homebrew_tap:
-            name:
-                - homebrew/cask-drivers
-                - homebrew/cask-fonts
-                - homebrew/cask-versions
-                - homebrew/services
+            name: "{{ homebrew_taps }}"
             state: present
       - name: 安装基础软件包
         homebrew:
