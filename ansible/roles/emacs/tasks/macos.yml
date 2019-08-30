@@ -5,10 +5,6 @@
         homebrew_tap:
             name: railwaycat/emacsmacport
             state: present
-      - name: 安装 emacs-mac
-        homebrew_cask:
-            name: emacs-mac
-            state: present
       - name: 配置 emacs-mac 的 osx-defaults
         when: ansible_distribution == "MacOSX"
         block:

@@ -16,6 +16,8 @@ packages_mac:
     - dbus
     - fcitx-remote-for-osx
     - libvterm
+packages_cask:
+    - emacs-mac
 packages_arch:
     - emacs-git
     - ccls-git
