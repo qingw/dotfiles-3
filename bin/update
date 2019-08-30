@@ -158,7 +158,7 @@ update_emacs() {
 
 update_optools() {
     echo "updating optools"
-    for _DIR in "dumbo" "work"; do
+    for _DIR in "work"; do
         if [ -d "$HOME/${_DIR}" ]; then
             for _PROJECT in "$HOME"/${_DIR}/*; do
                 if [ -d "${_PROJECT}/.git/svn" ]; then
