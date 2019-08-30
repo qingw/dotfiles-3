@@ -216,5 +216,6 @@
        keybindings
        orgmode
        speed-type
-       telega
+       (:if (not (and IS-WINDOWS IS-ANDROID))
+        telega)
        ui)
