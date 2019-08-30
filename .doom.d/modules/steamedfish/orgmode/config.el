@@ -32,6 +32,15 @@
    org-clock-into-drawer t
    org-clock-out-remove-zero-time-clocks t))
 
+(after! plantuml-mode
+  (setq plantuml-jar-path
+        (cond
+         (IS-MAC
+          "/usr/local/opt/plantuml/libexec/plantuml.jar")
+         (IS-LINUX
+          "/usr/share/java/plantuml/plantuml.jar"))
+        org-plantuml-jar-path plantuml-jar-path))
+
 (use-package! ob-plantuml
   :after plantuml-mode
   :init
