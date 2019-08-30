@@ -75,7 +75,6 @@ fi
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
-alias dumbo="python $HOME/dumbo/optools/dumbo.py"
 if [ -n "$(command -v lsd)" ];then
     alias ls='lsd'
     alias tree='lsd --tree'
