@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if [ -d "$HOME/.emacs.d/bin" ]; then
+    export PATH="$HOME/.emacs.d/bin:$PATH"
+fi
+
 # emacs-vterm
 if [ -n "$INSIDE_EMACS" ]; then
     alias vi='emacsclient -n'
@@ -39,7 +43,7 @@ function emacs {
 
 if [ -d "$HOME/emacs-distros/spacemacs" ] && \
     [ -f "$HOME/.emacs-profiles.el" ]; then
-    for distro in centaur doom spacemacs; do
+    for distro in centaur spacemacs; do
         eval "
         function $distro {
             ln -s emacs-distros/chemacs/.emacs ~/
