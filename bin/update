@@ -140,11 +140,6 @@ update_emacs() {
         run "$HOME"/.emacs.d/bin/doom -y update
         run "$HOME"/.emacs.d/bin/doom -y refresh
         run "$HOME"/.emacs.d/bin/doom -y recompile
-    else
-        # assume it spacemacs
-        # TODO not working currectly
-        echo "updating spacemacs packages"
-        run /usr/local/bin/emacs --no-window-system --load "$HOME/dotfiles/bin/update-emacs.el"
     fi
     for _PROJECT in "$HOME"/emacs-distros/*; do
         if [ -d "${_PROJECT}/.git" ]; then
