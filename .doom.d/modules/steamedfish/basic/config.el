@@ -8,7 +8,10 @@
  calendar-longitude 113.3612
  calendar-location-name "Tianhe, Guangzhou"
  message-log-max 10000
- delete-by-moving-to-trash t)
+ delete-by-moving-to-trash t
+ ;; undo-tree-auto-save is said unstable
+ ;; enable it just for testing
+ undo-tree-auto-save-history t)
 
 (add-hook! (prog-mode text-mode conf-mode)
   (setq show-trailing-whitespace t))
