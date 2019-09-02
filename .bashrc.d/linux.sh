@@ -11,14 +11,10 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
             PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
             ;;
     esac
-    if [ -n "$(command -v lsd)" ];then
-        alias ls='lsd'
-        alias tree='lsd --tree'
-    elif [ -n "$(command -v exa)" ];then
-        alias ls='exa'
-        alias tree='exa --tree'
-    elif $CLICOLOR ; then
-        alias ls='ls --color=auto'
+    if $CLICOLOR ; then
+        if ! grep -q "alias" $(type ls); then
+            alias ls='ls --color=auto'
+        fi
     fi
     alias open='xdg-open'
 fi
