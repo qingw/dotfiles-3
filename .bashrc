@@ -78,6 +78,9 @@ alias rm='rm -iv'
 if [ -n "$(command -v lsd)" ];then
     alias ls='lsd'
     alias tree='lsd --tree'
+elif [ -n "$(command -v exa)" ];then
+    alias ls='exa'
+    alias tree='exa --tree'
 fi
 
 if [ -d "$HOME/.bashrc.d" ]; then

@@ -14,6 +14,9 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
     if [ -n "$(command -v lsd)" ];then
         alias ls='lsd'
         alias tree='lsd --tree'
+    elif [ -n "$(command -v exa)" ];then
+        alias ls='exa'
+        alias tree='exa --tree'
     elif $CLICOLOR ; then
         alias ls='ls --color=auto'
     fi
