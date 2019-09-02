@@ -3,7 +3,7 @@
 [[ -f "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
 
 if [ -n "$(command -v figlet)" -a "$(uname -o 2>&1)" != "Android" ]; then
-    figlet -f doh -w 300 SteamedFish
+    figlet -f mini -w 300 SteamedFish
 fi
 
 if [ -n "$(command -v neofetch)" ];then
