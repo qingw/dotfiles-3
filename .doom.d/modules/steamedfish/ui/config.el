@@ -13,11 +13,14 @@
   (when (string-equal window-system "ns")
     (setq ns-use-thin-smoothing t))
 
-  (setq
-   doom-font (font-spec :family "Fira Mono" :size 12.5)
-   doom-variable-pitch-font (font-spec :family "Fira Sans")
-   doom-unicode-font (font-spec :family "Hiragino Sans GB" :size 14.5)
-   doom-big-font (font-spec :family "Fira Mono" :size 21))
+  ;; fonts
+  (when (member "Fira Mono" (font-family-list))
+    (setq doom-font (font-spec :family "Fira Mono" :size 12.5)
+          doom-big-font (font-spec :family "Fira Mono" :size 21)))
+  (when (member "Fira Sans" (font-family-list))
+    (setq doom-variable-pitch-font (font-spec :family "Fira Sans")))
+  (when (member "Hiragino Sans GB" (font-family-list))
+    (setq doom-unicode-font (font-spec :family "Hiragino Sans GB" :size 14.5)))
 
   (add-hook 'window-setup-hook #'toggle-frame-maximized)
   (add-hook 'window-setup-hook #'+ui/toggle-transparency))
