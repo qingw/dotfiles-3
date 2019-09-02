@@ -12,7 +12,7 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
             ;;
     esac
     if $CLICOLOR ; then
-        if ! alias ls >dev/null 2>&1; then
+        if ! alias ls > /dev/null 2>&1; then
             alias ls='ls --color=auto'
         fi
     fi
