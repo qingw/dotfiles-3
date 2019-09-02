@@ -19,14 +19,13 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
     alias open='xdg-open'
 fi
 
-# LinuxBrew
-if [ -d /home/linuxbrew/.linuxbrew ]; then
-    export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/$PATH"
-elif [ -d "$HOME/.linuxbrew" ]; then
-    export PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
-fi
-
-# snap
-if [ -d /snap/bin ]; then
-    export PATH="/snap/bin:$PATH"
-fi
+# extra PATHs
+for i in
+    /home/linuxbrew/.linuxbrew
+    $HOME/.linuxbrew
+    /snap/bin
+do
+    if [ -d "$i" ]; then
+        export PATH="$i/bin:$i/sbin/$PATH"
+    fi
+done
