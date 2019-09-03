@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    source "$HOME/.bashrc_secret"
+if [[ "$OSTYPE" != "darwin"* ]]; then
+    return
 fi
+
+source "$HOME/.bashrc_secret"
