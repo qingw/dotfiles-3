@@ -3,9 +3,7 @@
 (when (display-graphic-p)
   (when IS-MAC
     (setq
-     mac-system-move-file-to-trash-use-finder t
-     mac-command-modifier 'super
-     mac-option-modifier  'meta))
+     mac-system-move-file-to-trash-use-finder t))
 
   ;; emacs-mac special
   (when (string-equal window-system "mac")
