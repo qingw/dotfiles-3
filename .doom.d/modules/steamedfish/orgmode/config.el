@@ -40,19 +40,3 @@
          (IS-LINUX
           "/usr/share/java/plantuml/plantuml.jar"))
         org-plantuml-jar-path plantuml-jar-path))
-
-(use-package! ob-plantuml
-  :after plantuml-mode
-  :init
-  ;; @ has meanings in orgmode, add an \ to escape it
-  (defadvice! +fix-start-at-symbol--org-babel-plantuml-make-body (args)
-    :filter-args #'org-babel-execute:plantuml
-    (cl-destructuring-bind (body params) args
-      (let* ((origin-body body)
-             (fix-body
-              (replace-regexp-in-string
-               "^\\w*\\(@start\\)" "\\\\\\1" origin-body)))
-        (list fix-body params))))
-  :config
-  (add-to-list 'org-babel-default-header-args:plantuml
-               '(:cmdline . "-charset UTF-8")))
