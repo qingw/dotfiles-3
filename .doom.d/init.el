@@ -218,4 +218,5 @@
        speed-type
        (:if (not (or IS-WINDOWS IS-ANDROID))
         telega)
-       ui)
+       ui
+       beancount)
