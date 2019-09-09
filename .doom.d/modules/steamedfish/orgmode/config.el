@@ -5,11 +5,11 @@
   ;; instead of having its own
   (custom-set-faces!
    '(org-ellipsis :foreground nil))
-  (setq org-directory (expand-file-name "~/Dropbox/org/")
-        diary-file (expand-file-name "~/Dropbox/org/diary")
+  (setq org-directory (expand-file-name "~/work/org/")
+        diary-file (expand-file-name "~/work/org/diary")
         ;; all files but later.org should be put in agenda
         org-agenda-files
-        (delete (expand-file-name "~/Dropbox/org/later.org")
+        (delete (expand-file-name "~/work/org/later.org")
                 (file-expand-wildcards (concat org-directory "*.org")))
         ;; one archive file instead of many
         org-archive-location
