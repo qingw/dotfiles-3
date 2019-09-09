@@ -12,9 +12,9 @@
     (setq ns-use-thin-smoothing t))
 
   ;; fonts
-  (if (member "Operator Mono" (font-family-list))
-      (setq doom-font (font-spec :family "Operator Mono" :size 12.5)
-            doom-big-font (font-spec :family "Operator Mono" :size 21))
+  (if (member "OperatorMono Nerd Font" (font-family-list))
+      (setq doom-font (font-spec :family "OperatorMono Nerd Font" :size 12.5)
+            doom-big-font (font-spec :family "OperatorMono Nerd Font" :size 21))
     (when (member "Fira Mono" (font-family-list))
       (setq doom-font (font-spec :family "Fira Mono" :size 12.5)
             doom-big-font (font-spec :family "Fira Mono" :size 21))))
