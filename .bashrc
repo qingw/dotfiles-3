@@ -92,9 +92,4 @@ if [ -d "$HOME/.bashrc.d" ]; then
     unset i
 fi
 
-# envs from pass
-if [ -n "$(command -v pass)" ]; then
-    export HOMEBREW_GITHUB_API_TOKEN="$(pass env/homebrew)"
-fi
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
