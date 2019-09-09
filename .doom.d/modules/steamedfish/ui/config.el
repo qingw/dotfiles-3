@@ -12,11 +12,16 @@
     (setq ns-use-thin-smoothing t))
 
   ;; fonts
-  (when (member "Fira Mono" (font-family-list))
-    (setq doom-font (font-spec :family "Fira Mono" :size 12.5)
-          doom-big-font (font-spec :family "Fira Mono" :size 21)))
-  (when (member "Fira Sans" (font-family-list))
-    (setq doom-variable-pitch-font (font-spec :family "Fira Sans")))
+  (if (member "Operator Mono" (font-family-list))
+      (setq doom-font (font-spec :family "Operator Mono" :size 12.5)
+            doom-big-font (font-spec :family "Operator Mono" :size 21))
+    (when (member "Fira Mono" (font-family-list))
+      (setq doom-font (font-spec :family "Fira Mono" :size 12.5)
+            doom-big-font (font-spec :family "Fira Mono" :size 21))))
+  (if (member "Operator SSm" (font-family-list))
+      (setq doom-variable-pitch-font (font-spec :family "Operator SSm"))
+    (when (member "Fira Sans" (font-family-list))
+      (setq doom-variable-pitch-font (font-spec :family "Fira Sans"))))
   (when (member "Hiragino Sans GB" (font-family-list))
     (setq doom-unicode-font (font-spec :family "Hiragino Sans GB" :size 14.5)))
 
