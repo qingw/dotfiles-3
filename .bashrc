@@ -82,6 +82,10 @@ elif [ -n "$(command -v exa)" ];then
     alias ls='exa'
     alias tree='exa --tree'
 fi
+if [ -n "$(command -v nvim)" ];then
+    alias vim='nvim'
+    alias vi='nvim'
+fi
 
 if [ -d "$HOME/.bashrc.d" ]; then
     for i in $HOME/.bashrc.d/*.sh; do
