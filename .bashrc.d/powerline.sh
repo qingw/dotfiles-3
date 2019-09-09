@@ -15,7 +15,12 @@ if [ "$TERM_PROGRAM" != "iTerm.app" ] && [ "$OSTYPE" != "linux-gnu" ]; then
     return
 fi
 
-_SITE_PACKAGES=$(python -c "import sys; print(next(p for p in sys.path if 'site-packages' in p and '.local' not in p))")
+if [ -f /etc/debian_version ]; then
+    _SITE_PACKAGES="/usr/share/"
+else
+    _SITE_PACKAGES=$(python -c "import sys; print(next(p for p in sys.path if 'site-packages' in p and '.local' not in p))")
+fi
+
 if [ -f $_SITE_PACKAGES/powerline/bindings/bash/powerline.sh ]; then
         powerline-daemon -q
         POWERLINE_BASH_CONTINUATION=1
