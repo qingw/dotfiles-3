@@ -128,8 +128,9 @@ self_update() {
 update_vim() {
     echo "updating vim"
     cd "$HOME/.vim" && run git pull && run git submodule update --recursive --init
+    cd "$HOME/.config/nvim" && run git pull && run git submodule update --recursive --init
     # TODO not working currectly
-    run vim +SPUpdate +qall
+    # run vim +SPUpdate +qall
 }
 
 
