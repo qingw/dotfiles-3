@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/bin/auth.conf
+source ~/dotfiles/bin/auth.conf
 
 if [ ! -f /tmp/cookie.txt ]; then
     curl -k -s -c /tmp/cookie.txt -o /dev/null https://ita.netease.com:444/ac_portal/default/pc.html?tabs=pwd
