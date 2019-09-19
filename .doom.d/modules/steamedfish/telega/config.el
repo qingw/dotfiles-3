@@ -25,6 +25,6 @@
      (:map telega-msg-button-map
        "k" nil
        "l" nil)))
-  (when (string-equal window-system "mac")
+  (when (eq window-system 'mac)
     ;; emacs-mac have some bug on user avatars
     (setq telega-user-use-avatars nil)))

@@ -6,9 +6,9 @@
      mac-system-move-file-to-trash-use-finder t))
 
   ;; emacs-mac special
-  (when (string-equal window-system "mac")
+  (when (eq window-system 'mac)
     (mac-auto-operator-composition-mode))
-  (when (string-equal window-system "ns")
+  (when (eq window-system 'ns)
     (setq ns-use-thin-smoothing t))
 
   ;; fonts
