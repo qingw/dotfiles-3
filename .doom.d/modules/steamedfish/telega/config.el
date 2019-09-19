@@ -11,6 +11,15 @@
   (set-popup-rule! "^◀\\[.*@.*\\]" :side 'right :size 0.6 :quit nil :select t)
   (when (featurep! :completion ivy)
     (load! "+ivy"))
+  (when (featurep! :completion company)
+    (add-hook 'telega-chat-mode-hook
+              (lambda ()
+                (set (make-local-variable 'company-backends)
+                     (append '(telega-company-emoji
+                               telega-company-username
+                               telega-company-hashtag)
+                             (when (telega-chat-bot-p telega-chatbuf--chat)
+                               '(telega-company-botcmd)))))))
   (when (featurep! :editor evil)
     (map!
      (:map telega-msg-button-map
