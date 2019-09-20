@@ -17,3 +17,5 @@ packages_cask: []
 packages_arch: []
 
 packages_debian: []
+
+packages_snap: []
