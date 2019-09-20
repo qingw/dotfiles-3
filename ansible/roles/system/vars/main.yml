@@ -43,16 +43,49 @@ packages_mac:
 
 packages_cask:
     - android-platform-tools
+    - alfred
+    - alacritty
+    - copyq
+    - dash
+    - discord
+    - docker
     - dropbox
+    - firefox
+    - flash-npapi
+    - flash-ppapi
+    - font-fira-code
+    - font-fira-mono
+    - font-fira-sans
+    - font-noto-sans-cjk-sc
+    - font-sarasa-gothic
+    - font-symbola
     - google-chrome
     - gpg-suite
     - iina
     - iterm2
+    - java
     - keycastr
+    - kindle
+    - language-switcher
     - minecraft
+    - neteasemusic
     - popo
+    - provisionql
+    - qlcolorcode
+    - qlmarkdown
+    - qlprettypatch
+    - qlstephen
+    - qlvideo
     - qsync-client
+    - quicklook-csv
+    - quicklook-json
+    - quicklook-pat
+    - quicklookapk
+    - quicklookase
+    - qutebrowser
     - shadowsocksx-ng
+    - slack
+    - sourcetree
     - squirrel
     - steam
     - teensy
@@ -60,7 +93,12 @@ packages_cask:
     - tor-browser
     - tunnelblick
     - visual-studio-code
+    - webquicklook
+    - wechat
+    - wireshark
     - x-lite
+    - xquartz
+    - yed
     - zoomus
 
 packages_arch:
