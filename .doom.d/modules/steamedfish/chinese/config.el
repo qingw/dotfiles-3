@@ -49,7 +49,7 @@
         '((:name
            "pyim-bigdict"
            :file
-           (expand-file-name (concat doom-private-dir "etc/pyim-bigdict.pyim")))))
+           (expand-file-name (concat doom-private-dir "etc/pyim/pyim-bigdict.pyim.gz")))))
 
   ;; 设置 pyim 探针设置，这是 pyim 高级功能设置，可以实现 *无痛* 中英文切换 :-)
   ;; 我自己使用的中英文动态切换规则是：
