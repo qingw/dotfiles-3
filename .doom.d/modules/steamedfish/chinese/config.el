@@ -3,7 +3,7 @@
 (use-package! youdao-dictionary
   :defer t
   :config
-  (setq-default
+  (setq
    url-automatic-caching t
    youdao-dictionary-search-history-file (concat doom-cache-dir "youdao.cache")
    youdao-dictionary-use-chinese-word-segmentation t)
@@ -25,7 +25,7 @@
 (use-package! cal-china-x
   :after calendar
   :config
-  (setq-default
+  (setq
    mark-holidays-in-calendar t
    cal-china-x-important-holidays cal-china-x-chinese-holidays
    calendar-holidays

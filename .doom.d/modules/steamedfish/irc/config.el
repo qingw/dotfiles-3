@@ -3,7 +3,7 @@
 (when (featurep! :app irc)
   (after! circe
     (evil-set-initial-state 'circe-chat-mode 'insert)
-    (setq-default
+    (setq
      circe-default-quit-message "Ahhhhhhhhh!"
      circe-default-part-message "Ahhhhhhhhh!"))
   (map!

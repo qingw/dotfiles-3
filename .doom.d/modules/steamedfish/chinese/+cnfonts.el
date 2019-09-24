@@ -5,7 +5,7 @@
   :when (display-graphic-p)
   :init (cnfonts-enable)
   :config
-  (setq-default
+  (setq
    cnfonts-default-step 4
    cnfonts-directory (concat doom-etc-dir "cnfonts/")
    cnfonts-personal-fontnames
