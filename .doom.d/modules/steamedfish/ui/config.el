@@ -65,6 +65,10 @@
    nyan-wavy-trail t)
   (nyan-mode 1))
 
-(use-package! flucui-themes
-  :config
-  (setq doom-theme 'flucui-dark))
+(after! doom-themes
+  (if (member "OperatorMono Nerd Font" (font-family-list))
+      (custom-set-faces!
+       '((font-lock-comment-face
+          font-lock-constant-face
+          font-lock-keyword-face)
+         :slant italic))))
