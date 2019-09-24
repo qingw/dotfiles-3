@@ -10,10 +10,16 @@
    :map youdao-dictionary-mode-map
    :n "q" #'quit-window
    :n "p" #'youdao-dictionary-play-voice-of-current-word
-   :n "y" #'youdao-dictionary-play-voice-at-point
-   :leader
-   :prefix ("h" . "help")
-   :desc "Lookup Dictionary"    :n "y"  #'youdao-dictionary-search-at-point-tooltip))
+   :n "y" #'youdao-dictionary-play-voice-at-point)
+  (if (display-graphic-p)
+      (map!
+       :leader
+       :prefix ("h" . "help")
+       :desc "Lookup Dictionary" :n "y"  #'youdao-dictionary-search-at-point-posframe)
+    (map!
+     :leader
+     :prefix ("h" . "help")
+     :desc "Lookup Dictionary"   :n "y"  #'youdao-dictionary-search-at-point+)))
 
 (use-package! cal-china-x
   :after calendar
