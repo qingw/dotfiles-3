@@ -1,6 +1,7 @@
 ;;; steamedfish/chinese/config.el  -*- lexical-binding: t; -*-
 
 (use-package! youdao-dictionary
+  :defer t
   :config
   (setq-default
    url-automatic-caching t
