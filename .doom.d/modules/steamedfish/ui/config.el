@@ -66,7 +66,5 @@
   (nyan-mode 1))
 
 (use-package! flucui-themes
-  :init
-  (flucui-themes-load-style 'dark)
   :config
-  (setq doom-theme 'flucui))
+  (setq doom-theme 'flucui-dark))
