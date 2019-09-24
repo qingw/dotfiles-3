@@ -2,3 +2,4 @@
 ;;; steamedfish/ui/packages.el
 
 (package! nyan-mode)
+(package! flucui-themes)

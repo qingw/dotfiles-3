@@ -64,3 +64,9 @@
    nyan-animate-nyancat t
    nyan-wavy-trail t)
   (nyan-mode 1))
+
+(use-package! flucui-themes
+  :init
+  (flucui-themes-load-style 'dark)
+  :config
+  (setq doom-theme 'flucui))
