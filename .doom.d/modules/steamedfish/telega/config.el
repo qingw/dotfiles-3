@@ -8,7 +8,10 @@
   :config
   (telega-mode-line-mode 1)
   (set-popup-rule! "^\\*Telega Root" :side 'left :size 50 :quit nil :select t)
-  (set-popup-rule! "^◀\\[.*@.*\\]" :side 'right :size 94 :quit nil :select t)
+  (set-popup-rule! "^◀\\[.*\\]$" :side 'right :size 94 :quit nil :select t)
+  (set-popup-rule! "^◀\\(.*\\)$" :side 'right :size 94 :quit nil :select t)
+  (set-popup-rule! "^◀{.*}$" :side 'right :size 94 :quit nil :select t)
+  (set-popup-rule! "^◀<.*>$" :side 'right :size 94 :quit nil :select t)
   (setq telega-use-tracking t
         telega-known-inline-bots '("@shufmbot")
         telega-sticker-set-download t
