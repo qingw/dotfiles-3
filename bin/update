@@ -68,6 +68,15 @@ update_homebrew() {
     fi
 }
 
+update_macports() {
+    if [ ! -f "/opt/local/bin/port" ]; then
+        return
+    fi
+    echo "updating macports"
+    run port selfupdate
+    run sudo port uninstall inactive
+}
+
 update_linuxbrew() {
     if [ -d "/home/linuxbrew/.linuxbrew" ] || [ -d "$HOME/.linuxbrew" ]; then
         echo "Updating LinuxBrew"
@@ -188,6 +197,7 @@ update() {
             update_mac_system
             update_mas
             update_homebrew
+            update_macports
             update_pip
             update_gem
             update_go
