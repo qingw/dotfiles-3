@@ -73,7 +73,7 @@ update_macports() {
         return
     fi
     echo "updating macports"
-    run port selfupdate
+    run sudo port selfupdate
     run sudo port uninstall inactive
 }
 
