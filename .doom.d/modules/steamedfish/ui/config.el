@@ -7,6 +7,8 @@
 
   ;; emacs-mac special
   (when (eq window-system 'mac)
+    (setq mac-auto-operator-composition-characters
+          "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~")
     (mac-auto-operator-composition-mode))
   (when (eq window-system 'ns)
     (setq ns-use-thin-smoothing t))
