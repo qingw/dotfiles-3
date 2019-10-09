@@ -74,6 +74,7 @@ update_macports() {
     fi
     echo "updating macports"
     run sudo port selfupdate
+    run sudo port upgrade outdated
     run sudo port uninstall inactive
 }
 
