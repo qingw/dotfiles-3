@@ -5,19 +5,6 @@
   :commands (telega)
   :defer t
   :hook (telega-chat-mode . doom-mark-buffer-as-real-h)
-  :init
-  (when (eq window-system 'mac)
-    (defadvice! +telega--fix-emacs-mac-svg-embed-a
-      (svg image image-type datap &rest args)
-      "Emacs-mac uses macOS's buildin svg parser, which cannot handle the
-deprecated `xlink:href' attribute. Change it to `href' ."
-      :override #'svg-embed
-      (svg--append
-       svg
-       (dom-node
-        'image
-        `((href . ,(svg--image-data image image-type datap))
-          ,@(svg--arguments svg args))))))
   :config
   (telega-mode-line-mode 1)
   (set-popup-rule! "^\\*Telega Root" :side 'left :size 50 :quit nil :select t)
