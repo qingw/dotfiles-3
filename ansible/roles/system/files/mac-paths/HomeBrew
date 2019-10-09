@@ -1,5 +1,3 @@
-/opt/local/bin
-/opt/local/sbin
 /usr/local/opt/python/libexec/bin
 /usr/local/opt/ruby/bin
 /usr/local/opt/perl/bin
@@ -9,3 +7,5 @@
 /bin
 /usr/sbin
 /sbin
+/opt/local/bin
+/opt/local/sbin
